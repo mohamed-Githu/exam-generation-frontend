@@ -318,15 +318,21 @@ div.dropdown button {
   color: var(--grey-color);
   border: 0;
   border-radius: 9999px;
-  font-size: 16px;
+  cursor: pointer;
+}
+
+div.dropdown button::after {
+  content: "\2807";
+  font-size: 20px;
 }
 
 div.dropdown ul {
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  width: 120px;
-  left: 0;
+  width: 160px;
+  padding: 8px 0;
+  right: 0;
   top: 0;
   background-color: var(--white-color);
   box-shadow: 0 0 8px var(--grey-color);
@@ -341,8 +347,11 @@ div.dropdown button:focus ~ ul {
 div.dropdown li {
   list-style: none;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: var(--grey-color);
-  padding: 8px 16px 8px 8px;
+  padding: 10px 8px;
   cursor: pointer;
 }
 
@@ -350,14 +359,10 @@ div.dropdown li:hover {
   background-color: #58585822;
 }
 
-div.dropdown li:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  height: 1px;
-  background-color: #58585844;
-  border-radius: 9999px;
+div.dropdown li i {
+  font-size: 20px;
+}
+
+div.dropdown li:last-child {
+  border-top: 1px solid #58585844;
 }
