@@ -68,7 +68,7 @@ li.dropdown ul:hover {
   visibility: visible;
   opacity: 1;
   text-align: left;
-  box-shadow: 0px 3px 5px -1px #ccc;
+  box-shadow: var(--card-shadow);
 }
 
 li.dropdown ul li {
@@ -211,7 +211,7 @@ a.modal-close-btn {
 /* quetion-block */
 
 .question-wrapper {
-  box-shadow: 1px 2px 5px var(--grey-color-light);
+  box-shadow: var(--card-shadow);
   padding: 12px;
   padding-bottom: 6px;
   background: var(--white-color);
@@ -335,11 +335,11 @@ div.dropdown ul {
   right: 0;
   top: 0;
   background-color: var(--white-color);
-  box-shadow: 0 0 8px var(--grey-color);
-  transition: visibility 200ms ease, opacity 200ms ease;
+  box-shadow: var(--card-shadow);
+  transition: visibility 300ms ease, opacity 300ms ease;
 }
 
-div.dropdown button:focus ~ ul {
+div.dropdown button:focus + ul {
   visibility: visible;
   opacity: 1;
 }
@@ -365,4 +365,27 @@ div.dropdown li i {
 
 div.dropdown li:last-child {
   border-top: 1px solid #58585844;
+}
+
+/* primary-button */
+
+.btn {
+  background-color: var(--primary-color-dark);
+  padding: 8px 12px;
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+
+/*  */
+
+.card {
+  box-shadow: var(--card-shadow);
+  padding: 12px;
+  background: var(--white-color);
+  border-radius: 5px;
+  margin: 5em auto;
+  width: 100%;
+  max-width: 160px;
+  display: flex;
+  flex-direction: column;
 }
