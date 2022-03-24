@@ -105,7 +105,7 @@ img.avatar {
   position: relative;
   padding: 15px 0 0;
   margin-top: 10px;
-  width: 50%;
+  width: 100%;
 }
 
 .input-field {
@@ -114,7 +114,7 @@ img.avatar {
   border: 0;
   border-bottom: 2px solid var(--primary-color-dark);
   outline: 0;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: var(--grey-color-light);
   padding: 7px 0;
   background: transparent;
@@ -122,7 +122,7 @@ img.avatar {
 }
 
 .input-field:not(:focus) ~ .input-label {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   cursor: text;
   top: 20px;
 }
@@ -270,6 +270,11 @@ a.modal-close-btn {
 
 /* Text */
 
+h1 {
+  color: var(--grey-color);
+  font-size: 38px;
+}
+
 h4 {
   color: var(--primary-color-dark);
 }
@@ -371,12 +376,16 @@ div.dropdown li:last-child {
 
 .btn {
   background-color: var(--primary-color-dark);
-  padding: 8px 12px;
+  border: none;
+  outline: none;
+  border-radius: 9999px;
+  padding: 10px 18px;
   color: var(--white-color);
   text-transform: uppercase;
+  cursor: pointer;
 }
 
-/*  */
+/* card */
 
 .card {
   box-shadow: var(--card-shadow);
