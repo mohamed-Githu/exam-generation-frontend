@@ -269,7 +269,7 @@ a.modal-close-btn {
   background: var(--white-color);
   border-radius: 5px;
   margin: 0 auto;
-  height: 160px;
+  min-height: 160px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -282,7 +282,7 @@ a.modal-close-btn {
 }
 
 .question-wrapper p {
-  margin-top: 14px;
+  margin: 14px 0;
 }
 
 .question-wrapper > div:last-child {
@@ -365,9 +365,12 @@ p {
   display: flex;
 }
 
-.container .buttons-wrapper .add-question {
+.container .buttons-wrapper a {
   flex: 1;
-  margin-right: 18px;
+}
+
+.container .buttons-wrapper a:not(:last-child) {
+  margin-right: 12px;
 }
 
 .container .filters-wrapper form {
