@@ -27,7 +27,6 @@
             </ul>
           </li>
           <li>
-            <img src="assets/img/account.jpeg" alt="avatar" class="avatar" />
             <a href="">Mohamed Hussein</a>
           </li>
         </ul>
@@ -45,8 +44,29 @@
             Aggiungi Domanda
           </button>
         </a>
-        <button>btn</button>
-        <button>btn</button>
+      </div>
+      <div class="filters-wrapper">
+        <form action="">
+          <select name="year" id="year">
+            <option value="placeholder">Anno</option>
+            <option value="1">1 ITI</option>
+            <option value="2">2 ITI</option>
+            <option value="3">3 ITI</option>
+          </select>
+          <select name="difficulty" id="difficulty">
+            <option value="placeholder">Difficoltà</option>
+            <option value="1">Facile</option>
+            <option value="2">Medio</option>
+            <option value="3">Difficile</option>
+          </select>
+          <select name="unit" id="unit">
+            <option value="placeholder">Unità</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <input type="submit" value="Applica" class="btn">
+        </form>
       </div>
       <div class="question-wrapper">
         <div>
@@ -210,7 +230,7 @@
             ></textarea>
             <label for="question" class="input-label">Domanda</label>
           </div>
-          <input type="submit" value="Aggiungi" class="btn">
+          <input type="submit" value="Aggiungi" class="btn" />
         </form>
         <a href="#" class="modal-close-btn">&times;</a>
       </div>

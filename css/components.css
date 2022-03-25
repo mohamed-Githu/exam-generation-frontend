@@ -5,7 +5,7 @@ nav {
   box-shadow: 0 12px 50px lightgrey;
 }
 
-nav div {
+nav > div {
   margin: 0 auto;
   padding: 8px 0;
   width: 100%;
@@ -16,7 +16,8 @@ nav div {
 }
 
 nav > div > img {
-  height: 90px;
+  height: 70px;
+  margin-right: auto;
 }
 
 nav ul {
@@ -153,7 +154,7 @@ img.avatar {
 /* select-input */
 
 select {
-  min-width: 200px;
+  min-width: 120px;
   padding: 8px 2px;
   background-color: var(--grey-color-transparent);
   border: none;
@@ -351,7 +352,7 @@ p {
 
 .container {
   width: 100%;
-  max-width: 750px;
+  max-width: 850px;
   margin: 80px auto;
   padding: 0 8px;
 }
@@ -367,6 +368,18 @@ p {
 .container .buttons-wrapper .add-question {
   flex: 1;
   margin-right: 18px;
+}
+
+.container .filters-wrapper form {
+  margin-top: 18px;
+  border-bottom: 1px solid var(--grey-color-light);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container .filters-wrapper form > * {
+  margin-bottom: 18px;
 }
 
 /* options menu */
