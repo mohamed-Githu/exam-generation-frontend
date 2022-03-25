@@ -147,7 +147,7 @@ img.avatar {
   resize: none;
   position: relative;
   background-color: var(--grey-color-transparent);
-  padding: 8px;
+  padding: 4px;
 }
 
 /* select-input */
@@ -225,6 +225,11 @@ a.modal-background {
 .modal h1 {
   text-align: center;
   margin-bottom: 24px;
+}
+
+.modal input[type="submit"] {
+  margin: 12px auto;
+  margin-bottom: 0;
 }
 
 a.modal-close-btn {
@@ -434,12 +439,13 @@ div.dropdown li:last-child {
   border: none;
   outline: none;
   border-radius: 9999px;
-  padding: 10px 18px;
+  padding: 10px 24px;
   color: var(--white-color);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  letter-spacing: 1.1px;
 }
 
 .btn i {
@@ -450,7 +456,6 @@ div.dropdown li:last-child {
   border-radius: 8px;
   color: var(--primary-color-dark);
   padding: 24px;
-  letter-spacing: 1.2px;
   font-size: 16px;
   background-color: transparent;
   border: 2px solid var(--primary-color-dark);

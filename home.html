@@ -147,60 +147,71 @@
       <a href="#" class="modal-background"></a>
       <div class="modal question-modal">
         <h1>CSS Only Modal</h1>
-        <div class="top">
-          <div class="left">
-            <select name="year" id="year">
-              <option value="placeholder">Anno</option>
-              <option value="1">1 ITI</option>
-              <option value="2">2 ITI</option>
-              <option value="3">3 ITI</option>
-            </select>
-            <select name="difficulty" id="difficulty">
-              <option value="placeholder">Difficoltà</option>
-              <option value="1">Facile</option>
-              <option value="2">Medio</option>
-              <option value="3">Difficile</option>
-            </select>
-            <div class="input-group">
-              <input type="number" class="input-field" name="durata" id='durata' required />
-              <label for="durata" class="input-label">Durata (min)</label>
+        <form action="">
+          <div class="top">
+            <div class="left">
+              <select name="year" id="year">
+                <option value="placeholder">Anno</option>
+                <option value="1">1 ITI</option>
+                <option value="2">2 ITI</option>
+                <option value="3">3 ITI</option>
+              </select>
+              <select name="difficulty" id="difficulty">
+                <option value="placeholder">Difficoltà</option>
+                <option value="1">Facile</option>
+                <option value="2">Medio</option>
+                <option value="3">Difficile</option>
+              </select>
+              <div class="input-group">
+                <input
+                  type="number"
+                  class="input-field"
+                  name="durata"
+                  id="durata"
+                  required
+                />
+                <label for="durata" class="input-label">Durata (min)</label>
+              </div>
+            </div>
+            <div class="right">
+              <select name="unit" id="unit">
+                <option value="placeholder">Unità</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <select name="argument" id="argument">
+                <option value="placeholder">Argomento</option>
+                <option value="1">Primo Ottocento</option>
+                <option value="2">Secondo Ottocento</option>
+                <option value="3">Primo Novecento</option>
+              </select>
+              <select name="subargument" id="subargument">
+                <option value="placeholder">Sotto-argomento</option>
+                <option value="1">Romanticismo</option>
+                <option value="2">Neoclassicismo</option>
+                <option value="3">Giovanni Verga</option>
+                <option value="4">
+                  Verismo Italiano e Naturalismo Francese
+                </option>
+                <option value="5">Decadentismo</option>
+              </select>
             </div>
           </div>
-          <div class="right">
-            <select name="unit" id="unit">
-              <option value="placeholder">Unità</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
-            <select name="argument" id="argument">
-              <option value="placeholder">Argomento</option>
-              <option value="1">Primo Ottocento</option>
-              <option value="2">Secondo Ottocento</option>
-              <option value="3">Primo Novecento</option>
-            </select>
-            <select name="subargument" id="subargument">
-              <option value="placeholder">Sotto-argomento</option>
-              <option value="1">Romanticismo</option>
-              <option value="2">Neoclassicismo</option>
-              <option value="3">Giovanni Verga</option>
-              <option value="4">Verismo Italiano e Naturalismo Francese</option>
-              <option value="5">Decadentismo</option>
-            </select>
+          <div class="divider"></div>
+          <div class="input-group">
+            <textarea
+              type="input"
+              class="input-field"
+              name="question"
+              id="question"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <label for="question" class="input-label">Domanda</label>
           </div>
-        </div>
-        <div class="divider"></div>
-        <div class="input-group">
-          <textarea
-            type="input"
-            class="input-field"
-            name="question"
-            id="question"
-            cols="30"
-            rows="10"
-          ></textarea>
-          <label for="question" class="input-label">Domanda</label>
-        </div>
+          <input type="submit" value="Aggiungi" class="btn">
+        </form>
         <a href="#" class="modal-close-btn">&times;</a>
       </div>
     </div>
