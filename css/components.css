@@ -341,6 +341,10 @@ h2 {
   font-size: 24px;
 }
 
+h3 {
+  color: var(--grey-color);
+}
+
 h4 {
   color: var(--primary-color-dark);
 }
@@ -512,6 +516,14 @@ div.dropdown li:last-child {
   flex-direction: column;
 }
 
+/* subject-card */
+
+.subject-card {
+  margin: 16px auto;
+  width: 100%;
+  max-width: 250px;
+}
+
 /* divider */
 
 .divider {
@@ -557,12 +569,6 @@ div.dropdown li:last-child {
   margin-left: 8px;
   margin-right: -8px;
 }
-
-/* subject-block */
-
-/* .subject-block {
-  
-} */
 
 /* styles */
 
