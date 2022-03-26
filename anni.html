@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/basic.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Exam Generator | Anni e Settori</title>
+  </head>
+  <body>
+    <!-- Nav-Bar - START -->
+
+    <nav>
+      <div>
+        <img src="./assets/img/logo-large.png" alt="logo-large" />
+        <ul>
+          <li class="dropdown">
+            <a href="" class="active">Italiano &dtrif;</a>
+            <ul>
+              <li><a href="#">Storia</a></li>
+              <li><a href="#">Educazione Civica</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">Mohamed Hussein</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Nav-Bar - END -->
+
+    <div class="container flex">
+      <div class="flex-1">
+        <h1 class="text-center">Settori ITI</h1>
+        <div class="buttons-wrapper m-vertical">
+          <a href="#open-anno-iti-modal">
+            <button class="btn btn-secondary">
+              <i class="material-icons">add</i>
+              Nuovo Settore
+            </button>
+          </a>
+        </div>
+        <div class="flex-1 flex-wrapper">
+          <div class="removable-block">
+            <span>1 ITI E</span>
+            <button class="btn-close">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+          <div class="removable-block">
+            <span>2 ITI E</span>
+            <button class="btn-close">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+          <div class="removable-block">
+            <span>3 ITI E</span>
+            <button class="btn-close">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+          <div class="removable-block">
+            <span>1 ITI M</span>
+            <button class="btn-close">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+          <div class="removable-block">
+            <span>2 ITI M</span>
+            <button class="btn-close">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+          <div class="removable-block">
+            <span>3 ITI M</span>
+            <button class="btn-close">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="divider vertical"></div>
+      <div class="flex-1">
+        <h1 class="text-center">Settori IPI</h1>
+        <div class="buttons-wrapper m-vertical">
+          <a href="#open-anno-ipi-modal">
+            <button class="btn btn-secondary">
+              <i class="material-icons">add</i>
+              Nuovo Settore
+            </button>
+          </a>
+        </div>
+        <div class="flex-1 flex-wrapper">
+          <div class="removable-block">
+            <span>1 IPI E</span>
+            <button class="btn-close">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+          <div class="removable-block">
+            <span>2 IPI E</span>
+            <button class="btn-close">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+          <div class="removable-block">
+            <span>3 IPI E</span>
+            <button class="btn-close">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+          <div class="removable-block">
+            <span>1 IPI M</span>
+            <button class="btn-close">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+          <div class="removable-block">
+            <span>2 IPI M</span>
+            <button class="btn-close">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+          <div class="removable-block">
+            <span>3 IPI M</span>
+            <button class="btn-close">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal-iti-add-sector - START -->
+
+    <div id="open-anno-iti-modal" class="modal-wrapper">
+      <a href="#" class="modal-background"></a>
+      <div class="modal">
+        <h1>Nuovo Settore ITI</h1>
+        <div class="flex flex-wrapper m-vertical">
+          <div class="removable-block">
+            <span>2 IPI E</span>
+            <button class="btn-close">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+          <div class="removable-block">
+            <span>2 IPI E</span>
+            <button class="btn-close">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+          <div class="removable-block">
+            <span>2 IPI E</span>
+            <button class="btn-close">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+          <div class="removable-block">
+            <span>2 IPI E</span>
+            <button class="btn-close">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+        </div>
+        <form>
+          <div class="input-group">
+            <input
+              type="input"
+              class="input-field"
+              name="title"
+              id="title"
+              required
+            />
+            <label for="title" class="input-label">Titolo</label>
+          </div>
+          <input type="submit" value="Conferma" class="btn" />
+        </form>
+        <a href="#" class="modal-close-btn">&times;</a>
+      </div>
+    </div>
+
+    <!-- modal-iti-add-sector - END -->
+    <!-- modal-iti-add-sector - START -->
+
+    <div id="open-anno-ipi-modal" class="modal-wrapper">
+      <a href="#" class="modal-background"></a>
+      <div class="modal">
+        <h1>Nuovo Settore IPI</h1>
+        <div class="flex flex-wrapper  m-vertical">
+          <div class="removable-block">
+            <span>2 IPI E</span>
+            <button class="btn-close">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+          <div class="removable-block">
+            <span>2 IPI E</span>
+            <button class="btn-close">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+          <div class="removable-block">
+            <span>2 IPI E</span>
+            <button class="btn-close">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+          <div class="removable-block">
+            <span>2 IPI E</span>
+            <button class="btn-close">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+        </div>
+        <form>
+          <div class="input-group">
+            <input
+              type="input"
+              class="input-field"
+              name="title"
+              id="title"
+              required
+            />
+            <label for="title" class="input-label">Titolo</label>
+          </div>
+          <input type="submit" value="Conferma" class="btn" />
+        </form>
+        <a href="#" class="modal-close-btn">&times;</a>
+      </div>
+    </div>
+
+    <!-- modal-iti-add-sector - END -->
+  </body>
+  <script src="./script.js"></script>
+</html>

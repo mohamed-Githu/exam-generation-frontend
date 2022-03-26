@@ -505,6 +505,66 @@ div.dropdown li:last-child {
   height: 1px;
   margin: 12px 0;
   border-radius: 9999px;
-  background-color: var(--grey-color-light);
-  opacity: .4;
+  background-color: var(--grey-color-transparent);
+}
+
+.divider.vertical {
+  width: 1px;
+  height: 100%;
+  min-height: 400px;
+  margin: 0 16px;
+}
+
+/* removable-block */
+
+.removable-block {
+  font-size: 16px;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  padding: 2px 8px;
+  padding-right: 4px;
+  margin: 3px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-close {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.removable-block i {
+  background-color: var(--grey-color);
+  color: var(--white-color);
+  border-radius: 9999px;
+  font-size: 14px;
+  padding: 2px;
+  margin-left: 5px;
+  display: flex;
+}
+
+/* styles */
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.m-vertical {
+  margin: 16px 0;
 }
