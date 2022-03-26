@@ -242,6 +242,16 @@ a.modal-close-btn {
   z-index: 110;
 }
 
+/* sectors-modal */
+
+.sectors-modal form > div {
+  align-items: baseline;
+}
+
+.sectors-modal .input-group {
+  max-width: 100px;
+}
+
 /* add-question-modal */
 
 .question-modal .top,
@@ -322,9 +332,13 @@ a.modal-close-btn {
 
 /* Text */
 
-h1 {
+h1, h2 {
   color: var(--grey-color);
   font-size: 38px;
+}
+
+h2 {
+  font-size: 24px;
 }
 
 h4 {
@@ -448,7 +462,7 @@ div.dropdown li:last-child {
   border-top: 1px solid var(--grey-color-transparent);
 }
 
-/* primary-button */
+/* buttons */
 
 .btn, .btn-secondary {
   background-color: var(--primary-color-dark);
@@ -511,7 +525,7 @@ div.dropdown li:last-child {
 .divider.vertical {
   width: 1px;
   height: 100%;
-  min-height: 400px;
+  min-height: 200px;
   margin: 0 16px;
 }
 
@@ -521,12 +535,10 @@ div.dropdown li:last-child {
   font-size: 16px;
   color: var(--white-color);
   background-color: var(--primary-color);
-  padding: 2px 8px;
-  padding-right: 4px;
+  padding: 2px 12px;
   margin: 3px;
   border-radius: 9999px;
   display: flex;
-  align-items: center;
 }
 
 .btn-close {
@@ -542,9 +554,15 @@ div.dropdown li:last-child {
   border-radius: 9999px;
   font-size: 14px;
   padding: 2px;
-  margin-left: 5px;
-  display: flex;
+  margin-left: 8px;
+  margin-right: -8px;
 }
+
+/* subject-block */
+
+/* .subject-block {
+  
+} */
 
 /* styles */
 
@@ -554,6 +572,16 @@ div.dropdown li:last-child {
 
 .flex {
   display: flex;
+}
+
+.justify-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
 }
 
 .flex-wrapper {
