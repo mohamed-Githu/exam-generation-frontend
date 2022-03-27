@@ -121,7 +121,12 @@ img.avatar {
   transition: border-color 0.2s;
 }
 
-.input-field:not(:focus) ~ .input-label {
+.input-field::placeholder {
+  color: transparent;
+}
+
+.input-field:not(:focus) ~ .input-label,
+.input-field:placeholder-shown ~ .input-label {
   font-size: 1.2rem;
   cursor: text;
   top: 20px;
@@ -136,7 +141,8 @@ img.avatar {
   color: var(--primary-color-dark);
 }
 
-.input-field:focus ~ .input-label {
+.input-field:focus ~ .input-label,
+.input-field:not(:placeholder-shown) ~ .input-label {
   position: absolute;
   top: 0;
   display: block;
