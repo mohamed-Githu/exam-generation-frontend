@@ -614,8 +614,7 @@ div.dropdown li:last-child {
   color: var(--white-color);
   background-color: var(--primary-color);
   padding: 2px 12px;
-  margin: 3px;
-  margin-left: 0;
+  margin: 3px 5px 3px 0;
   border-radius: 9999px;
   display: flex;
 }
@@ -662,6 +661,11 @@ div.dropdown li:last-child {
   align-items: center;
 }
 
+.align-baseline {
+  display: flex;
+  align-items: baseline;
+}
+
 .flex-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -673,6 +677,10 @@ div.dropdown li:last-child {
 
 .m-vertical {
   margin: 16px 0;
+}
+
+.m-horizontal {
+  margin: 0 4px;
 }
 
 .disabled {
