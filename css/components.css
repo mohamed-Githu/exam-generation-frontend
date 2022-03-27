@@ -162,7 +162,7 @@ img.avatar {
 .checkbox-group {
   margin: 4px;
   margin-left: 0;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
 
 .checkbox-group * {
@@ -607,9 +607,9 @@ div.dropdown li:last-child {
   margin: 0 16px;
 }
 
-/* removable-block */
+/* text-block */
 
-.removable-block {
+.text-block {
   font-size: 16px;
   color: var(--white-color);
   background-color: var(--primary-color);
@@ -620,7 +620,7 @@ div.dropdown li:last-child {
   display: flex;
 }
 
-.removable-block.dark {
+.text-block.dark {
   padding: 0 16px;
   background-color: var(--grey-color);
 }
@@ -632,7 +632,7 @@ div.dropdown li:last-child {
   cursor: pointer;
 }
 
-.removable-block i {
+.text-block i {
   background-color: var(--grey-color);
   color: var(--white-color);
   border-radius: 9999px;
