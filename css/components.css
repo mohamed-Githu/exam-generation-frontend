@@ -338,7 +338,8 @@ a.modal-close-btn {
 
 /* Text */
 
-h1, h2 {
+h1,
+h2 {
   color: var(--grey-color);
   font-size: 38px;
 }
@@ -474,7 +475,8 @@ div.dropdown li:last-child {
 
 /* buttons */
 
-.btn, .btn-secondary {
+.btn,
+.btn-secondary {
   background-color: var(--primary-color-dark);
   border: none;
   outline: none;
