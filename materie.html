@@ -37,19 +37,64 @@
 
     <div class="container">
       <div class="buttons-wrapper">
-        <a href="#question-modal-add" class="add-question">
+        <a href="#subject-modal">
           <button class="btn btn-secondary">
             <i class="material-icons">add</i>
             Nuova Materia
           </button>
         </a>
       </div>
+      <div class="filters-wrapper">
+        <form action="">
+          <select name="year" id="year">
+            <option value="placeholder">Anno</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <select name="tipo" id="tipo">
+            <option value="placeholder">Tipo</option>
+            <option value="iti-e-ipi">ITI e IPI</option>
+            <option value="iti-o-ipi">ITI o IPI</option>
+            <option value="iti">ITI</option>
+            <option value="ipi">IPI</option>
+          </select>
+          <select name="settore" id="settore">
+            <option value="placeholder">Settore</option>
+            <option value="iti-i">ITI I</option>
+            <option value="iti-m">ITI M</option>
+            <option value="iti-e">ITI E</option>
+            <option value="ipi-e">IPI M</option>
+            <option value="ipi-e">IPI E</option>
+          </select>
+          <input type="submit" value="Applica" class="btn" />
+        </form>
+      </div>
+      <div class="divider"></div>
       <div class="flex-wrapper justify-between">
-
         <!-- subject-card components - START -->
 
         <div class="card subject-card">
-          <h3 class="text-center">Italiano</h3>
+          <div class="justify-between">
+            <h3>Italiano</h3>
+            <div class="dropdown">
+              <button></button>
+
+              <!-- Options -->
+              <ul>
+                <li><span>Modifica</span><i class="material-icons">create</i></li>
+                <li><span>Rimuovi</span><i class="material-icons">delete</i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block dark">
+              <span>ITI</span>
+            </div>
+          </div>
           <div class="divider"></div>
           <div class="flex-wrapper">
             <div class="removable-block">
@@ -76,7 +121,24 @@
         <!-- subject-card components - END -->
 
         <div class="card subject-card">
-          <h3 class="text-center">Storia</h3>
+          <div class="justify-between">
+            <h3>Storia</h3>
+            <div class="dropdown">
+              <button></button>
+
+              <!-- Options -->
+              <ul>
+                <li><span>Modifica</span><i class="material-icons">create</i></li>
+                <li><span>Rimuovi</span><i class="material-icons">delete</i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block dark">
+              <span>ITI</span>
+            </div>
+          </div>
           <div class="divider"></div>
           <div class="flex-wrapper">
             <div class="removable-block">
@@ -100,7 +162,24 @@
           </div>
         </div>
         <div class="card subject-card">
-          <h3 class="text-center">Sistemi e Reti</h3>
+          <div class="justify-between">
+            <h3>Sistemi e Reti</h3>
+            <div class="dropdown">
+              <button></button>
+
+              <!-- Options -->
+              <ul>
+                <li><span>Modifica</span><i class="material-icons">create</i></li>
+                <li><span>Rimuovi</span><i class="material-icons">delete</i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block dark">
+              <span>ITI</span>
+            </div>
+          </div>
           <div class="divider"></div>
           <div class="flex-wrapper">
             <div class="removable-block">
@@ -115,7 +194,24 @@
           </div>
         </div>
         <div class="card subject-card">
-          <h3 class="text-center">Disegno</h3>
+          <div class="justify-between">
+            <h3>Disegno</h3>
+            <div class="dropdown">
+              <button></button>
+
+              <!-- Options -->
+              <ul>
+                <li><span>Modifica</span><i class="material-icons">create</i></li>
+                <li><span>Rimuovi</span><i class="material-icons">delete</i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block dark">
+              <span>ITI</span>
+            </div>
+          </div>
           <div class="divider"></div>
           <div class="flex-wrapper">
             <div class="removable-block">
@@ -154,225 +250,741 @@
           </div>
         </div>
         <div class="card subject-card">
-          <h3 class="text-center">Italiano</h3>
-          <div class="divider"></div>
-          <div class="flex-wrapper">
-            <div class="removable-block">
-              <span>1 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>2 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>3 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>1 IPI M</span>
-            </div>
-            <div class="removable-block">
-              <span>2 IPI M</span>
-            </div>
-            <div class="removable-block">
-              <span>3 IPI M</span>
-            </div>
-          </div>
-        </div>
-        <div class="card subject-card">
-          <h3 class="text-center">Italiano</h3>
-          <div class="divider"></div>
-          <div class="flex-wrapper">
-            <div class="removable-block">
-              <span>1 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>2 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>3 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>1 IPI M</span>
-            </div>
-            <div class="removable-block">
-              <span>2 IPI M</span>
-            </div>
-            <div class="removable-block">
-              <span>3 IPI M</span>
-            </div>
-          </div>
-        </div>
-        <div class="card subject-card">
-          <h3 class="text-center">Italiano</h3>
-          <div class="divider"></div>
-          <div class="flex-wrapper">
-            <div class="removable-block">
-              <span>1 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>2 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>3 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>1 IPI M</span>
-            </div>
-            <div class="removable-block">
-              <span>2 IPI M</span>
-            </div>
-            <div class="removable-block">
-              <span>3 IPI M</span>
-            </div>
-          </div>
-        </div>
-        <div class="card subject-card">
-          <h3 class="text-center">Italiano</h3>
-          <div class="divider"></div>
-          <div class="flex-wrapper">
-            <div class="removable-block">
-              <span>1 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>2 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>3 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>1 IPI M</span>
-            </div>
-            <div class="removable-block">
-              <span>2 IPI M</span>
-            </div>
-            <div class="removable-block">
-              <span>3 IPI M</span>
-            </div>
-          </div>
-        </div>
-        <div class="card subject-card">
-          <h3 class="text-center">Italiano</h3>
-          <div class="divider"></div>
-          <div class="flex-wrapper">
-            <div class="removable-block">
-              <span>1 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>2 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>3 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>1 IPI M</span>
-            </div>
-            <div class="removable-block">
-              <span>2 IPI M</span>
-            </div>
-            <div class="removable-block">
-              <span>3 IPI M</span>
-            </div>
-          </div>
-        </div>
-        <div class="card subject-card">
-          <h3 class="text-center">Italiano</h3>
-          <div class="divider"></div>
-          <div class="flex-wrapper">
-            <div class="removable-block">
-              <span>1 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>2 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>3 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>1 IPI M</span>
-            </div>
-            <div class="removable-block">
-              <span>2 IPI M</span>
-            </div>
-            <div class="removable-block">
-              <span>3 IPI M</span>
-            </div>
-          </div>
-        </div>
-        <div class="card subject-card">
-          <h3 class="text-center">Italiano</h3>
-          <div class="divider"></div>
-          <div class="flex-wrapper">
-            <div class="removable-block">
-              <span>1 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>2 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>3 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>1 IPI M</span>
-            </div>
-            <div class="removable-block">
-              <span>2 IPI M</span>
-            </div>
-            <div class="removable-block">
-              <span>3 IPI M</span>
-            </div>
-          </div>
-        </div>
-        <div class="card subject-card">
-          <h3 class="text-center">Italiano</h3>
-          <div class="divider"></div>
-          <div class="flex-wrapper">
-            <div class="removable-block">
-              <span>1 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>2 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>3 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>1 IPI M</span>
-            </div>
-            <div class="removable-block">
-              <span>2 IPI M</span>
-            </div>
-            <div class="removable-block">
-              <span>3 IPI M</span>
-            </div>
-          </div>
-        </div>
-        <div class="card subject-card">
-          <h3 class="text-center">Italiano</h3>
-          <div class="divider"></div>
-          <div class="flex-wrapper">
-            <div class="removable-block">
-              <span>1 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>2 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>3 IPI E</span>
-            </div>
-            <div class="removable-block">
-              <span>1 IPI M</span>
-            </div>
-            <div class="removable-block">
-              <span>2 IPI M</span>
-            </div>
-            <div class="removable-block">
-              <span>3 IPI M</span>
-            </div>
-          </div>
-        </div>
+          <div class="justify-between">
+            <h3>Italiano</h3>
+            <div class="dropdown">
+              <button></button>
 
+              <!-- Options -->
+              <ul>
+                <li><span>Modifica</span><i class="material-icons">create</i></li>
+                <li><span>Rimuovi</span><i class="material-icons">delete</i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block dark">
+              <span>ITI</span>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block">
+              <span>1 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>2 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>3 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>1 IPI M</span>
+            </div>
+            <div class="removable-block">
+              <span>2 IPI M</span>
+            </div>
+            <div class="removable-block">
+              <span>3 IPI M</span>
+            </div>
+          </div>
+        </div>
+        <div class="card subject-card">
+          <div class="justify-between">
+            <h3>Italiano</h3>
+            <div class="dropdown">
+              <button></button>
+
+              <!-- Options -->
+              <ul>
+                <li><span>Modifica</span><i class="material-icons">create</i></li>
+                <li><span>Rimuovi</span><i class="material-icons">delete</i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block dark">
+              <span>ITI</span>
+            </div>
+            <div class="removable-block dark">
+              <span>IPI</span>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block">
+              <span>1 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>2 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>3 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>1 IPI M</span>
+            </div>
+            <div class="removable-block">
+              <span>2 IPI M</span>
+            </div>
+            <div class="removable-block">
+              <span>3 IPI M</span>
+            </div>
+          </div>
+        </div>
+        <div class="card subject-card">
+          <div class="justify-between">
+            <h3>Italiano</h3>
+            <div class="dropdown">
+              <button></button>
+
+              <!-- Options -->
+              <ul>
+                <li><span>Modifica</span><i class="material-icons">create</i></li>
+                <li><span>Rimuovi</span><i class="material-icons">delete</i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block dark">
+              <span>ITI</span>
+            </div>
+            <div class="removable-block dark">
+              <span>IPI</span>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block">
+              <span>1 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>2 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>3 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>1 IPI M</span>
+            </div>
+            <div class="removable-block">
+              <span>2 IPI M</span>
+            </div>
+            <div class="removable-block">
+              <span>3 IPI M</span>
+            </div>
+          </div>
+        </div>
+        <div class="card subject-card">
+          <div class="justify-between">
+            <h3>Italiano</h3>
+            <div class="dropdown">
+              <button></button>
+
+              <!-- Options -->
+              <ul>
+                <li><span>Modifica</span><i class="material-icons">create</i></li>
+                <li><span>Rimuovi</span><i class="material-icons">delete</i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block dark">
+              <span>ITI</span>
+            </div>
+            <div class="removable-block dark">
+              <span>IPI</span>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block">
+              <span>1 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>2 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>3 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>1 IPI M</span>
+            </div>
+            <div class="removable-block">
+              <span>2 IPI M</span>
+            </div>
+            <div class="removable-block">
+              <span>3 IPI M</span>
+            </div>
+          </div>
+        </div>
+        <div class="card subject-card">
+          <div class="justify-between">
+            <h3>Italiano</h3>
+            <div class="dropdown">
+              <button></button>
+
+              <!-- Options -->
+              <ul>
+                <li><span>Modifica</span><i class="material-icons">create</i></li>
+                <li><span>Rimuovi</span><i class="material-icons">delete</i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block dark">
+              <span>ITI</span>
+            </div>
+            <div class="removable-block dark">
+              <span>IPI</span>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block">
+              <span>1 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>2 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>3 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>1 IPI M</span>
+            </div>
+            <div class="removable-block">
+              <span>2 IPI M</span>
+            </div>
+            <div class="removable-block">
+              <span>3 IPI M</span>
+            </div>
+          </div>
+        </div>
+        <div class="card subject-card">
+          <div class="justify-between">
+            <h3>Italiano</h3>
+            <div class="dropdown">
+              <button></button>
+
+              <!-- Options -->
+              <ul>
+                <li><span>Modifica</span><i class="material-icons">create</i></li>
+                <li><span>Rimuovi</span><i class="material-icons">delete</i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block dark">
+              <span>ITI</span>
+            </div>
+            <div class="removable-block dark">
+              <span>IPI</span>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block">
+              <span>1 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>2 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>3 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>1 IPI M</span>
+            </div>
+            <div class="removable-block">
+              <span>2 IPI M</span>
+            </div>
+            <div class="removable-block">
+              <span>3 IPI M</span>
+            </div>
+          </div>
+        </div>
+        <div class="card subject-card">
+          <div class="justify-between">
+            <h3>Italiano</h3>
+            <div class="dropdown">
+              <button></button>
+
+              <!-- Options -->
+              <ul>
+                <li><span>Modifica</span><i class="material-icons">create</i></li>
+                <li><span>Rimuovi</span><i class="material-icons">delete</i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block dark">
+              <span>ITI</span>
+            </div>
+            <div class="removable-block dark">
+              <span>IPI</span>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block">
+              <span>1 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>2 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>3 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>1 IPI M</span>
+            </div>
+            <div class="removable-block">
+              <span>2 IPI M</span>
+            </div>
+            <div class="removable-block">
+              <span>3 IPI M</span>
+            </div>
+          </div>
+        </div>
+        <div class="card subject-card">
+          <div class="justify-between">
+            <h3>Italiano</h3>
+            <div class="dropdown">
+              <button></button>
+
+              <!-- Options -->
+              <ul>
+                <li><span>Modifica</span><i class="material-icons">create</i></li>
+                <li><span>Rimuovi</span><i class="material-icons">delete</i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block dark">
+              <span>ITI</span>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block">
+              <span>1 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>2 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>3 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>1 IPI M</span>
+            </div>
+            <div class="removable-block">
+              <span>2 IPI M</span>
+            </div>
+            <div class="removable-block">
+              <span>3 IPI M</span>
+            </div>
+          </div>
+        </div>
+        <div class="card subject-card">
+          <div class="justify-between">
+            <h3>Italiano</h3>
+            <div class="dropdown">
+              <button></button>
+
+              <!-- Options -->
+              <ul>
+                <li><span>Modifica</span><i class="material-icons">create</i></li>
+                <li><span>Rimuovi</span><i class="material-icons">delete</i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block dark">
+              <span>ITI</span>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="removable-block">
+              <span>1 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>2 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>3 IPI E</span>
+            </div>
+            <div class="removable-block">
+              <span>1 IPI M</span>
+            </div>
+            <div class="removable-block">
+              <span>2 IPI M</span>
+            </div>
+            <div class="removable-block">
+              <span>3 IPI M</span>
+            </div>
+          </div>
+        </div>
       </div>
 
+      <!-- subject-modal - START -->
 
+      <div id="subject-modal" class="modal-wrapper">
+        <a href="#" class="modal-background"></a>
+        <div class="modal">
+          <h1>Nuova Materia</h1>
+          <form action="" method="post">
+            <div class="input-group">
+              <input
+                type="text"
+                placeholder="title"
+                class="input-field"
+                name="title"
+                id="title"
+                required
+              />
+              <label for="title" class="input-label">Titolo</label>
+            </div>
+            <div class="divider m-vertical"></div>
+            <div class="flex-wrapper">
+              <div class="checkbox-group">
+                <input
+                  type="checkbox"
+                  name="iti"
+                  id="iti"
+                  class="iti-checkbox"
+                />
+                <label for="iti">
+                  <i class="material-icons check">check</i>
+                  <i class="material-icons add">add</i>
+                  ITI
+                </label>
+              </div>
+              <div class="checkbox-group">
+                <input
+                  type="checkbox"
+                  name="ipi"
+                  id="ipi"
+                  class="ipi-checkbox"
+                />
+                <label for="ipi">
+                  <i class="material-icons check">check</i>
+                  <i class="material-icons add">add</i>
+                  IPI
+                </label>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="flex-wrapper">
+              <div class="flex-1 classes-iti">
+                <h3>Classi ITI</h3>
+                <div class="flex-wrapper">
+                  <div class="checkbox-group disabled">
+                    <input type="checkbox" name="1-iti" id="1-iti" disabled />
+                    <label for="1-iti">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      1 ITI
+                    </label>
+                  </div>
+                  <div class="checkbox-group disabled">
+                    <input type="checkbox" name="2-iti" id="2-iti" disabled />
+                    <label for="2-iti">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      2 ITI
+                    </label>
+                  </div>
+                </div>
+                <div class="flex-wrapper">
+                  <div class="checkbox-group disabled">
+                    <input
+                      type="checkbox"
+                      name="3-iti-m"
+                      id="3-iti-m"
+                      disabled
+                    />
+                    <label for="3-iti-m">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      3 ITI M
+                    </label>
+                  </div>
+                  <div class="checkbox-group disabled">
+                    <input
+                      type="checkbox"
+                      name="4-iti-m"
+                      id="4-iti-m"
+                      disabled
+                    />
+                    <label for="4-iti-m">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      4 ITI M
+                    </label>
+                  </div>
+                  <div class="checkbox-group disabled">
+                    <input
+                      type="checkbox"
+                      name="5-iti-m"
+                      id="5-iti-m"
+                      disabled
+                    />
+                    <label for="5-iti-m">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      5 ITI M
+                    </label>
+                  </div>
+                </div>
+                <div class="flex-wrapper">
+                  <div class="checkbox-group disabled">
+                    <input
+                      type="checkbox"
+                      name="3-iti-i"
+                      id="3-iti-i"
+                      disabled
+                    />
+                    <label for="3-iti-i">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      3 ITI I
+                    </label>
+                  </div>
+                  <div class="checkbox-group disabled">
+                    <input
+                      type="checkbox"
+                      name="4-iti-i"
+                      id="4-iti-i"
+                      disabled
+                    />
+                    <label for="4-iti-i">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      4 ITI I
+                    </label>
+                  </div>
+                  <div class="checkbox-group disabled">
+                    <input
+                      type="checkbox"
+                      name="5-iti-i"
+                      id="5-iti-i"
+                      disabled
+                    />
+                    <label for="5-iti-i">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      5 ITI I
+                    </label>
+                  </div>
+                </div>
+                <div class="flex-wrapper">
+                  <div class="checkbox-group disabled">
+                    <input
+                      type="checkbox"
+                      name="3-iti-e"
+                      id="3-iti-e"
+                      disabled
+                    />
+                    <label for="3-iti-e">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      3 ITI E
+                    </label>
+                  </div>
+                  <div class="checkbox-group disabled">
+                    <input
+                      type="checkbox"
+                      name="4-iti-e"
+                      id="4-iti-e"
+                      disabled
+                    />
+                    <label for="4-iti-e">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      4 ITI E
+                    </label>
+                  </div>
+                  <div class="checkbox-group disabled">
+                    <input
+                      type="checkbox"
+                      name="5-iti-e"
+                      id="5-iti-e"
+                      disabled
+                    />
+                    <label for="5-iti-e">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      5 ITI E
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-1 classes-ipi">
+                <h3>Classi IPI</h3>
+                <div class="flex-wrapper">
+                  <div class="checkbox-group disabled">
+                    <input type="checkbox" name="1-ipi" id="1-ipi" disabled />
+                    <label for="1-ipi">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      1 IPI
+                    </label>
+                  </div>
+                  <div class="checkbox-group disabled">
+                    <input type="checkbox" name="2-ipi" id="2-ipi" disabled />
+                    <label for="2-ipi">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      2 IPI
+                    </label>
+                  </div>
+                </div>
+                <div class="flex-wrapper">
+                  <div class="checkbox-group disabled">
+                    <input
+                      type="checkbox"
+                      name="3-ipi-m"
+                      id="3-ipi-m"
+                      disabled
+                    />
+                    <label for="3-ipi-m">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      3 IPI M
+                    </label>
+                  </div>
+                  <div class="checkbox-group disabled">
+                    <input
+                      type="checkbox"
+                      name="4-ipi-m"
+                      id="4-ipi-m"
+                      disabled
+                    />
+                    <label for="4-ipi-m">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      4 IPI M
+                    </label>
+                  </div>
+                  <div class="checkbox-group disabled">
+                    <input
+                      type="checkbox"
+                      name="5-ipi-m"
+                      id="5-ipi-m"
+                      disabled
+                    />
+                    <label for="5-ipi-m">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      5 IPI M
+                    </label>
+                  </div>
+                </div>
+                <div class="flex-wrapper">
+                  <div class="checkbox-group disabled">
+                    <input
+                      type="checkbox"
+                      name="3-ipi-i"
+                      id="3-ipi-i"
+                      disabled
+                    />
+                    <label for="3-ipi-i">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      3 IPI I
+                    </label>
+                  </div>
+                  <div class="checkbox-group disabled">
+                    <input
+                      type="checkbox"
+                      name="4-ipi-i"
+                      id="4-ipi-i"
+                      disabled
+                    />
+                    <label for="4-ipi-i">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      4 IPI I
+                    </label>
+                  </div>
+                  <div class="checkbox-group disabled">
+                    <input
+                      type="checkbox"
+                      name="5-ipi-i"
+                      id="5-ipi-i"
+                      disabled
+                    />
+                    <label for="5-ipi-i">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      5 IPI I
+                    </label>
+                  </div>
+                </div>
+                <div class="flex-wrapper">
+                  <div class="checkbox-group disabled">
+                    <input
+                      type="checkbox"
+                      name="3-ipi-e"
+                      id="3-ipi-e"
+                      disabled
+                    />
+                    <label for="3-ipi-e">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      3 IPI E
+                    </label>
+                  </div>
+                  <div class="checkbox-group disabled">
+                    <input
+                      type="checkbox"
+                      name="4-ipi-e"
+                      id="4-ipi-e"
+                      disabled
+                    />
+                    <label for="4-ipi-e">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      4 IPI E
+                    </label>
+                  </div>
+                  <div class="checkbox-group disabled">
+                    <input
+                      type="checkbox"
+                      name="5-ipi-e"
+                      id="5-ipi-e"
+                      disabled
+                    />
+                    <label for="5-ipi-e">
+                      <i class="material-icons check">check</i>
+                      <i class="material-icons add">add</i>
+                      5 ITI E
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="divider m-vertical"></div>
+            <input type="submit" value="Conferma" class="btn" />
+          </form>
+          <a href="#" class="modal-close-btn">&times;</a>
+        </div>
+      </div>
+
+      <!-- subject-modal - END -->
     </div>
   </body>
+  <script src="./js/materie.js"></script>
 </html>

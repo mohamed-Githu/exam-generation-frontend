@@ -157,6 +157,65 @@ img.avatar {
   padding: 4px;
 }
 
+/* checkbox-group */
+
+.checkbox-group {
+  margin: 4px;
+  margin-left: 0;
+  transition: opacity .2s;
+}
+
+.checkbox-group * {
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  display: inline-block;
+  background-color: var(--grey-color-transparent);
+  border: 2px solid var(--grey-color-light);
+  color: var(--grey-color-light);
+  border-radius: 25px;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.checkbox-group label {
+  padding: 3px 12px;
+  padding-left: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group i {
+  font-size: 16px;
+  font-weight: 900;
+  padding-right: 5px;
+  padding-left: 0;
+}
+
+.checkbox-group input:checked ~ label i.add {
+  display: none;
+}
+
+.checkbox-group input:not(:checked) ~ label i.check {
+  display: none;
+}
+
+.checkbox-group input[type="checkbox"]:checked + label {
+  border: 2px solid var(--primary-color-dark);
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  transition: all 0.2s;
+}
+
+.checkbox-group input[type="checkbox"] {
+  display: absolute;
+}
+.checkbox-group input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
 /* select-input */
 
 select {
@@ -400,7 +459,6 @@ p {
 
 .container .filters-wrapper form {
   margin-top: 18px;
-  border-bottom: 1px solid var(--grey-color-light);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -557,8 +615,14 @@ div.dropdown li:last-child {
   background-color: var(--primary-color);
   padding: 2px 12px;
   margin: 3px;
+  margin-left: 0;
   border-radius: 9999px;
   display: flex;
+}
+
+.removable-block.dark {
+  padding: 0 16px;
+  background-color: var(--grey-color);
 }
 
 .btn-close {
@@ -609,4 +673,9 @@ div.dropdown li:last-child {
 
 .m-vertical {
   margin: 16px 0;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.4;
 }
