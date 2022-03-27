@@ -14,7 +14,7 @@ formP.addEventListener("submit", (e) => {
     return;
   }
   const child = document.createElement("div");
-  child.classList.add("removable-block");
+  child.classList.add("text-block");
   child.innerHTML = `<span>${formP.elements[0].value}</span>
                       <button class="btn-close">
                         <i class="material-icons">close</i>
@@ -29,7 +29,7 @@ formT.addEventListener("submit", (e) => {
     return;
   }
   const child = document.createElement("div");
-  child.classList.add("removable-block");
+  child.classList.add("text-block");
   child.innerHTML = `<span>${formT.elements[0].value}</span>
                       <button class="btn-close">
                         <i class="material-icons">close</i>
