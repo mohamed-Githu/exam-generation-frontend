@@ -2,7 +2,10 @@ nav {
   background-color: var(--white-color);
   width: 100%;
   padding: 0 2px;
-  box-shadow: 0 12px 50px lightgrey;
+  box-shadow: 0 0.5px 10px var(--grey-color);
+  position: sticky;
+  top: 0;
+  z-index: 80;
 }
 
 nav > div {
@@ -17,7 +20,6 @@ nav > div {
 
 nav > div > img {
   height: 70px;
-  margin-right: auto;
 }
 
 nav ul {
@@ -47,6 +49,126 @@ nav ul li:hover a {
 
 nav ul li a.active {
   color: var(--primary-color-dark);
+}
+
+/* drawer */
+
+/* --- drawer-button --- */
+
+.drawer-button {
+  width: 25px;
+  height: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.drawer-button input[type="checkbox"].drawer-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.drawer-button label {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.drawer-button label > * {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 9999px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--grey-color);
+  transition: all 0.2s ease;
+}
+
+.drawer-button label > *:first-child {
+  top: 0;
+}
+
+.drawer-button label > *:last-child {
+  top: 100%;
+}
+
+.drawer-button input[type="checkbox"]:checked ~ label > *:first-child {
+  transform: rotate(-45deg);
+  left: 0;
+  top: 50%;
+}
+
+.drawer-button input[type="checkbox"]:checked ~ label > *:last-child {
+  transform: rotate(-315deg);
+  left: 0;
+  top: 50%;
+}
+
+.drawer-button input[type="checkbox"]:checked ~ label > *:nth-child(2) {
+  opacity: 0;
+}
+
+/* --- drawer --- */
+
+.drawer {
+  width: 250px;
+  height: 100vh;
+  padding-top: 86px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--grey-color);
+  transform: translateX(-250px);
+  transition: all 0.4s ease;
+  z-index: 70;
+}
+
+.drawer-background {
+  transition: all 0.4s ease;
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(77, 77, 77, 0.7);
+  z-index: 60;
+}
+
+.drawer.visible {
+  transform: translate(0);
+}
+
+.drawer-background.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.drawer a {
+  display: block;
+  cursor: pointer;
+  color: var(--white-color);
+  opacity: 0.8;
+  font-size: 18px;
+  padding: 12px 12px;
+}
+
+.drawer a.active {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+.drawer a:hover {
+  opacity: 1;
+  background-color: var(--grey-color-transparent);
+}
+
+.drawer a:not(:last-child) {
+  border-bottom: 1px solid var(--grey-color-light);
 }
 
 /* ------------------------------- hover menu ------------------------------- */
@@ -252,6 +374,7 @@ a.modal-open-btn {
   justify-content: center;
   background: rgba(77, 77, 77, 0.7);
   transition: all 0.4s;
+  z-index: 90;
 }
 
 a.modal-background {

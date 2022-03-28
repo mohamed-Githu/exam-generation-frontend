@@ -16,7 +16,7 @@
     <nav>
       <div>
         <img src="./assets/img/logo-large.png" alt="logo-large" />
-        <ul>
+        <!-- <ul>
           <li class="dropdown">
             <a href="" class="active">Italiano &dtrif;</a>
             <ul>
@@ -25,10 +25,22 @@
             </ul>
           </li>
           <li>
-            <img src="assets/img/account.jpeg" alt="avatar" class="avatar" />
             <a href="">Mohamed Hussein</a>
           </li>
-        </ul>
+        </ul> -->
+        <div class="drawer-button">
+          <input
+            type="checkbox"
+            name="drawer-checkbox"
+            id="drawer-checkbox"
+            class="drawer-checkbox"
+          />
+          <label for="drawer-checkbox">
+            <div></div>
+            <div></div>
+            <div></div>
+          </label>
+        </div>
       </div>
     </nav>
 
@@ -197,5 +209,21 @@
         </div>
       </div>
     </div>
+
+    <!-- ------------------------------------------- drawer ------------------------------------------- -->
+
+
+      <div class="drawer-background"></div>
+      <div class="drawer">
+        <div class="drawer-links">
+          <a href="#" class="active">Mohamed Hussein</a>
+          <a href="./anni.html">Anni e Settori</a>
+          <a href="./home-coordinatore.html">Domande</a>
+          <a href="./subjects.html">Materie</a>
+          <a href="#">Docenti</a>
+        </div>
+      </div>
+
   </body>
+  <script src="./js/drawer.js"></script>
 </html>
