@@ -778,6 +778,11 @@ div.dropdown li:last-child {
   margin: 0 16px;
 }
 
+.divider.bold {
+  height: 2px;
+  background-color: var(--primary-color-dark);
+}
+
 /* text-block */
 
 .text-block {
@@ -792,6 +797,7 @@ div.dropdown li:last-child {
 
 .text-block.dark {
   padding: 1px 6px;
+  font-size: 14px;
   background-color: var(--grey-color-lighter);
   border-radius: 6px;
   font-weight: 300;
@@ -872,3 +878,5 @@ div.dropdown li:last-child {
   grid-template-rows: repeat(1, min-content);
   gap: 18px;
 }
+
+/* colors */

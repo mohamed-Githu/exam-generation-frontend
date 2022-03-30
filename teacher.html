@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/basic.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/teacher.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Exam Generator | Teachers'name</title>
+  </head>
+  <body>
+    <!-- nav-bar - START -->
+
+    <nav>
+      <div>
+        <img src="./assets/img/logo-large.png" alt="logo-large" />
+        <div class="drawer-button">
+          <input
+            type="checkbox"
+            name="drawer-checkbox"
+            id="drawer-checkbox"
+            class="drawer-checkbox"
+          />
+          <label for="drawer-checkbox">
+            <div></div>
+            <div></div>
+            <div></div>
+          </label>
+        </div>
+      </div>
+    </nav>
+
+    <!-- nav-bar - END -->
+
+    <!-- body - START -->
+
+    <div class="container">
+
+      <div class="data-card">
+        <div class="justify-between align-center">
+          <h2 class="header">Dati</h2>
+          <i class="material-icons">
+            <a href="#teacher-data-modal">settings</a>
+          </i>
+        </div>
+        <div class="divider"></div>
+        <div class="data">
+          <p><strong>Nome: </strong>Mohamed</p>
+          <p><strong>Cognome: </strong>Hussein</p>
+          <p><strong>Email: </strong>mohamed.hussein@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="divider bold"></div>
+
+      <div class="data-card">
+        <div class="justify-between align-center">
+          <h2 class="header">Ruoli</h2>
+          <i class="material-icons">
+            <a href="#teacher-roles-modal">settings</a>
+          </i>
+        </div>
+        <div class="divider"></div>
+        <div class="flex-wrapper">
+          <div class="text-block dark">Docente</div>
+          <div class="text-block dark">Coordinatore</div>
+          <div class="text-block dark">Admin</div>
+        </div>
+      </div>
+
+      <div class="divider bold"></div>
+
+      <div class="data-card">
+        <div class="justify-between align-center">
+          <h2 class="header">Insegna</h2>
+          <i class="material-icons">
+            <a href="#teacher-subjects-modal">settings</a>
+          </i>
+        </div>
+        <div class="divider"></div>
+        <div class="flex-wrapper">
+          <div class="text-block dark">Italiano</div>
+          <div class="text-block dark">Informatica</div>
+          <div class="text-block dark">Storia</div>
+          <div class="text-block dark">Sistemi e Reti</div>
+          <div class="text-block dark">TPSIT</div>
+        </div>
+      </div>
+
+      <div class="divider bold"></div>
+
+      <div class="data-card">
+        <div class="justify-between align-center">
+          <h2 class="header">Coordina</h2>
+          <i class="material-icons">
+            <a href="#teacher-coordinations-modal">settings</a>
+          </i>
+        </div>
+        <div class="divider"></div>
+        <div class="flex-wrapper">
+          <div class="text-block dark">Informatica</div>
+          <div class="text-block dark">Sistemi e Reti</div>
+          <div class="text-block dark">TPSIT</div>
+        </div>
+      </div>
+
+      <div class="divider bold"></div>
+
+    </div>
+
+    <!-- drawer - START -->
+
+    <div class="drawer-background"></div>
+    <div class="drawer">
+      <div class="drawer-links">
+        <a href="#" class="active">Mohamed Hussein</a>
+        <a href="./classes.html">Anni e Settori</a>
+        <a href="./home-coordinatore.html">Domande</a>
+        <a href="./subjects.html">Materie</a>
+        <a href="./teachers.html">Docenti</a>
+        <a href="./generate.html">Genera Esame</a>
+      </div>
+    </div>
+
+    <!-- drawer - END -->
+  </body>
+  <script src="./js/drawer.js"></script>
+</html>
