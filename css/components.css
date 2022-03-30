@@ -678,7 +678,6 @@ div.dropdown li:last-child {
 
 .dropdown-menu .slide {
   padding: 0 8px;
-  height: 0;
   overflow: hidden;
   transition: all 0.4s ease;
 }
@@ -687,9 +686,12 @@ div.dropdown li:last-child {
   transform: rotate(90deg);
 }
 
+.dropdown-menu input[type="checkbox"]:not(:checked) ~ .slide {
+  height: 0px;
+}
+
 .dropdown-menu input[type="checkbox"]:checked ~ .slide {
   padding: 16px 8px;
-  height: max-content;
 }
 
 /* buttons */
