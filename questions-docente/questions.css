@@ -1,0 +1,77 @@
+/* question-block */
+
+.question-wrapper {
+  box-shadow: var(--card-shadow);
+  padding: 12px;
+  padding-bottom: 6px;
+  background: var(--white-color);
+  border-radius: 5px;
+  margin: 0 auto;
+  min-height: 160px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.question-wrapper > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.question-wrapper p {
+  margin: 14px 0;
+}
+
+.question-wrapper > div:last-child {
+  text-align: center;
+  margin-top: auto;
+}
+
+.question-wrapper > div:last-child > h5 {
+  display: flex;
+  align-items: center;
+}
+
+.question-wrapper > div:last-child > h5 > strong {
+  margin: 0 4px;
+}
+
+.question-wrapper .level {
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin-right: 2px;
+  border-radius: 9999px;
+  background-color: var(--primary-color);
+}
+
+.question-wrapper .level.easy {
+  background-color: var(--tertiary-color);
+}
+
+.question-wrapper .level.medium {
+  background-color: var(--secondary-color);
+}
+
+.question-wrapper i {
+  cursor: pointer;
+}
+
+/* question-modal */
+
+.question-modal .top,
+.question-modal .right,
+.question-modal .left {
+  display: flex;
+  justify-content: space-between;
+}
+
+.question-modal .top > * {
+  flex-direction: column;
+  width: 200px;
+}
+
+.question-modal .top > div > * {
+  margin-bottom: 10px;
+}
