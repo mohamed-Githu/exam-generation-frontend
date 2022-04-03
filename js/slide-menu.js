@@ -1,15 +1,19 @@
 window.addEventListener("load", () => {
-  const slides = document.querySelectorAll(".slide");
-  const style = document.createElement("style");
-  let heights = "";
+  const toggles = document.querySelectorAll(".toggle");
 
-  slides.forEach((slide, i) => {
-    const height = slide.offsetHeight;
-    const className = `slide-${i + 1}`;
-    heights += `.${className} { height: ${height}px }`;
-    slide.classList.add(className);
+  toggles.forEach(function (toggle) {
+    toggle.addEventListener("click", function () {
+      const panel = this.nextElementSibling;
+      const icon = this.children[0];
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+        icon.style.transform = "rotate(0deg)";
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        icon.style.transform = "rotate(90deg)";
+      }
+
+      // icon.classList.toggle(".rotate");
+    });
   });
-
-  style.innerHTML = heights;
-  document.getElementsByTagName("head")[0].appendChild(style);
 });
