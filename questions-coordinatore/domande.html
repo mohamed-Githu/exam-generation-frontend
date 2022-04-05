@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/basic.css" />
     <link rel="stylesheet" href="../css/components.css" />
     <link rel="stylesheet" href="./questions.css" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -81,7 +82,7 @@
       <div class="divider"></div>
 
       <!-- questions - START -->
-      <div class="question-wrapper">
+      <div class="question-wrapper" id="question-1">
         <div>
           <div>
             <h4>Unita 1 > Romanticismo > caratteristiche fondamentali</h4>
@@ -92,8 +93,14 @@
 
             <!-- Options -->
             <ul>
-              <li><span>Modifica</span><i class="material-icons">create</i></li>
-              <li><span>Rimuovi</span><i class="material-icons">delete</i></li>
+              <li>
+                <a href="#"> Modifica<i class="material-icons">create</i> </a>
+              </li>
+              <li>
+                <a href="#question-modal-delete">
+                  Rimuovi<i class="material-icons">delete</i>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -111,7 +118,7 @@
           <h5><strong>Durata:</strong> 15min</h5>
         </div>
       </div>
-      <div class="question-wrapper">
+      <div class="question-wrapper" id="question-2">
         <div>
           <div>
             <h4>Unita 1 > Romanticismo > caratteristiche fondamentali</h4>
@@ -122,8 +129,14 @@
 
             <!-- Options -->
             <ul>
-              <li><span>Modifica</span><i class="material-icons">create</i></li>
-              <li><span>Rimuovi</span><i class="material-icons">delete</i></li>
+              <li>
+                <a href="#"> Modifica<i class="material-icons">create</i> </a>
+              </li>
+              <li>
+                <a href="#question-modal-delete">
+                  Rimuovi<i class="material-icons">delete</i>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -141,7 +154,7 @@
           <h5><strong>Durata:</strong> 15min</h5>
         </div>
       </div>
-      <div class="question-wrapper">
+      <div class="question-wrapper" id="question-3">
         <div>
           <div>
             <h4>Unita 1 > Romanticismo > caratteristiche fondamentali</h4>
@@ -152,8 +165,14 @@
 
             <!-- Options -->
             <ul>
-              <li><span>Modifica</span><i class="material-icons">create</i></li>
-              <li><span>Rimuovi</span><i class="material-icons">delete</i></li>
+              <li>
+                <a href="#"> Modifica<i class="material-icons">create</i> </a>
+              </li>
+              <li>
+                <a href="#question-modal-delete">
+                  Rimuovi<i class="material-icons">delete</i>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -261,7 +280,8 @@
       </div>
     </div>
     <!-- drawer - END -->
+
+    <!-- drawer.js-link -->
+    <script src="../js/drawer.js"></script>
   </body>
-  <!-- drawer.js-link -->
-  <script src="../js/drawer.js"></script>
 </html>

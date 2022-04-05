@@ -555,6 +555,9 @@ div.dropdown button:focus + ul {
 
 div.dropdown li {
   list-style: none;
+}
+
+div.dropdown li a {
   position: relative;
   display: flex;
   justify-content: space-between;
