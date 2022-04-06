@@ -12,8 +12,6 @@ window.addEventListener("load", () => {
         panel.style.maxHeight = panel.scrollHeight + "px";
         icon.style.transform = "rotate(90deg)";
       }
-
-      // icon.classList.toggle(".rotate");
     });
   });
 });
