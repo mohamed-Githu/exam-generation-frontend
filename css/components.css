@@ -750,7 +750,7 @@ div.dropdown li:last-child {
 
 .justify-around {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .align-center {
