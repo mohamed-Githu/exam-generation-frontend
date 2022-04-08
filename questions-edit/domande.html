@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/basic.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="./questions.css" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Generazione Esami | Domande</title>
+  </head>
+  <body>
+    <!-- Nav-Bar - START -->
+    <nav>
+      <div>
+        <img src="../assets/img/logo-large.png" alt="logo-large" />
+        <div class="drawer-button">
+          <input
+            type="checkbox"
+            name="drawer-checkbox"
+            id="drawer-checkbox"
+            class="drawer-checkbox"
+          />
+          <label for="drawer-checkbox">
+            <div></div>
+            <div></div>
+            <div></div>
+          </label>
+        </div>
+      </div>
+    </nav>
+    <!-- Nav-Bar - END -->
+
+    <div class="container">
+
+      <div class="divider"></div>
+
+       <!-- questions - START -->
+       <div class="question-wrapper" id="questino-1" data-year="1">
+        <div>
+          <div>
+            <h4>Unita 1 > Romanticismo > caratteristiche fondamentali</h4>
+            <h6>Oct, 8, 2020</h6>
+          </div>
+          <div class="dropdown">
+            <button></button>
+
+            <!-- Options -->
+            <ul>
+              <li>
+                <a href="#question-modal">
+                  Modifica<i class="material-icons">create</i>
+                </a>
+              </li>
+              <li>
+                <a href="#question-modal-delete">
+                  Rimuovi<i class="material-icons">delete</i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p>Sulla base di quanto studiato in classe, spiega il concetto di popolo in ottica romantica, facendo un paragone tra il Romanticismo e le visioni delle correnti fondamentale del Primo Ottocento.</p>
+        <div>
+          <h5>
+            <span class="level difficult"></span>
+            <strong>Livello:</strong>
+            <span>Difficile</span>
+          </h5>
+          <h5><strong>Durata:</strong> 15min</h5>
+        </div>
+      </div>
+      <!-- questions - END -->
+
+      <div class="divider"></div>
+
+      <div class="card">
+        <form>
+          <div class="top">
+            <div class="left">
+              <select name="year" id="year">
+                <option value="placeholder">Anno</option>
+                <option value="1">1 ITI</option>
+                <option value="2">2 ITI</option>
+                <option value="3">3 ITI</option>
+              </select>
+              <select name="level" id="level">
+                <option value="placeholder">Difficoltà</option>
+                <option value="1">Facile</option>
+                <option value="2">Medio</option>
+                <option value="3">Difficile</option>
+              </select>
+              <div class="input-group">
+                <input
+                  placeholder="duration"
+                  type="number"
+                  class="input-field"
+                  name="duration"
+                  id="duration"
+                  required
+                />
+                <label for="duration" class="input-label">Durata (min)</label>
+              </div>
+            </div>
+            <div class="right">
+              <select name="unit" id="unit">
+                <option value="placeholder">Unità</option>
+                <option value="1">Unita 1</option>
+                <option value="2">Unita 2</option>
+                <option value="3">Unita 3</option>
+              </select>
+              <select name="argument" id="argument">
+                <option value="placeholder">Argomento</option>
+                <option value="1">Romanticismo</option>
+                <option value="2">Secondo Ottocento</option>
+                <option value="3">Primo Novecento</option>
+              </select>
+              <select name="subargument" id="subargument">
+                <option value="placeholder">Sotto-argomento</option>
+                <option value="1">Romanticismo</option>
+                <option value="2">Neoclassicismo</option>
+                <option value="3">Giovanni Verga</option>
+                <option value="4">caratteristiche fondamentali</option>
+                <option value="5">Decadentismo</option>
+              </select>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="input-group">
+            <textarea
+              placeholder="text"
+              type="text"
+              class="input-field"
+              name="text"
+              id="text"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <label for="text" class="input-label">Domanda</label>
+          </div>
+          <input type="submit" value="Aggiungi" class="btn" />
+        </form>
+      </div>
+    </div>
+
+    <!-- question-modal - START -->
+    <div id="question-modal" class="modal-wrapper">
+      <a href="#" class="modal-background"></a>
+      <div class="modal question-modal">
+        <h1>Nuova Domanda</h1>
+        <form>
+          <div class="top">
+            <div class="left">
+              <select name="year" id="year">
+                <option value="placeholder">Anno</option>
+                <option value="1">1 ITI</option>
+                <option value="2">2 ITI</option>
+                <option value="3">3 ITI</option>
+              </select>
+              <select name="level" id="level">
+                <option value="placeholder">Difficoltà</option>
+                <option value="1">Facile</option>
+                <option value="2">Medio</option>
+                <option value="3">Difficile</option>
+              </select>
+              <div class="input-group">
+                <input
+                  placeholder="duration"
+                  type="number"
+                  class="input-field"
+                  name="duration"
+                  id="duration"
+                  required
+                />
+                <label for="duration" class="input-label">Durata (min)</label>
+              </div>
+            </div>
+            <div class="right">
+              <select name="unit" id="unit">
+                <option value="placeholder">Unità</option>
+                <option value="1">Unita 1</option>
+                <option value="2">Unita 2</option>
+                <option value="3">Unita 3</option>
+              </select>
+              <select name="argument" id="argument">
+                <option value="placeholder">Argomento</option>
+                <option value="1">Romanticismo</option>
+                <option value="2">Secondo Ottocento</option>
+                <option value="3">Primo Novecento</option>
+              </select>
+              <select name="subargument" id="subargument">
+                <option value="placeholder">Sotto-argomento</option>
+                <option value="1">Romanticismo</option>
+                <option value="2">Neoclassicismo</option>
+                <option value="3">Giovanni Verga</option>
+                <option value="4">caratteristiche fondamentali</option>
+                <option value="5">Decadentismo</option>
+              </select>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="input-group">
+            <textarea
+              placeholder="text"
+              type="text"
+              class="input-field"
+              name="text"
+              id="text"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <label for="text" class="input-label">Domanda</label>
+          </div>
+          <input type="submit" value="Aggiungi" class="btn" />
+        </form>
+        <a href="#" class="modal-close-btn">&times;</a>
+      </div>
+    </div>
+    <!-- question-modal - END -->
+
+    <!-- question-modal - START -->
+    <div id="question-modal-delete" class="modal-wrapper">
+      <a href="#" class="modal-background"></a>
+      <div class="modal">
+        <form action="post">
+          <input type="text" name="id" id="id" value="" style="display: none;">
+          <h4>Sei sicuro di voler rimuovere questa domanda?</h4>
+          <p class="m-vertical"></p>
+          <input type="submit" value="Conferma" class="btn">
+        </form>
+        <a href="#" class="modal-close-btn">&times;</a>
+      </div>
+    </div>
+    <!-- question-modal - END -->
+
+    <!-- drawer - START -->
+    <div class="drawer-background"></div>
+    <div class="drawer">
+      <div class="drawer-links">
+        <a href="#">Mohamed Hussein</a>
+        <a href="./home-coordinatore.html" class="active">Domande</a>
+      </div>
+    </div>
+    <!-- drawer - END -->
+
+    <!-- drawer.js-link -->
+    <script src="../js/drawer.js"></script>
+    <script src="../js/questions.js"></script>
+  </body>
+</html>
