@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/basic.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="./teacher.css" />
+    <link rel="stylesheet" href="./teacher.css" />
+    <link rel="stylesheet" href="./account.css" />
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Account | {Teachers'name}</title>
+  </head>
+  <body>
+       <!-- Nav-Bar - START -->
+    <nav>
+        <div>
+          <img src="../assets/img/logo-large.png" alt="logo-large" />
+          <div class="drawer-button">
+            <input
+              type="checkbox"
+              name="drawer-checkbox"
+              id="drawer-checkbox"
+              class="drawer-checkbox"
+            />
+            <label for="drawer-checkbox">
+              <div></div>
+              <div></div>
+              <div></div>
+            </label>
+          </div>
+        </div>
+      </nav>
+      <!-- Nav-Bar - END -->
+
+      <div class="container">
+        <div class="data-card">
+          <div class="justify-between align-center">
+            <h2 class="header">Dati</h2>
+            <i class="material-icons">
+              <a href="#teacher-data-modal">settings</a>
+            </i>
+          </div>
+          <div class="divider"></div>
+          <div class="data">
+            <p><strong>Nome: </strong>Bishoy</p>
+            <p><strong>Cognome: </strong>Kamel</p>
+            <p><strong>Email: </strong>gamed.gamed@gmail.com</p>
+          </div>
+        </div>
+  
+        <div class="divider bold"></div>
+  
+        <div class="data-card">
+          <div class="justify-between align-center">
+            <h2 class="header">Ruoli</h2>
+            <i class="material-icons">
+              <a href="#teacher-roles-modal">settings</a>
+            </i>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="text-block dark">Docente</div>
+            <div class="text-block dark">Coordinatore</div>
+            <div class="text-block dark">Admin</div>
+          </div>
+        </div>
+  
+        <div class="divider bold"></div>
+  
+        <div class="data-card">
+          <div class="justify-between align-center">
+            <h2 class="header">Insegna</h2>
+            <i class="material-icons">
+              <a href="#teacher-subjects-modal">settings</a>
+            </i>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="text-block dark">Italiano</div>
+            <div class="text-block dark">Informatica</div>
+            <div class="text-block dark">Storia</div>
+            <div class="text-block dark">Sistemi e Reti</div>
+            <div class="text-block dark">TPSIT</div>
+          </div>
+        </div>
+  
+        <div class="divider bold"></div>
+  
+        <div class="data-card">
+          <div class="justify-between align-center">
+            <h2 class="header">Coordina</h2>
+            <i class="material-icons">
+              <a href="#teacher-coordinations-modal">settings</a>
+            </i>
+          </div>
+          <div class="divider"></div>
+          <div class="flex-wrapper">
+            <div class="text-block dark">Informatica</div>
+            <div class="text-block dark">Sistemi e Reti</div>
+            <div class="text-block dark">TPSIT</div>
+          </div>
+        </div>
+  
+        <div class="divider bold"></div>
+      </div>
+
+
+      <!-- drawer - START -->
+    <div class="drawer-background"></div>
+    <div class="drawer">
+      <div class="drawer-links">
+        <a href="#">Mohamed Hussein</a>
+        <a href="#">Materie</a>
+        <a href="#">Docenti</a>
+        <a href="#" class="active">Classi</a>
+      </div>
+    </div>
+    <!-- drawer - END -->
+    
+    <!-- drawer.js-link -->
+    <script src="../js/drawer.js"></script>
+  </body>
