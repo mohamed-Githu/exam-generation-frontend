@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/basic.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Generazione Esami | {class name}</title>
+  </head>
+  <body>
+    <!-- Nav-Bar - START -->
+    <nav>
+      <div>
+        <img src="../assets/img/logo-large.png" alt="logo-large" />
+        <div class="drawer-button">
+          <input
+            type="checkbox"
+            name="drawer-checkbox"
+            id="drawer-checkbox"
+            class="drawer-checkbox"
+          />
+          <label for="drawer-checkbox">
+            <div></div>
+            <div></div>
+            <div></div>
+          </label>
+        </div>
+      </div>
+    </nav>
+    <!-- Nav-Bar - END -->
+
+    <div class="container">
+      <!-- header - START -->
+      <header class="justify-between align-center subject-header">
+        <div class="flex align-center">
+          <h3>Titolo:</h3>
+          <div class="m-horizontal"></div>
+          <h4>1 IPI E</h4>
+        </div>
+        <i class="material-icons">
+          <a href="#class-modal"> settings </a>
+        </i>
+      </header>
+      <!-- header - END -->
+
+      <div class="divider"></div>
+      <h3>Materie</h3>
+
+      <!-- subjects - START -->
+      <div class="flex-wrapper">
+        <div class="text-block">Italiano</div>
+        <div class="text-block">English</div>
+        <div class="text-block">Arabo</div>
+        <div class="text-block">Fisica</div>
+        <div class="text-block">Ginnastica</div>
+        <div class="text-block">Religione Musulmana</div>
+        <div class="text-block">Religione Cristiana</div>
+        <div class="text-block">Elettro</div>
+      </div>
+      <!-- subjects - END -->
+ 
+      <div class="m-vertical"></div>
+      
+      <h3>Insegnanti</h3>
+      <!-- teachers - START -->
+      <div class="flex-wrapper">
+        <div class="text-block">S7s</div>
+        <div class="text-block">Abdo</div>
+        <div class="text-block">Dodo</div>
+      </div>
+      <!-- teachers - END -->
+    </div>
+
+    <!-- class-modal - START -->
+    <div id="class-modal" class="modal-wrapper">
+      <a href="#" class="modal-background"></a>
+      <div class="modal">
+        <h1>Modifica</h1>
+        <form action="">
+          <h3>Titolo</h3>
+          <div class="flex-wrapper justify-between align-baseline">
+            <select name="anno" id="anno">
+              <option value="" disabled selected hidden>Anno</option>
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <select name="tipo" id="tipo">
+              <option value="iti">ITI</option>
+              <option value="IPI" selected>IPI</option>
+            </select>
+            <div>
+              <div class="input-group">
+                <input
+                  type="text"
+                  placeholder="settore"
+                  class="input-field"
+                  name="settore"
+                  id="settore"
+                  maxlength="2"
+                  value="E"
+                />
+                <label for="settore" class="input-label">Settore</label>
+              </div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <h3>Materie</h3>
+          <div class="flex-wrapper m-vertical">
+            <div class="checkbox-group">
+              <input type="checkbox" name="italiano" id="italiano" checked />
+              <label for="italiano">
+                <i class="material-icons check">check</i>
+                <i class="material-icons add">add</i>
+                Italiano
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" name="disegno" id="disegno" checked />
+              <label for="disegno">
+                <i class="material-icons check">check</i>
+                <i class="material-icons add">add</i>
+                Disegno
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" name="elettro" id="elettro" checked />
+              <label for="elettro">
+                <i class="material-icons check">check</i>
+                <i class="material-icons add">add</i>
+                Elettro
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" name="meccanica" id="meccanica" />
+              <label for="meccanica">
+                <i class="material-icons check">check</i>
+                <i class="material-icons add">add</i>
+                Meccanica
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" name="storia" id="storia" />
+              <label for="storia">
+                <i class="material-icons check">check</i>
+                <i class="material-icons add">add</i>
+                Storia
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                name="religione-cristiana"
+                id="religione-cristiana"
+              />
+              <label for="religione-cristiana">
+                <i class="material-icons check">check</i>
+                <i class="material-icons add">add</i>
+                Religione Cristiana
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                name="religione-musulmana"
+                id="religione-musulmana"
+                checked
+              />
+              <label for="religione-musulmana">
+                <i class="material-icons check">check</i>
+                <i class="material-icons add">add</i>
+                Religione Musulmana
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                name="ginnastica"
+                id="ginnastica"
+                checked
+              />
+              <label for="ginnastica">
+                <i class="material-icons check">check</i>
+                <i class="material-icons add">add</i>
+                Ginnastica
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" name="fisica" id="fisica" checked />
+              <label for="fisica">
+                <i class="material-icons check">check</i>
+                <i class="material-icons add">add</i>
+                fisica
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                name="sistemi-e-reti"
+                id="sistemi-e-reti"
+              />
+              <label for="sistemi-e-reti">
+                <i class="material-icons check">check</i>
+                <i class="material-icons add">add</i>
+                Sistemi e Reti
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" name="informatica" id="informatica" />
+              <label for="informatica">
+                <i class="material-icons check">check</i>
+                <i class="material-icons add">add</i>
+                Informatica
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" name="tpsit" id="tpsit" />
+              <label for="tpsit">
+                <i class="material-icons check">check</i>
+                <i class="material-icons add">add</i>
+                TPSIT
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" name="science" id="science" />
+              <label for="science">
+                <i class="material-icons check">check</i>
+                <i class="material-icons add">add</i>
+                Science
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" name="economia" id="economia" />
+              <label for="economia">
+                <i class="material-icons check">check</i>
+                <i class="material-icons add">add</i>
+                Economia
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" name="chimestry" id="chimestry" />
+              <label for="chimestry">
+                <i class="material-icons check">check</i>
+                <i class="material-icons add">add</i>
+                Chimestry
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" name="english" id="english" checked />
+              <label for="english">
+                <i class="material-icons check">check</i>
+                <i class="material-icons add">add</i>
+                English
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" name="arabo" id="arabo" checked />
+              <label for="arabo">
+                <i class="material-icons check">check</i>
+                <i class="material-icons add">add</i>
+                Arabo
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                name="lab-sistemi-e-reti"
+                id="lab-sistemi-e-reti"
+              />
+              <label for="lab-sistemi-e-reti">
+                <i class="material-icons check">check</i>
+                <i class="material-icons add">add</i>
+                Lab Sistemi e Reti
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                name="lab-informatica"
+                id="lab-informatica"
+              />
+              <label for="lab-informatica">
+                <i class="material-icons check">check</i>
+                <i class="material-icons add">add</i>
+                Lab Informatica
+              </label>
+            </div>
+          </div>
+          <input type="submit" value="Conferma" class="btn" />
+        </form>
+        <a href="#" class="modal-close-btn">&times;</a>
+      </div>
+    </div>
+    <!-- class-modal - END -->
+
+    <!-- drawer - START -->
+    <div class="drawer-background"></div>
+    <div class="drawer">
+      <div class="drawer-links">
+        <a href="#">Mohamed Hussein</a>
+        <a href="#">Materie</a>
+        <a href="#">Docenti</a>
+        <a href="#" class="active">Classi</a>
+      </div>
+    </div>
+    <!-- drawer - END -->
+  </body>
+  <!-- drawer.js-link -->
+  <script src="../js/drawer.js"></script>
+</html>
