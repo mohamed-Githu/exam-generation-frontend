@@ -171,57 +171,6 @@ nav ul li a.active {
   border-bottom: 1px solid var(--grey-color-light);
 }
 
-/* ------------------------------- hover menu ------------------------------- */
-
-li.dropdown ul {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  display: block;
-  min-width: max-content;
-  left: 10%;
-  top: 30%;
-  background-color: var(--primary-color-dark);
-  z-index: 100;
-  transition: visibility 300ms ease, opacity 300ms ease;
-}
-
-li.dropdown:hover > ul,
-li.dropdown ul:hover {
-  visibility: visible;
-  opacity: 1;
-  text-align: left;
-  box-shadow: var(--card-shadow);
-}
-
-li.dropdown ul li {
-  clear: both;
-  width: 100%;
-  text-align: left;
-  margin-bottom: 0px;
-  border-style: none;
-  color: var(--white-color);
-}
-
-li.dropdown ul li a {
-  color: var(--white-color);
-  opacity: 0.8;
-}
-
-li.dropdown ul li a:hover {
-  opacity: 1;
-}
-
-/* ------------------------------- avatar ------------------------------- */
-
-img.avatar {
-  border-radius: 50%;
-  margin-right: 12px;
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-}
-
 /* input */
 
 .input-group {
@@ -513,72 +462,6 @@ p {
   margin-bottom: 18px;
 }
 
-/* options menu */
-
-div.dropdown {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-div.dropdown button {
-  background-color: transparent;
-  color: var(--grey-color);
-  border: 0;
-  border-radius: 9999px;
-  cursor: pointer;
-}
-
-div.dropdown button::after {
-  content: "\2807";
-  font-size: 20px;
-}
-
-div.dropdown ul {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  width: 160px;
-  padding: 8px 0;
-  right: 0;
-  top: 0;
-  background-color: var(--white-color);
-  box-shadow: var(--card-shadow);
-  transition: visibility 300ms ease, opacity 300ms ease;
-}
-
-div.dropdown button:focus + ul {
-  visibility: visible;
-  opacity: 1;
-}
-
-div.dropdown li {
-  list-style: none;
-}
-
-div.dropdown li a {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--grey-color);
-  padding: 10px 8px;
-  cursor: pointer;
-}
-
-div.dropdown li:hover {
-  background-color: var(--grey-color-transparent);
-}
-
-div.dropdown li i {
-  font-size: 20px;
-}
-
-div.dropdown li:last-child {
-  border-top: 1px solid var(--grey-color-transparent);
-}
-
 /* dropdown-menu */
 
 .dropdown-menu i {
@@ -646,6 +529,14 @@ div.dropdown li:last-child {
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+h4 a {
+  color: var(--primary-color-dark);
+}
+
+h4 a:hover {
+  text-decoration: underline;
 }
 
 /* subject-card */
