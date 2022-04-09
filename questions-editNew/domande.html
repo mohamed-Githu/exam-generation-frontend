@@ -41,12 +41,6 @@
       <div class="buttons-wrapper">
         <a href="#question-modal" class="add-question">
           <button class="btn btn-secondary">
-            <i class="material-icons">add</i>
-            Aggiungi Domanda
-          </button>
-        </a>
-        <a href="#question-modal" class="add-question">
-          <button class="btn btn-secondary">
             <i class="material-icons">settings</i>
             Modifica 
           </button>
@@ -88,16 +82,16 @@
       <div class="modal question-modal">
         <h1>Nuova Domanda</h1>
         <form>
-          <div class="justify-between">
+          <div class="top">
             <div class="left">
               <select name="year" id="year">
-                <option value="placeholder">Anno</option>
+                <option value="" disabled selected hidden>Sotto argomento</option>Anno</option>
                 <option value="1">1 ITI</option>
                 <option value="2">2 ITI</option>
                 <option value="3">3 ITI</option>
               </select>
               <select name="level" id="level">
-                <option value="placeholder">Difficoltà</option>
+                <option value="" disabled selected hidden>Sotto argomento</option>Difficoltà</option>
                 <option value="1">Facile</option>
                 <option value="2">Medio</option>
                 <option value="3">Difficile</option>
@@ -116,19 +110,19 @@
             </div>
             <div class="right">
               <select name="unit" id="unit">
-                <option value="placeholder">Unità</option>
+                <option value="" disabled selected hidden>Sotto argomento</option>Unità</option>
                 <option value="1">Unita 1</option>
                 <option value="2">Unita 2</option>
                 <option value="3">Unita 3</option>
               </select>
               <select name="argument" id="argument">
-                <option value="placeholder">Argomento</option>
+                <option value="" disabled selected hidden>Sotto argomento</option>Argomento</option>
                 <option value="1">Romanticismo</option>
                 <option value="2">Secondo Ottocento</option>
                 <option value="3">Primo Novecento</option>
               </select>
               <select name="subargument" id="subargument">
-                <option value="placeholder">Sotto-argomento</option>
+                <option value="" disabled selected hidden>Sotto argomento</option>Sotto-argomento</option>
                 <option value="1">Romanticismo</option>
                 <option value="2">Neoclassicismo</option>
                 <option value="3">Giovanni Verga</option>
@@ -150,10 +144,7 @@
             ></textarea>
             <label for="text" class="input-label">Domanda</label>
           </div>
-          <div class="justify-center">
-            <input type="submit" value="Modifica" class="btn" />
-          </div>
-          
+          <input type="submit" value="Aggiungi" class="btn" />
         </form>
         <a href="#" class="modal-close-btn">&times;</a>
       </div>
