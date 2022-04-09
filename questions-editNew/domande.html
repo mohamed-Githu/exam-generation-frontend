@@ -37,21 +37,39 @@
     <!-- Nav-Bar - END -->
 
     <div class="container">
+
+      <div class="buttons-wrapper">
+        <a href="#question-modal" class="add-question">
+          <button class="btn btn-secondary">
+            <i class="material-icons">add</i>
+            Aggiungi Domanda
+          </button>
+        </a>
+        <a href="#question-modal" class="add-question">
+          <button class="btn btn-secondary">
+            <i class="material-icons">settings</i>
+            Modifica 
+          </button>
+        </a>
+        <a href="#question-modal-delete" class="add-question">
+          <button class="btn btn-secondary">
+            <i class="material-icons">delete</i>
+            Cancella  
+          </button>
+        </a>
+      </div>
+      
       <div class="divider"></div>
 
-      <!-- questions - START -->
-      <div class="question-wrapper" id="questino-1" data-year="1">
+       <!-- questions - START -->
+       <div class="question-wrapper" id="questino-1" >
         <div>
           <div>
             <h4>Unita 1 > Romanticismo > caratteristiche fondamentali</h4>
             <h6>Oct, 8, 2020</h6>
           </div>
         </div>
-        <p>
-          Sulla base di quanto studiato in classe, spiega il concetto di popolo
-          in ottica romantica, facendo un paragone tra il Romanticismo e le
-          visioni delle correnti fondamentale del Primo Ottocento.
-        </p>
+        <p>Sulla base di quanto studiato in classe, spiega il concetto di popolo in ottica romantica, facendo un paragone tra il Romanticismo e le visioni delle correnti fondamentale del Primo Ottocento.</p>
         <div>
           <h5>
             <span class="level difficult"></span>
@@ -63,93 +81,23 @@
       </div>
       <!-- questions - END -->
 
-      <div class="divider"></div>
-
-      <div class="card">
-        <form>
-          <div class="top">
-            <div class="left">
-              <select name="year" id="year">
-                <option value="" disabled selected hidden>Anno</option>
-                <option value="1">1 ITI</option>
-                <option value="2">2 ITI</option>
-                <option value="3">3 ITI</option>
-              </select>
-              <select name="level" id="level">
-                <option value="" disabled selected hidden>Difficoltà</option>
-                <option value="1">Facile</option>
-                <option value="2">Medio</option>
-                <option value="3">Difficile</option>
-              </select>
-              <div class="input-group">
-                <input
-                  placeholder="duration"
-                  type="number"
-                  class="input-field"
-                  name="duration"
-                  id="duration"
-                  required
-                />
-                <label for="duration" class="input-label">Durata (min)</label>
-              </div>
-            </div>
-            <div class="right">
-              <select name="unit" id="unit">
-                <option value="" disabled selected hidden>Unità</option>
-                <option value="1">Unita 1</option>
-                <option value="2">Unita 2</option>
-                <option value="3">Unita 3</option>
-              </select>
-              <select name="argument" id="argument">
-                <option value="" disabled selected hidden>Argomento</option>
-                <option value="1">Romanticismo</option>
-                <option value="2">Secondo Ottocento</option>
-                <option value="3">Primo Novecento</option>
-              </select>
-              <select name="subargument" id="subargument">
-                <option value="" disabled selected hidden>Sotto argomento</option>
-                <option value="1">Romanticismo</option>
-                <option value="2">Neoclassicismo</option>
-                <option value="3">Giovanni Verga</option>
-                <option value="4">caratteristiche fondamentali</option>
-                <option value="5">Decadentismo</option>
-              </select>
-            </div>
-          </div>
-          <div class="divider"></div>
-          <div class="input-group">
-            <textarea
-              placeholder="text"
-              type="text"
-              class="input-field"
-              name="text"
-              id="text"
-              cols="30"
-              rows="10"
-            ></textarea>
-            <label for="text" class="input-label">Domanda</label>
-          </div>
-          <input type="submit" value="Aggiungi" class="btn" />
-        </form>
-      </div>
-    </div>
-
+      
     <!-- question-modal - START -->
     <div id="question-modal" class="modal-wrapper">
       <a href="#" class="modal-background"></a>
       <div class="modal question-modal">
         <h1>Nuova Domanda</h1>
         <form>
-          <div class="top">
+          <div class="justify-between">
             <div class="left">
               <select name="year" id="year">
-                <option value="" disabled selected hidden>Sotto argomento</option>Anno</option>
+                <option value="placeholder">Anno</option>
                 <option value="1">1 ITI</option>
                 <option value="2">2 ITI</option>
                 <option value="3">3 ITI</option>
               </select>
               <select name="level" id="level">
-                <option value="" disabled selected hidden>Sotto argomento</option>Difficoltà</option>
+                <option value="placeholder">Difficoltà</option>
                 <option value="1">Facile</option>
                 <option value="2">Medio</option>
                 <option value="3">Difficile</option>
@@ -168,19 +116,19 @@
             </div>
             <div class="right">
               <select name="unit" id="unit">
-                <option value="" disabled selected hidden>Sotto argomento</option>Unità</option>
+                <option value="placeholder">Unità</option>
                 <option value="1">Unita 1</option>
                 <option value="2">Unita 2</option>
                 <option value="3">Unita 3</option>
               </select>
               <select name="argument" id="argument">
-                <option value="" disabled selected hidden>Sotto argomento</option>Argomento</option>
+                <option value="placeholder">Argomento</option>
                 <option value="1">Romanticismo</option>
                 <option value="2">Secondo Ottocento</option>
                 <option value="3">Primo Novecento</option>
               </select>
               <select name="subargument" id="subargument">
-                <option value="" disabled selected hidden>Sotto argomento</option>Sotto-argomento</option>
+                <option value="placeholder">Sotto-argomento</option>
                 <option value="1">Romanticismo</option>
                 <option value="2">Neoclassicismo</option>
                 <option value="3">Giovanni Verga</option>
@@ -202,7 +150,10 @@
             ></textarea>
             <label for="text" class="input-label">Domanda</label>
           </div>
-          <input type="submit" value="Aggiungi" class="btn" />
+          <div class="justify-center">
+            <input type="submit" value="Modifica" class="btn" />
+          </div>
+          
         </form>
         <a href="#" class="modal-close-btn">&times;</a>
       </div>
@@ -214,10 +165,10 @@
       <a href="#" class="modal-background"></a>
       <div class="modal">
         <form action="post">
-          <input type="text" name="id" id="id" value="" style="display: none" />
+          <input type="text" name="id" id="id" value="" style="display: none;">
           <h4>Sei sicuro di voler rimuovere questa domanda?</h4>
           <p class="m-vertical"></p>
-          <input type="submit" value="Conferma" class="btn" />
+          <input type="submit" value="Conferma" class="btn">
         </form>
         <a href="#" class="modal-close-btn">&times;</a>
       </div>
@@ -236,5 +187,6 @@
 
     <!-- drawer.js-link -->
     <script src="../js/drawer.js"></script>
+    <script src="../js/questions.js"></script>
   </body>
 </html>

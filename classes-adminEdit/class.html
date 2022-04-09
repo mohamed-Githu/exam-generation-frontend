@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <title>Exam Generator | Anni e Settori</title>
+    <title>Generazione Esami | {class name}</title>
   </head>
   <body>
     <!-- Nav-Bar - START -->
@@ -35,57 +35,58 @@
     <!-- Nav-Bar - END -->
 
     <div class="container">
-      <!-- header-buttons - START -->
-      <div class="buttons-wrapper">
-        <a href="#sectors-modal">
-          <button class="btn btn-secondary">
-            <i class="material-icons">add</i>
-            Aggiungi
-          </button>
-        </a>
-      </div>
-      <!-- header-buttons - END -->
+      <!-- header - START -->
+      <header class="justify-between align-center subject-header">
+        <div class="flex align-center">
+          <h3>Titolo:</h3>
+          <div class="m-horizontal"></div>
+          <h4>1 IPI E</h4>
+        </div>
+        <i class="material-icons">
+          <a href="#class-modal"> settings </a>
+        </i>
+      </header>
+      <!-- header - END -->
 
-      <!-- classes - START -->
-      <div class="flex">
-        <div class="flex-1">
-          <h1 class="text-center m-vertical">Settori ITI</h1>
-          <div class="flex-1 flex-wrapper">
-            <a href="#"><div class="text-block">1 ITI E</div></a>
-            <a href="#"><div class="text-block">2 ITI E</div></a>
-            <a href="#"><div class="text-block">3 ITI E</div></a>
-            <a href="#"><div class="text-block">1 ITI M</div></a>
-            <a href="#"><div class="text-block">2 ITI M</div></a>
-            <a href="#"><div class="text-block">3 ITI M</div></a>
-          </div>
-        </div>
-        <div class="divider vertical"></div>
-        <div class="flex-1">
-          <h1 class="text-center m-vertical">Settori IPI</h1>
-          <div class="flex-1 flex-wrapper">
-            <a href=""><div class="text-block">1 IPI E</div></a>
-            <a href=""><div class="text-block">2 IPI E</div></a>
-            <a href=""><div class="text-block">3 IPI E</div></a>
-            <a href=""><div class="text-block">1 IPI M</div></a>
-            <a href=""><div class="text-block">2 IPI M</div></a>
-            <a href=""><div class="text-block">3 IPI M</div></a>
-          </div>
-        </div>
+      <div class="divider"></div>
+      <h3>Materie</h3>
+
+      <!-- subjects - START -->
+      <div class="flex-wrapper">
+        <div class="text-block">Italiano</div>
+        <div class="text-block">English</div>
+        <div class="text-block">Arabo</div>
+        <div class="text-block">Fisica</div>
+        <div class="text-block">Ginnastica</div>
+        <div class="text-block">Religione Musulmana</div>
+        <div class="text-block">Religione Cristiana</div>
+        <div class="text-block">Elettro</div>
       </div>
-      <!-- classes - END -->
+      <!-- subjects - END -->
+ 
+      <div class="m-vertical"></div>
+      
+      <h3>Insegnanti</h3>
+      <!-- teachers - START -->
+      <div class="flex-wrapper">
+        <div class="text-block">S7s</div>
+        <div class="text-block">Abdo</div>
+        <div class="text-block">Dodo</div>
+      </div>
+      <!-- teachers - END -->
     </div>
 
-    <!-- sectors-modal - START -->
-    <div id="sectors-modal" class="modal-wrapper">
+    <!-- class-modal - START -->
+    <div id="class-modal" class="modal-wrapper">
       <a href="#" class="modal-background"></a>
-      <div class="modal sectors-modal">
-        <h1>Nuovi Settori</h1>
-        <form>
+      <div class="modal">
+        <h1>Modifica</h1>
+        <form action="">
           <h3>Titolo</h3>
-          <div class="flex-wrapper justify-between m-vertical">
+          <div class="flex-wrapper justify-between align-baseline">
             <select name="anno" id="anno">
               <option value="" disabled selected hidden>Anno</option>
-              <option value="1">1</option>
+              <option value="1" selected>1</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
@@ -93,7 +94,7 @@
             </select>
             <select name="tipo" id="tipo">
               <option value="iti">ITI</option>
-              <option value="IPI">IPI</option>
+              <option value="IPI" selected>IPI</option>
             </select>
             <div>
               <div class="input-group">
@@ -104,6 +105,7 @@
                   name="settore"
                   id="settore"
                   maxlength="2"
+                  value="E"
                 />
                 <label for="settore" class="input-label">Settore</label>
               </div>
@@ -113,7 +115,7 @@
           <h3>Materie</h3>
           <div class="flex-wrapper m-vertical">
             <div class="checkbox-group">
-              <input type="checkbox" name="italiano" id="italiano" />
+              <input type="checkbox" name="italiano" id="italiano" checked />
               <label for="italiano">
                 <i class="material-icons check">check</i>
                 <i class="material-icons add">add</i>
@@ -121,7 +123,7 @@
               </label>
             </div>
             <div class="checkbox-group">
-              <input type="checkbox" name="disegno" id="disegno" />
+              <input type="checkbox" name="disegno" id="disegno" checked />
               <label for="disegno">
                 <i class="material-icons check">check</i>
                 <i class="material-icons add">add</i>
@@ -129,7 +131,7 @@
               </label>
             </div>
             <div class="checkbox-group">
-              <input type="checkbox" name="elettro" id="elettro" />
+              <input type="checkbox" name="elettro" id="elettro" checked />
               <label for="elettro">
                 <i class="material-icons check">check</i>
                 <i class="material-icons add">add</i>
@@ -169,6 +171,7 @@
                 type="checkbox"
                 name="religione-musulmana"
                 id="religione-musulmana"
+                checked
               />
               <label for="religione-musulmana">
                 <i class="material-icons check">check</i>
@@ -177,7 +180,12 @@
               </label>
             </div>
             <div class="checkbox-group">
-              <input type="checkbox" name="ginnastica" id="ginnastica" />
+              <input
+                type="checkbox"
+                name="ginnastica"
+                id="ginnastica"
+                checked
+              />
               <label for="ginnastica">
                 <i class="material-icons check">check</i>
                 <i class="material-icons add">add</i>
@@ -185,7 +193,7 @@
               </label>
             </div>
             <div class="checkbox-group">
-              <input type="checkbox" name="fisica" id="fisica" />
+              <input type="checkbox" name="fisica" id="fisica" checked />
               <label for="fisica">
                 <i class="material-icons check">check</i>
                 <i class="material-icons add">add</i>
@@ -245,7 +253,7 @@
               </label>
             </div>
             <div class="checkbox-group">
-              <input type="checkbox" name="english" id="english" />
+              <input type="checkbox" name="english" id="english" checked />
               <label for="english">
                 <i class="material-icons check">check</i>
                 <i class="material-icons add">add</i>
@@ -253,7 +261,7 @@
               </label>
             </div>
             <div class="checkbox-group">
-              <input type="checkbox" name="arabo" id="arabo" />
+              <input type="checkbox" name="arabo" id="arabo" checked />
               <label for="arabo">
                 <i class="material-icons check">check</i>
                 <i class="material-icons add">add</i>
@@ -290,7 +298,7 @@
         <a href="#" class="modal-close-btn">&times;</a>
       </div>
     </div>
-    <!-- sectors-modal - END -->
+    <!-- class-modal - END -->
 
     <!-- drawer - START -->
     <div class="drawer-background"></div>
