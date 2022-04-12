@@ -481,6 +481,72 @@ p {
   transition: all 0.4s ease;
 }
 
+/* dropdown-options */
+
+div.dropdown {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.dropdown button {
+  background-color: transparent;
+  color: var(--grey-color);
+  border: 0;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+div.dropdown button::after {
+  content: "\2807";
+  font-size: 20px;
+}
+
+div.dropdown ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  width: 160px;
+  padding: 8px 0;
+  right: 0;
+  top: 0;
+  background-color: var(--white-color);
+  box-shadow: var(--card-shadow);
+  transition: visibility 300ms ease, opacity 300ms ease;
+}
+
+div.dropdown button:focus + ul {
+  visibility: visible;
+  opacity: 1;
+}
+
+div.dropdown li {
+  list-style: none;
+}
+
+div.dropdown li a {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--grey-color);
+  padding: 10px 8px;
+  cursor: pointer;
+}
+
+div.dropdown li:hover {
+  background-color: var(--grey-color-transparent);
+}
+
+div.dropdown li i {
+  font-size: 20px;
+}
+
+div.dropdown li:last-child {
+  border-top: 1px solid var(--grey-color-transparent);
+}
+
 /* buttons */
 
 .btn,
@@ -679,8 +745,7 @@ h4 a:hover {
 .grid-wrapper {
   display: grid;
   padding: 24px 8px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, minmax(200px, max-content));
+  grid-template-columns: repeat(auto-fit, minmax(14rem ,1fr));
   grid-auto-flow: row;
   gap: 18px;
 }
