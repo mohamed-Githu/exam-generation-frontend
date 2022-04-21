@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
   toggles.forEach(function (toggle) {
     toggle.addEventListener("click", function () {
       const panel = this.nextElementSibling;
-      const icon = this.children[0];
+      const icon = $(this).find("i")[0];
       if (panel.style.maxHeight) {
         panel.style.maxHeight = null;
         icon.style.transform = "rotate(0deg)";
