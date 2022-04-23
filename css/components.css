@@ -794,6 +794,25 @@ h4 a:hover {
   margin-right: -8px;
 }
 
+/* data-card */
+
+p {
+  font-size: 14px;
+}
+
+.data-card:not(:first-child) {
+  margin-top: 46px;
+}
+
+.header {
+  font-size: 20px;
+  color: var(--primary-color-dark);
+}
+
+.data > *:not(:first-child) {
+  margin-top: 4px;
+}
+
 /* styles */
 
 .flex-1 {
