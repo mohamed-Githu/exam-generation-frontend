@@ -448,33 +448,30 @@
       <div class="modal argument-modal">
         <h1>Nuovo Argomento</h1>
         <form>
-          <div class="top">
-            <div class="left">
-              <div class="inline">
-                <h3><strong> Unità: </strong></h3>
-                <h4>Unità 1</h4>
-              </div>
-              <div class="divider"></div>
+          <div>
+            <h3 class="inline"><strong> Unità: </strong></h3>
+            <h4 class="inline">Unità 1</h4>
+            <div class="divider"></div>
+            <div class="input-group">
+              <input placeholder="titolo" type="text" class="input-field" name="titolo" id="titolo" required />
+              <label for="titolo" class="input-label">Titolo</label>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div>
+            <h3 class="inline">Sotto-Argomenti:</h3>
+            <h4 class="inline blocks-count">0</h4>
+            <div class="m-vertical"></div>
+            <div class="blocks-form">
+              <textarea type="text" name="subarguments" class="blocks-area" hidden required></textarea>
+              <div class="flex-wrapper"></div>
+              <div class="m-vertical"></div>
               <div class="input-group">
-                <input placeholder="italiano" type="text" class="input-field" name="duration" id="duration" required />
-                <label for="duration" class="input-label">Titolo</label>
-              </div>
-              <div class="divider"></div>
-              <div class="input-group">
-                <textarea
-                  placeholder="text"
-                  type="text"
-                  class="input-field"
-                  name="text"
-                  id="text"
-                  cols="30"
-                  rows="10"
-                ></textarea>
-                <label for="text" class="input-label">Sotto-Argomenti</label>
+                <input placeholder="#" type="text" class="input-field block-input" id="subargument" />
+                <label for="subargument" class="input-label">Sotto-argomento</label>
               </div>
             </div>
           </div>
-
           <input type="submit" value="Aggiungi" class="btn" />
         </form>
         <a href="#" class="modal-close-btn">&times;</a>
@@ -485,5 +482,6 @@
     <!-- drawer.js-link -->
     <script src="../js/drawer.js"></script>
     <script src="../js/slide-menu.js"></script>
+    <script src="../js/blocks-form.js"></script>
 </body>
 </html>

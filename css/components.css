@@ -767,6 +767,7 @@ h4 a:hover {
   margin: 3px 5px 3px 0;
   border-radius: 9999px;
   display: flex;
+  letter-spacing: 1px;
 }
 
 .text-block.dark {
@@ -775,6 +776,8 @@ h4 a:hover {
   background-color: var(--grey-color-lighter);
   border-radius: 6px;
   font-weight: 300;
+  display: flex;
+  align-items: center;
 }
 
 .btn-close {
@@ -790,8 +793,8 @@ h4 a:hover {
   border-radius: 9999px;
   font-size: 14px;
   padding: 2px;
-  margin-left: 8px;
-  margin-right: -8px;
+  margin: 2px -2px 2px 4px;
+  cursor: pointer;
 }
 
 /* data-card */
@@ -856,6 +859,10 @@ p {
 .flex-wrapper {
   display: flex;
   flex-wrap: wrap;
+}
+
+.inline{
+  display: inline;
 }
 
 .text-center {
