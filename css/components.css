@@ -727,6 +727,14 @@ h4 a:hover {
   max-width: 250px;
 }
 
+.subject-card a {
+  color: var(--primary-color-dark);
+}
+
+.subject-card a:hover {
+  text-decoration: underline;
+}
+
 /* teacher-card */
 
 .teacher-card {
