@@ -16,7 +16,7 @@ const handleBlocks = (value) => {
       </div>`
     );
 
-    newBlock.click(() => removeBlock(i));
+    newBlock.find("i").click(() => removeBlock(i));
 
     blocksContainer.append(newBlock);
   });
