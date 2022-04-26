@@ -3,11 +3,12 @@ $(document).ready(function () {
   
   $("input[name='tab-nav']").change(function () {
     const id = $(this).attr("id");
-    const tabView = $("." + id);
-    const tabsContainer = document.querySelector(".tabs-container");
+    const index = parseInt(id[id.length - 1]) - 1;
+    const containerWidth = $(".tabs-container").width();
+    const tabsContainer = document.querySelector(".tabs-container")
 
     tabsContainer.scroll({
-      left: tabView.position().left,
+      left: index * containerWidth,
       behavior: "smooth"
     })
   });

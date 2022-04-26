@@ -3,6 +3,7 @@ $(document).ready(function() {
   const drawerBg = $(".drawer-background");
   const drawerCheckbox = $("input.drawer-checkbox");
 
+  drawerCheckbox.attr("autocomplete", "off");
   drawerCheckbox.prop("checked", false);
 
   drawerCheckbox.change(function () {

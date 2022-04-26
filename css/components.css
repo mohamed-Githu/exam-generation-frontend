@@ -89,12 +89,13 @@ body::-webkit-scrollbar-thumb {
   margin-top: -80px;
   overflow: hidden;
   display: grid;
-  grid-template-columns: repeat(2, 2fr);
+  grid-template-columns: repeat(3, auto);
 }
 
 .tabs-container > div {
   width: 850px;
-  max-width: 100vw;
+  padding: 24px 16px;
+  max-width: 100%;
   display: block;
 }
 
