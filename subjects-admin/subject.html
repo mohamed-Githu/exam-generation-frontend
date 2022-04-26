@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,6 +11,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <title>Generazione Esami | {Subject's name}</title>
 </head>
+
 <body>
   <!-- Nav-Bar - START -->
   <nav>
@@ -27,483 +29,497 @@
   </nav>
   <!-- Nav-Bar - END -->
 
-  <div class="container">
-    <div class="justify-between align-center">
-      <h3>Italiano 1 ITI</h3>
-      <i class="material-icons">
-        <a href="#subject-modal">settings</a>
-      </i>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- header-buttons - START -->
-    <div class="buttons-wrapper">
-      <a href="#unit-modal">
-        <button class="btn btn-secondary">
-          <i class="material-icons">add</i>
-          Nuova Unità
-        </button>
-      </a>
-    </div>
-    <!-- header-buttons - START -->
-
-    <div class="divider"></div>
-
-    <div class="dropdown-menu">
-      <h2 class="justify-between align-center toggle">
-        Unità 1 <i class="material-icons">keyboard_arrow_right</i>
-      </h2>
-      <div class="panel">
-        <div class="grid-wrapper">
-          <div class="card">
-            <div class="justify-between">
-              <h3>Argomento 1</h3>
-              <div class="dropdown">
-                <button></button>
-
-                <!-- Options -->
-                <ul>
-                  <li>
-                    <a href="#question-modal">
-                      Modifica<i class="material-icons">create</i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#question-modal-delete">
-                      Rimuovi<i class="material-icons">delete</i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="divider"></div>
-            <div class="flex-wrapper">
-              <div class="text-block dark">sotto argomento-1 ------</div>
-              <div class="text-block dark">sotto argomento-2 ------</div>
-              <div class="text-block dark">sotto argomento-3 ------</div>
-              <div class="text-block dark">sotto argomento-4 ------</div>
-              <div class="text-block dark">sotto argomento-5 ------</div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="justify-between">
-              <h3>Argomento 2</h3>
-              <div class="dropdown">
-                <button></button>
-
-                <!-- Options -->
-                <ul>
-                  <li>
-                    <a href="#question-modal">
-                      Modifica<i class="material-icons">create</i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#question-modal-delete">
-                      Rimuovi<i class="material-icons">delete</i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="divider"></div>
-            <div class="flex-wrapper">
-              <div class="text-block dark">sotto argomento-1 ------</div>
-              <div class="text-block dark">sotto argomento-2 ------</div>
-              <div class="text-block dark">sotto argomento-3 ------</div>
-              <div class="text-block dark">sotto argomento-4 ------</div>
-              <div class="text-block dark">sotto argomento-5 ------</div>
-            </div>
-          </div>
-
-          <!-- add-card - START -->
-          <div class="buttons-wrapper">
-            <a href="#argument-modal">
-              <button class="btn btn-secondary">
-                <i class="material-icons">add</i>Nuovo argomento
-              </button>
-            </a>
-          </div>
-          <!-- add-card - END -->
-
-        </div>
+  <div class="tabs-nav container">
+    <div class="tabs">
+      <div class="tab">
+        <input type="radio" name="tab-nav" id="tab-nav-1" checked>
+        <label for="tab-nav-1">Panoramica</label>
       </div>
-      <div class="dropdown-menu">
-        <h2 class="justify-between align-center toggle">
-          Unità 2 <i class="material-icons">keyboard_arrow_right</i>
-        </h2>
-        <div class="panel">
-          <div class="grid-wrapper">
-            <div class="card">
-              <div class="justify-between">
-                <h3>Argomento 3</h3>
-                <div class="dropdown">
-                  <button></button>
-
-                  <!-- Options -->
-                  <ul>
-                    <li>
-                      <a href="#question-modal">
-                        Modifica<i class="material-icons">create</i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#question-modal-delete">
-                        Rimuovi<i class="material-icons">delete</i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="divider"></div>
-              <div class="flex-wrapper">
-                <div class="text-block dark">sotto argomento-1 ------</div>
-                <div class="text-block dark">sotto argomento-2 ------</div>
-                <div class="text-block dark">sotto argomento-3 ------</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="justify-between">
-                <h3>Argomento 4</h3>
-                <div class="dropdown">
-                  <button></button>
-
-                  <!-- Options -->
-                  <ul>
-                    <li>
-                      <a href="#question-modal">
-                        Modifica<i class="material-icons">create</i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#question-modal-delete">
-                        Rimuovi<i class="material-icons">delete</i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="divider"></div>
-              <div class="flex-wrapper">
-                <div class="text-block dark">sotto argomento-1 ------</div>
-                <div class="text-block dark">sotto argomento-2 ------</div>
-                <div class="text-block dark">sotto argomento-3 ------</div>
-                <div class="text-block dark">sotto argomento-4 ------</div>
-                <div class="text-block dark">sotto argomento-5 ------</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="justify-between">
-                <h3>Argomento 5</h3>
-                <div class="dropdown">
-                  <button></button>
-
-                  <!-- Options -->
-                  <ul>
-                    <li>
-                      <a href="#question-modal">
-                        Modifica<i class="material-icons">create</i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#question-modal-delete">
-                        Rimuovi<i class="material-icons">delete</i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="divider"></div>
-              <div class="flex-wrapper">
-                <div class="text-block dark">sotto argomento-1 ------</div>
-                <div class="text-block dark">sotto argomento-2 ------</div>
-                <div class="text-block dark">sotto argomento-3 ------</div>
-                <div class="text-block dark">sotto argomento-4 ------</div>
-                <div class="text-block dark">sotto argomento-5 ------</div>
-              </div>
-            </div>
-
-            <!-- add-card - START -->
-            <div class="buttons-wrapper">
-              <a href="#argument-modal">
-                <button class="btn btn-secondary">
-                  <i class="material-icons">add</i>Nuovo argomento
-                </button>
-              </a>
-            </div>
-            <!-- add-card - END -->
-          </div>
-        </div>
+      <div class="tab">
+        <input type="radio" name="tab-nav" id="tab-nav-2">
+        <label for="tab-nav-2">Curriculum</label>
       </div>
-      <div class="dropdown-menu">
-        <h2 class="justify-between align-center toggle">
-          Unità 3 <i class="material-icons">keyboard_arrow_right</i>
-        </h2>
-        <div class="panel">
-          <div class="grid-wrapper">
-            <div class="card">
-              <div class="justify-between">
-                <h3>Argomento 1</h3>
-                <div class="dropdown">
-                  <button></button>
-
-                  <!-- Options -->
-                  <ul>
-                    <li>
-                      <a href="#question-modal">
-                        Modifica<i class="material-icons">create</i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#question-modal-delete">
-                        Rimuovi<i class="material-icons">delete</i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="divider"></div>
-              <div class="flex-wrapper">
-                <div class="text-block dark">sotto argomento-1 ------</div>
-                <div class="text-block dark">sotto argomento-2 ------</div>
-                <div class="text-block dark">sotto argomento-3 ------</div>
-                <div class="text-block dark">sotto argomento-4 ------</div>
-                <div class="text-block dark">sotto argomento-5 ------</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="justify-between">
-                <h3>Argomento 2</h3>
-                <div class="dropdown">
-                  <button></button>
-
-                  <!-- Options -->
-                  <ul>
-                    <li>
-                      <a href="#question-modal">
-                        Modifica<i class="material-icons">create</i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#question-modal-delete">
-                        Rimuovi<i class="material-icons">delete</i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="divider"></div>
-              <div class="flex-wrapper">
-                <div class="text-block dark">sotto argomento-1 ------</div>
-                <div class="text-block dark">sotto argomento-2 ------</div>
-                <div class="text-block dark">sotto argomento-3 ------</div>
-                <div class="text-block dark">sotto argomento-4 ------</div>
-                <div class="text-block dark">sotto argomento-5 ------</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="justify-between">
-                <h3>Argomento 3</h3>
-                <div class="dropdown">
-                  <button></button>
-
-                  <!-- Options -->
-                  <ul>
-                    <li>
-                      <a href="#question-modal">
-                        Modifica<i class="material-icons">create</i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#question-modal-delete">
-                        Rimuovi<i class="material-icons">delete</i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="divider"></div>
-              <div class="flex-wrapper">
-                <div class="text-block dark">sotto argomento-1 ------</div>
-                <div class="text-block dark">sotto argomento-2 ------</div>
-                <div class="text-block dark">sotto argomento-3 ------</div>
-                <div class="text-block dark">sotto argomento-4 ------</div>
-                <div class="text-block dark">sotto argomento-5 ------</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="justify-between">
-                <h3>Argomento 4</h3>
-                <div class="dropdown">
-                  <button></button>
-
-                  <!-- Options -->
-                  <ul>
-                    <li>
-                      <a href="#question-modal">
-                        Modifica<i class="material-icons">create</i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#question-modal-delete">
-                        Rimuovi<i class="material-icons">delete</i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="divider"></div>
-              <div class="flex-wrapper">
-                <div class="text-block dark">sotto argomento-1 ------</div>
-                <div class="text-block dark">sotto argomento-2 ------</div>
-                <div class="text-block dark">sotto argomento-3 ------</div>
-                <div class="text-block dark">sotto argomento-4 ------</div>
-                <div class="text-block dark">sotto argomento-5 ------</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="justify-between">
-                <h3>Argomento 5</h3>
-                <div class="dropdown">
-                  <button></button>
-
-                  <!-- Options -->
-                  <ul>
-                    <li>
-                      <a href="#question-modal">
-                        Modifica<i class="material-icons">create</i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#question-modal-delete">
-                        Rimuovi<i class="material-icons">delete</i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="divider"></div>
-              <div class="flex-wrapper">
-                <div class="text-block dark">sotto argomento-1 ------</div>
-                <div class="text-block dark">sotto argomento-2 ------</div>
-                <div class="text-block dark">sotto argomento-3 ------</div>
-                <div class="text-block dark">sotto argomento-4 ------</div>
-                <div class="text-block dark">sotto argomento-5 ------</div>
-              </div>
-            </div>
-
-            <!-- add-card - START -->
-            <div class="buttons-wrapper">
-              <a href="#argument-modal">
-                <button class="btn btn-secondary">
-                  <i class="material-icons">add</i>Nuovo argomento
-                </button>
-              </a>
-            </div>
-            <!-- add-card - END -->
-          </div>
-        </div>
+      <div class="tab">
+        <input type="radio" name="tab-nav" id="tab-nav-3">
+        <label for="tab-nav-3">Domande</label>
       </div>
     </div>
+  </div>
+  </div>
+  <div class="tabs-container container">
+    <!-- panoramica -->
 
-    <!-- subject - modal - start -->
+    <div class="tab-nav-1">
+      <div class="divider"></div>
+      <div class="data-card">
+        <div class="justify-between align-center">
+          <h2 class="header">Dati</h2>
+          <i class="material-icons">
+            <a href="#">settings</a>
+          </i>
+        </div>
+        <div class="divider"></div>
+        <div class="data">
+          <p><strong>Titolo: </strong>default</p>
+        </div>
+      </div>
+      <div class="divider bold"></div>
+
+
+      <div class="data-card">
+        <div class="justify-between align-center">
+          <h2 class="header">Insegnanti</h2>
+        </div>
+        <div class="divider"></div>
+        <div class="flex-wrapper">
+          <div class="text-block dark">Docente</div>
+          <div class="text-block dark">Coordinatore</div>
+          <div class="text-block dark">Admin</div>
+        </div>
+      </div>
+
+      <div class="divider bold"></div>
+
+      <div class="data-card">
+        <div class="justify-between align-center">
+          <h2 class="header">Coordinatori</h2>
+        </div>
+        <div class="divider"></div>
+        <div class="flex-wrapper">
+          <div class="text-block dark">Italiano</div>
+          <div class="text-block dark">Informatica</div>
+          <div class="text-block dark">Storia</div>
+          <div class="text-block dark">Sistemi e Reti</div>
+          <div class="text-block dark">TPSIT</div>
+        </div>
+      </div>
+
+      <div class="divider bold"></div>
+
+      <div class="data-card">
+        <div class="justify-between align-center">
+          <h2 class="header">Classi</h2>
+        </div>
+        <div class="divider"></div>
+        <div class="flex-wrapper">
+          <div class="text-block dark">Informatica</div>
+          <div class="text-block dark">Sistemi e Reti</div>
+          <div class="text-block dark">TPSIT</div>
+        </div>
+      </div>
+
+      <div class="divider bold"></div>
+
+    </div>
+
+    <!-- Curriculum -->
+    <div class="tab-nav-2">
+      <div class="divider"></div>
+      <div class="container">
+
+        <!-- header-buttons - START -->
+        <div class="buttons-wrapper">
+          <a href="#">
+            <button class="btn btn-secondary">
+              <i class="material-icons">add</i>
+              Nuova Unità
+            </button>
+          </a>
+        </div>
+        <!-- header-buttons - START -->
+
+        <div class="divider"></div>
+
+        <div class="dropdown-menu">
+          <h2 class="justify-between align-center toggle">
+            Unità 1 <i class="material-icons">keyboard_arrow_right</i>
+          </h2>
+          <div class="panel">
+            <div class="grid-wrapper">
+              <div class="card">
+                <div class="justify-between">
+                  <h3>Argomento 1</h3>
+                  <div class="dropdown">
+                    <button></button>
+
+                    <!-- Options -->
+                    <ul>
+                      <li>
+                        <a href="#">
+                          Modifica<i class="material-icons">create</i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          Rimuovi<i class="material-icons">delete</i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="flex-wrapper">
+                  <div class="text-block dark">sotto argomento-1 ------</div>
+                  <div class="text-block dark">sotto argomento-2 ------</div>
+                  <div class="text-block dark">sotto argomento-3 ------</div>
+                  <div class="text-block dark">sotto argomento-4 ------</div>
+                  <div class="text-block dark">sotto argomento-5 ------</div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="justify-between">
+                  <h3>Argomento 2</h3>
+                  <div class="dropdown">
+                    <button></button>
+
+                    <!-- Options -->
+                    <ul>
+                      <li>
+                        <a href="#">
+                          Modifica<i class="material-icons">create</i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          Rimuovi<i class="material-icons">delete</i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="flex-wrapper">
+                  <div class="text-block dark">sotto argomento-1 ------</div>
+                  <div class="text-block dark">sotto argomento-2 ------</div>
+                  <div class="text-block dark">sotto argomento-3 ------</div>
+                  <div class="text-block dark">sotto argomento-4 ------</div>
+                  <div class="text-block dark">sotto argomento-5 ------</div>
+                </div>
+              </div>
+
+              <!-- add-card - START -->
+              <div class="buttons-wrapper">
+                <a href="#">
+                  <button class="btn btn-secondary">
+                    <i class="material-icons">add</i>Nuovo argomento
+                  </button>
+                </a>
+              </div>
+              <!-- add-card - END -->
+
+            </div>
+          </div>
+          <div class="dropdown-menu">
+            <h2 class="justify-between align-center toggle">
+              Unità 2 <i class="material-icons">keyboard_arrow_right</i>
+            </h2>
+            <div class="panel">
+              <div class="grid-wrapper">
+                <div class="card">
+                  <div class="justify-between">
+                    <h3>Argomento 3</h3>
+                    <div class="dropdown">
+                      <button></button>
+
+                      <!-- Options -->
+                      <ul>
+                        <li>
+                          <a href="#">
+                            Modifica<i class="material-icons">create</i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            Rimuovi<i class="material-icons">delete</i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="flex-wrapper">
+                    <div class="text-block dark">sotto argomento-1 ------</div>
+                    <div class="text-block dark">sotto argomento-2 ------</div>
+                    <div class="text-block dark">sotto argomento-3 ------</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="justify-between">
+                    <h3>Argomento 4</h3>
+                    <div class="dropdown">
+                      <button></button>
+
+                      <!-- Options -->
+                      <ul>
+                        <li>
+                          <a href="#">
+                            Modifica<i class="material-icons">create</i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            Rimuovi<i class="material-icons">delete</i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="flex-wrapper">
+                    <div class="text-block dark">sotto argomento-1 ------</div>
+                    <div class="text-block dark">sotto argomento-2 ------</div>
+                    <div class="text-block dark">sotto argomento-3 ------</div>
+                    <div class="text-block dark">sotto argomento-4 ------</div>
+                    <div class="text-block dark">sotto argomento-5 ------</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="justify-between">
+                    <h3>Argomento 5</h3>
+                    <div class="dropdown">
+                      <button></button>
+
+                      <!-- Options -->
+                      <ul>
+                        <li>
+                          <a href="#">
+                            Modifica<i class="material-icons">create</i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            Rimuovi<i class="material-icons">delete</i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="flex-wrapper">
+                    <div class="text-block dark">sotto argomento-1 ------</div>
+                    <div class="text-block dark">sotto argomento-2 ------</div>
+                    <div class="text-block dark">sotto argomento-3 ------</div>
+                    <div class="text-block dark">sotto argomento-4 ------</div>
+                    <div class="text-block dark">sotto argomento-5 ------</div>
+                  </div>
+                </div>
+
+                <!-- add-card - START -->
+                <div class="buttons-wrapper">
+                  <a href="#">
+                    <button class="btn btn-secondary">
+                      <i class="material-icons">add</i>Nuovo argomento
+                    </button>
+                  </a>
+                </div>
+                <!-- add-card - END -->
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-menu">
+            <h2 class="justify-between align-center toggle">
+              Unità 3 <i class="material-icons">keyboard_arrow_right</i>
+            </h2>
+            <div class="panel">
+              <div class="grid-wrapper">
+                <div class="card">
+                  <div class="justify-between">
+                    <h3>Argomento 1</h3>
+                    <div class="dropdown">
+                      <button></button>
+
+                      <!-- Options -->
+                      <ul>
+                        <li>
+                          <a href="#">
+                            Modifica<i class="material-icons">create</i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            Rimuovi<i class="material-icons">delete</i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="flex-wrapper">
+                    <div class="text-block dark">sotto argomento-1 ------</div>
+                    <div class="text-block dark">sotto argomento-2 ------</div>
+                    <div class="text-block dark">sotto argomento-3 ------</div>
+                    <div class="text-block dark">sotto argomento-4 ------</div>
+                    <div class="text-block dark">sotto argomento-5 ------</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="justify-between">
+                    <h3>Argomento 2</h3>
+                    <div class="dropdown">
+                      <button></button>
+
+                      <!-- Options -->
+                      <ul>
+                        <li>
+                          <a href="#">
+                            Modifica<i class="material-icons">create</i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            Rimuovi<i class="material-icons">delete</i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="flex-wrapper">
+                    <div class="text-block dark">sotto argomento-1 ------</div>
+                    <div class="text-block dark">sotto argomento-2 ------</div>
+                    <div class="text-block dark">sotto argomento-3 ------</div>
+                    <div class="text-block dark">sotto argomento-4 ------</div>
+                    <div class="text-block dark">sotto argomento-5 ------</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="justify-between">
+                    <h3>Argomento 3</h3>
+                    <div class="dropdown">
+                      <button></button>
+
+                      <!-- Options -->
+                      <ul>
+                        <li>
+                          <a href="#">
+                            Modifica<i class="material-icons">create</i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            Rimuovi<i class="material-icons">delete</i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="flex-wrapper">
+                    <div class="text-block dark">sotto argomento-1 ------</div>
+                    <div class="text-block dark">sotto argomento-2 ------</div>
+                    <div class="text-block dark">sotto argomento-3 ------</div>
+                    <div class="text-block dark">sotto argomento-4 ------</div>
+                    <div class="text-block dark">sotto argomento-5 ------</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="justify-between">
+                    <h3>Argomento 4</h3>
+                    <div class="dropdown">
+                      <button></button>
+
+                      <!-- Options -->
+                      <ul>
+                        <li>
+                          <a href="#">
+                            Modifica<i class="material-icons">create</i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            Rimuovi<i class="material-icons">delete</i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="flex-wrapper">
+                    <div class="text-block dark">sotto argomento-1 ------</div>
+                    <div class="text-block dark">sotto argomento-2 ------</div>
+                    <div class="text-block dark">sotto argomento-3 ------</div>
+                    <div class="text-block dark">sotto argomento-4 ------</div>
+                    <div class="text-block dark">sotto argomento-5 ------</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="justify-between">
+                    <h3>Argomento 5</h3>
+                    <div class="dropdown">
+                      <button></button>
+
+                      <!-- Options -->
+                      <ul>
+                        <li>
+                          <a href="#">
+                            Modifica<i class="material-icons">create</i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            Rimuovi<i class="material-icons">delete</i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="flex-wrapper">
+                    <div class="text-block dark">sotto argomento-1 ------</div>
+                    <div class="text-block dark">sotto argomento-2 ------</div>
+                    <div class="text-block dark">sotto argomento-3 ------</div>
+                    <div class="text-block dark">sotto argomento-4 ------</div>
+                    <div class="text-block dark">sotto argomento-5 ------</div>
+                  </div>
+                </div>
+
+                <!-- add-card - START -->
+                <div class="buttons-wrapper">
+                  <a href="#">
+                    <button class="btn btn-secondary">
+                      <i class="material-icons">add</i>Nuovo argomento
+                    </button>
+                  </a>
+                </div>
+                <!-- add-card - END -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- drawer - START -->
+        <div class="drawer-background"></div>
+        <div class="drawer">
+          <div class="drawer-links">
+            <a href="#">Mohamed Hussein</a>
+            <a href="#" class="active">Materie</a>
+            <a href="#">Docenti</a>
+            <a href="#">Classi</a>
+          </div>
+        </div>
+        <!-- drawer - END -->
+      </div>
+    </div>
     
-    <div id="subject-modal" class="modal-wrapper">
-      <a href="#" class="modal-background"></a>
-      <div class="modal">
-        <h1>Modifica</h1>
-        <form>
-          <div class="input-group">
-            <input
-              type="text"
-              class="input-field"
-              value="Italiano"
-              id="duration"
-              required
-            />
-            <label for="duration" class="input-label">Titolo</label>
-          </div>
-          <input type="submit" value="Conferma" class="btn">
-        </form>
+    <!-- Domande -->
+    <div class="tab-nav-3">
+      <div class="divider"></div>
+      <div class="container">
+        <h3>asldkaasdsldj</h3>
       </div>
     </div>
-    <!-- subjrct - modal - ends -->
 
-    <!-- drawer - START -->
-    <div class="drawer-background"></div>
-    <div class="drawer">
-      <div class="drawer-links">
-        <a href="#">Mohamed Hussein</a>
-        <a href="#" class="active">Materie</a>
-        <a href="#">Docenti</a>
-        <a href="#">Classi</a>
-      </div>
-    </div>
-    <!-- drawer - END -->
 
-    <!-- unit-modal - START -->
-    <div id="unit-modal" class="modal-wrapper">
-      <a href="#" class="modal-background"></a>
-      <div class="modal unit-modal">
-        <h1>Nuova Unità</h1>
-        <form>
-          <div class="top">
-            <div class="left">
-              <div class="input-group">
-                <input placeholder="italiano" type="text" class="input-field" name="duration" id="duration" required />
-                <label for="duration" class="input-label">Titolo</label>
-              </div>
-            </div>
-          </div>
+  </div>
 
-          <input type="submit" value="Aggiungi" class="btn" />
-        </form>
-        <a href="#" class="modal-close-btn">&times;</a>
-      </div>
-    </div>
-    <!-- unit-modal - END -->
+  <!-- drawer.js-link -->
+  <script src="../js/drawer.js"></script>
+  <script src="../js/slide-menu.js"></script>
+  <script src="../js/blocks-form.js"></script>
+  <script src="../js/tabs-nav.js"></script>
 
-    <!-- argument-modal - START -->
-    <div id="argument-modal" class="modal-wrapper">
-      <a href="#" class="modal-background"></a>
-      <div class="modal argument-modal">
-        <h1>Nuovo Argomento</h1>
-        <form>
-          <div>
-            <h3 class="inline"><strong> Unità: </strong></h3>
-            <h4 class="inline">Unità 1</h4>
-            <div class="divider"></div>
-            <div class="input-group">
-              <input placeholder="titolo" type="text" class="input-field" name="titolo" id="titolo" required />
-              <label for="titolo" class="input-label">Titolo</label>
-            </div>
-          </div>
-          <div class="divider"></div>
-          <div>
-            <h3 class="inline">Sotto-Argomenti:</h3>
-            <h4 class="inline blocks-count">0</h4>
-            <div class="m-vertical"></div>
-            <div class="blocks-form">
-              <textarea type="text" name="subarguments" class="blocks-area" hidden required></textarea>
-              <div class="flex-wrapper"></div>
-              <div class="m-vertical"></div>
-              <div class="input-group">
-                <input placeholder="#" type="text" class="input-field block-input" id="subargument" />
-                <label for="subargument" class="input-label">Sotto-argomento</label>
-              </div>
-            </div>
-          </div>
-          <input type="submit" value="Aggiungi" class="btn" />
-        </form>
-        <a href="#" class="modal-close-btn">&times;</a>
-      </div>
-    </div>
-    <!-- argument-modal - END -->
-
-    <!-- drawer.js-link -->
-    <script src="../js/drawer.js"></script>
-    <script src="../js/slide-menu.js"></script>
-    <script src="../js/blocks-form.js"></script>
 </body>
+
 </html>
