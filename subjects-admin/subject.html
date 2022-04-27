@@ -120,7 +120,7 @@
       <div>
         <!-- header-buttons - START -->
         <div class="buttons-wrapper">
-          <a href="#">
+          <a href="#unit-modal">
             <button class="btn btn-secondary">
               <i class="material-icons">add</i>
               Nuova Unità
@@ -585,6 +585,92 @@
         <!-- questions - END -->
       </div>
     </div>
+
+    <!-- unit-modal - START -->
+    <div id="unit-modal" class="modal-wrapper">
+      <a href="#" class="modal-background"></a>
+      <div class="modal unit-modal">
+        <h1>Nuova Unità</h1>
+        <form>
+          <div class="top">
+            <div class="left">
+              <div class="input-group">
+                <input
+                  placeholder="italiano"
+                  type="text"
+                  class="input-field"
+                  name="duration"
+                  id="duration"
+                  required
+                />
+                <label for="duration" class="input-label">Titolo</label>
+              </div>
+            </div>
+          </div>
+
+          <input type="submit" value="Aggiungi" class="btn" />
+        </form>
+        <a href="#" class="modal-close-btn">&times;</a>
+      </div>
+    </div>
+    <!-- unit-modal - END -->
+
+    <!-- argument-modal - START -->
+    <div id="argument-modal" class="modal-wrapper">
+      <a href="#" class="modal-background"></a>
+      <div class="modal argument-modal">
+        <h1>Nuovo Argomento</h1>
+        <form>
+          <div>
+            <h3 class="inline"><strong> Unità: </strong></h3>
+            <h4 class="inline">Unità 1</h4>
+            <div class="divider"></div>
+            <div class="input-group">
+              <input
+                placeholder="titolo"
+                type="text"
+                class="input-field"
+                name="titolo"
+                id="titolo"
+                required
+              />
+              <label for="titolo" class="input-label">Titolo</label>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div>
+            <h3 class="inline">Sotto-Argomenti:</h3>
+            <h4 class="inline blocks-count">0</h4>
+            <div class="m-vertical"></div>
+            <div class="blocks-form">
+              <textarea
+                type="text"
+                name="subarguments"
+                class="blocks-area"
+                hidden
+                required
+              ></textarea>
+              <div class="flex-wrapper"></div>
+              <div class="m-vertical"></div>
+              <div class="input-group">
+                <input
+                  placeholder="#"
+                  type="text"
+                  class="input-field block-input"
+                  id="subargument"
+                />
+                <label for="subargument" class="input-label"
+                  >Sotto-argomento</label
+                >
+              </div>
+            </div>
+          </div>
+          <input type="submit" value="Aggiungi" class="btn" />
+        </form>
+        <a href="#" class="modal-close-btn">&times;</a>
+      </div>
+    </div>
+    <!-- argument-modal - END -->
 
     <!-- drawer - START -->
     <div class="drawer-background"></div>
