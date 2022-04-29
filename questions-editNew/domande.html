@@ -39,12 +39,6 @@
     <div class="container">
 
       <div class="buttons-wrapper">
-        <a href="#question-modal" class="add-question">
-          <button class="btn btn-secondary">
-            <i class="material-icons">settings</i>
-            Modifica 
-          </button>
-        </a>
         <a href="#question-modal-delete" class="add-question">
           <button class="btn btn-secondary">
             <i class="material-icons">delete</i>
@@ -53,45 +47,21 @@
         </a>
       </div>
       
-      <div class="divider"></div>
+      <div class="divider m-vertical"></div>
 
        <!-- questions - START -->
-       <div class="question-wrapper" id="questino-1" >
-        <div>
-          <div>
-            <h4>Unita 1 > Romanticismo > caratteristiche fondamentali</h4>
-            <h6>Oct, 8, 2020</h6>
-          </div>
-        </div>
-        <p>Sulla base di quanto studiato in classe, spiega il concetto di popolo in ottica romantica, facendo un paragone tra il Romanticismo e le visioni delle correnti fondamentale del Primo Ottocento.</p>
-        <div>
-          <h5>
-            <span class="level difficult"></span>
-            <strong>Livello:</strong>
-            <span>Difficile</span>
-          </h5>
-          <h5><strong>Durata:</strong> 15min</h5>
-        </div>
-      </div>
-      <!-- questions - END -->
-
-      
-    <!-- question-modal - START -->
-    <div id="question-modal" class="modal-wrapper">
-      <a href="#" class="modal-background"></a>
-      <div class="modal question-modal">
-        <h1>Nuova Domanda</h1>
+      <div class="card question-modal">
         <form>
           <div class="top">
             <div class="left">
               <select name="year" id="year">
-                <option value="" disabled selected hidden>Sotto argomento</option>Anno</option>
+                <option value="" disabled selected hidden>Anno</option>Anno</option>
                 <option value="1">1 ITI</option>
                 <option value="2">2 ITI</option>
                 <option value="3">3 ITI</option>
               </select>
               <select name="level" id="level">
-                <option value="" disabled selected hidden>Sotto argomento</option>Difficoltà</option>
+                <option value="" disabled selected hidden>Difficoltà</option>Difficoltà</option>
                 <option value="1">Facile</option>
                 <option value="2">Medio</option>
                 <option value="3">Difficile</option>
@@ -110,19 +80,96 @@
             </div>
             <div class="right">
               <select name="unit" id="unit">
-                <option value="" disabled selected hidden>Sotto argomento</option>Unità</option>
+                <option value="" disabled selected hidden>Unità</option>Unità</option>
                 <option value="1">Unita 1</option>
                 <option value="2">Unita 2</option>
                 <option value="3">Unita 3</option>
               </select>
               <select name="argument" id="argument">
-                <option value="" disabled selected hidden>Sotto argomento</option>Argomento</option>
+                <option value="" disabled selected hidden>Argomento</option>Argomento</option>
                 <option value="1">Romanticismo</option>
                 <option value="2">Secondo Ottocento</option>
                 <option value="3">Primo Novecento</option>
               </select>
               <select name="subargument" id="subargument">
-                <option value="" disabled selected hidden>Sotto argomento</option>Sotto-argomento</option>
+                <option value="" disabled selected hidden>Sotto-argomento</option>Sotto-argomento</option>
+                <option value="1">Romanticismo</option>
+                <option value="2">Neoclassicismo</option>
+                <option value="3">Giovanni Verga</option>
+                <option value="4">caratteristiche fondamentali</option>
+                <option value="5">Decadentismo</option>
+              </select>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="input-group">
+            <textarea
+              placeholder="text"
+              type="text"
+              class="input-field"
+              name="text"
+              id="text"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <label for="text" class="input-label">Domanda</label>
+          </div>
+          <div class="m-vertical"></div>
+          <div class="justify-center">
+            <input type="submit" value="Aggiungi" class="btn" />
+          </div>
+        </form>
+      </div>
+      <!-- questions - END -->
+
+      
+    <!-- question-modal - START -->
+    <div id="question-modal" class="modal-wrapper">
+      <a href="#" class="modal-background"></a>
+      <div class="modal question-modal">
+        <h1>Nuova Domanda</h1>
+        <form>
+          <div class="top">
+            <div class="left">
+              <select name="year" id="year">
+                <option value="" disabled selected hidden>Anno</option>Anno</option>
+                <option value="1">1 ITI</option>
+                <option value="2">2 ITI</option>
+                <option value="3">3 ITI</option>
+              </select>
+              <select name="level" id="level">
+                <option value="" disabled selected hidden>Difficoltà</option>Difficoltà</option>
+                <option value="1">Facile</option>
+                <option value="2">Medio</option>
+                <option value="3">Difficile</option>
+              </select>
+              <div class="input-group">
+                <input
+                  placeholder="duration"
+                  type="number"
+                  class="input-field"
+                  name="duration"
+                  id="duration"
+                  required
+                />
+                <label for="duration" class="input-label">Durata (min)</label>
+              </div>
+            </div>
+            <div class="right">
+              <select name="unit" id="unit">
+                <option value="" disabled selected hidden>Unità</option>Unità</option>
+                <option value="1">Unita 1</option>
+                <option value="2">Unita 2</option>
+                <option value="3">Unita 3</option>
+              </select>
+              <select name="argument" id="argument">
+                <option value="" disabled selected hidden>Argomento</option>Argomento</option>
+                <option value="1">Romanticismo</option>
+                <option value="2">Secondo Ottocento</option>
+                <option value="3">Primo Novecento</option>
+              </select>
+              <select name="subargument" id="subargument">
+                <option value="" disabled selected hidden>Sotto-argomento</option>Sotto-argomento</option>
                 <option value="1">Romanticismo</option>
                 <option value="2">Neoclassicismo</option>
                 <option value="3">Giovanni Verga</option>
