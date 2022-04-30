@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/basic.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/genera-esame.css" />
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <title>Genera esame</title>
+</head>
+
+<body>
+  <!-- Nav-Bar - START -->
+  <nav>
+    <div>
+      <img src="../assets/img/logo-large.png" alt="logo-large" />
+      <div class="drawer-button">
+        <input type="checkbox" name="drawer-checkbox" id="drawer-checkbox" class="drawer-checkbox" />
+        <label for="drawer-checkbox">
+          <div></div>
+          <div></div>
+          <div></div>
+        </label>
+      </div>
+    </div>
+  </nav>
+  <!-- Nav-Bar - END -->
+
+  <div class="container">
+    <form action="genera-esame-3.html" class="card">
+
+      <embed src="test.pdf" width="800px" height="1500px" />
+
+      <div class="m-vertical"></div>
+      <div class="justify-around flex-wrapper">
+
+        <input type="submit" name="scarica-pdf" id="scarica-pdf" value="Scarica PDF" class="btn">
+        <input type="submit" name="scarica-docs" id="scarica-docs" value="Scarica Docs" class="btn">
+
+      </div>
+    </form>
+  </div>
+
+
+  <!-- drawer - START -->
+  <div class="drawer-background"></div>
+  <div class="drawer">
+    <div class="drawer-links">
+      <a href="#">Mohamed Hussein</a>
+      <a href="#">Materie</a>
+      <a href="#">Docenti</a>
+      <a href="#" class="active">Classi</a>
+    </div>
+  </div>
+  <!-- drawer - END -->
+
+  <!-- drawer.js-link -->
+  <script src="../js/drawer.js"></script>
+</body>
+
+</html>
