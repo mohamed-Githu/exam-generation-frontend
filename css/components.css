@@ -51,6 +51,19 @@ nav ul li a.active {
   color: var(--primary-color);
 }
 
+/* link */
+
+a.link {
+  font-size: 16px;
+  color: var(--primary-color-dark);
+  width: fit-content;
+}
+
+a.link:hover {
+  text-decoration: underline;
+}
+
+
 /* scrollbar */
 
 body::-webkit-scrollbar {
