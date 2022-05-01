@@ -468,10 +468,6 @@ a.modal-close-btn {
   align-items: baseline;
 }
 
-.sectors-modal .input-group {
-  max-width: 100px;
-}
-
 /* Text */
 
 h1,
@@ -777,6 +773,33 @@ h4 a:hover {
 .divider.bold {
   height: 2px;
   background-color: var(--primary-color-dark);
+}
+
+/* blocks-input select */
+
+ul.input-list.card {
+  padding: 0;
+}
+
+ul.input-list {
+  position: absolute;
+  display: none;
+}
+
+ul.input-list li {
+  list-style: none;
+  padding: 12px 10px;
+  color: var(--grey-color-light);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+ul.input-list li:hover {
+  background-color: var(--grey-color-transparent);
+}
+
+ul.input-list li:not(:last-child) {
+  border-bottom: 1px solid var(--grey-color-transparent);
 }
 
 /* text-block */
