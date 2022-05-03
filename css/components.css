@@ -944,4 +944,8 @@ p {
   gap: 18px;
 }
 
+.width-full {
+  width: 100%;
+}
+
 /* colors */
