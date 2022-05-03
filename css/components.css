@@ -232,12 +232,21 @@ body::-webkit-scrollbar-thumb {
 }
 
 .drawer a {
-  display: block;
+  display: flex;
+  align-items: center;
   cursor: pointer;
   color: var(--white-color);
   opacity: 0.8;
   font-size: 18px;
   padding: 12px 12px;
+}
+
+.drawer a i {
+  margin-right: 5px;
+}
+
+.drawer .drawer-links div {
+  margin: 12px 6px;
 }
 
 .drawer a.active {

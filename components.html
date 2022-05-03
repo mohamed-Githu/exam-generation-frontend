@@ -7,6 +7,7 @@
     <title>Generazioni Esami | Sign Up</title>
     <link rel="stylesheet" href="./css/basic.css" />
     <link rel="stylesheet" href="./css/components.css" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -200,19 +201,24 @@
 
     <!-- ------------------------------------------- drawer ------------------------------------------- -->
 
+    <div class="drawer-background"></div>
+    <div class="drawer">
+      <div class="drawer-links">
+        <a href="#" class="active">
+          <i class="material-icons">account_circle</i>
+          Mohamed Hussein
+        </a>
+        <a href="./classes.html">Anni e Settori</a>
+        <a href="./home-coordinatore.html">Domande</a>
+        <a href="./subjects.html">Materie</a>
+        <a href="./teachers.html">Docenti</a>
+        <a href="./generate.html">Genera Esame</a>
 
-      <div class="drawer-background"></div>
-      <div class="drawer">
-        <div class="drawer-links">
-          <a href="#" class="active">Mohamed Hussein</a>
-          <a href="./classes.html">Anni e Settori</a>
-          <a href="./home-coordinatore.html">Domande</a>
-          <a href="./subjects.html">Materie</a>
-          <a href="./teachers.html">Docenti</a>
-          <a href="./generate.html">Genera Esame</a>
-        </div>
+        <a href="#" class="flex">
+          <button class="btn flex-1">Log out</button>
+        </a>
       </div>
-
+    </div>
   </body>
   <script src="./js/drawer.js"></script>
 </html>
