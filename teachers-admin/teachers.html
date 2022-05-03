@@ -301,10 +301,17 @@
           <a href="#code-modal-print">
             <button class="btn btn-secondary">
               <i class="material-icons">print</i>
-              Stampa
+              Stampa compilati
+            </button>
+          </a>
+          <a href="#code-modal-print">
+            <button class="btn btn-secondary">
+              <i class="material-icons">print</i>
+              Stampa non compilati
             </button>
           </a>
         </div>
+        <div class="divider m-vertical"></div>
         <div class="dropdown-menu">
           <h2 class="justify-between align-center toggle">
             Compilato <i class="material-icons">keyboard_arrow_right</i>
@@ -376,39 +383,6 @@
       </div>
     </div>
     <!-- code-modal - END -->
-
-    <!-- code-modal-print - START -->
-    <div id="code-modal-print" class="modal-wrapper">
-      <a href="#" class="modal-background"></a>
-      <div class="modal">
-        <h1>Stampa Codici</h1>
-        <form action="" method="post">
-          <div class="flex-wrapper">
-            <div class="checkbox-group">
-              <input type="checkbox" name="compiled" id="compiled" value="compiled" />
-              <label for="compiled">
-                <i class="material-icons check">check</i>
-                <i class="material-icons add">add</i>
-                Compilati
-              </label>
-            </div>
-            <div class="checkbox-group">
-              <input type="checkbox" name="not-compiled" id="not-compiled" value="not-compiled" />
-              <label for="not-compiled">
-                <i class="material-icons check">check</i>
-                <i class="material-icons add">add</i>
-                Non Compilati
-              </label>
-            </div>
-          </div>
-          <div class="m-vertical"></div>
-          <input type="submit" value="Stampa" class="btn" />
-        </form>
-        <a href="#" class="modal-close-btn">&times;</a>
-      </div>
-    </div>
-    <!-- code-modal-print - END -->
-
     <!-- drawer - START -->
     <div class="drawer-background"></div>
     <div class="drawer">
