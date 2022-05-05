@@ -3,7 +3,7 @@ nav {
   width: 100%;
   padding: 0 2px;
   box-shadow: 0 0.5px 10px var(--grey-color);
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 80;
 }
@@ -63,6 +63,67 @@ a.link:hover {
   text-decoration: underline;
 }
 
+
+/* alert */
+/* .alert-container{
+  display: flex;
+  position: fixed;
+
+  justify-content: center;
+  z-index: 81;
+} */
+.alert {
+  left: 50%;
+  position: fixed;
+  transform: translateX(-50%);
+  transition: all .3s ease-out;
+  color: white;
+  padding: 20px;
+  width: 50%;
+  border-radius: 5px;
+  z-index: 81;
+  transform: translate(-50%, -200%);
+  transition: all 0.4 ease-in-out;
+}
+
+.alert-danger{
+  background-color: var(--primary-color-dark);
+}
+.alert-success{
+  background-color: var(--tertiary-color);
+}
+.alert-warning{
+  background-color: var(--secondary-color);
+}
+.alert-info{
+  background-color: var(--info-color);
+}
+
+.alert.show{
+  transform: translate(-50%, 0);
+
+}
+
+.alert li{
+  transform: translateX(20px);
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
 
 /* scrollbar */
 
@@ -565,6 +626,7 @@ p {
   width: 100%;
   max-width: 850px;
   margin: 80px auto;
+  margin-top: 160px;
   padding: 0 8px;
 }
 

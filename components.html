@@ -1,66 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Generazioni Esami | Sign Up</title>
-    <link rel="stylesheet" href="./css/basic.css" />
-    <link rel="stylesheet" href="./css/components.css" />
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generazioni Esami | Sign Up</title>
+  <link rel="stylesheet" href="./css/basic.css" />
+  <link rel="stylesheet" href="./css/components.css" />
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body>
+  <nav>
+    <div>
+      <img src="./assets/img/logo-large.png" alt="logo-large" />
+      <div class="drawer-button">
+        <input type="checkbox" name="drawer-checkbox" id="drawer-checkbox" class="drawer-checkbox" />
+        <label for="drawer-checkbox">
+          <div></div>
+          <div></div>
+          <div></div>
+        </label>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ------------------------------------------- alert ------------------------------------------- -->
+
+  <div class="divider"></div>
+  <div class="alert alert-info show">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+    <div class="m-vertical"></div>
+
+    <ul>
+      <li>asd</li>
+      <li>3da</li>
+    </ul>
+  </div>
+
+  <!-- ------------------------------------------ input ------------------------------------------------ -->
+
+  <div class="input-group">
+    <input type="text" placeholder="name" class="input-field" name="name" id="name" required />
+    <label for="name" class="input-label">Name</label>
+  </div>
+
+  <!-- ------------------------------------------ modal ------------------------------------------------ -->
+
+  <!-- Clicking on the a tag changes the url to [...]#modal-wrapper -->
+  <a href="#modal-wrapper" class="modal-open-btn">Open Demo Modal</a>
+  <div id="modal-wrapper" class="modal-wrapper">
+    <a href="#" class="modal-background"></a>
+    <div class="modal">
+      <h1>CSS Only Modal</h1>
+      <!--	to close the modal the url must be changed to [...]#	-->
+      <a href="#" class="modal-close-btn">&times;</a>
+    </div>
+  </div>
+
+  <!-- ------------------------------------------ question-block ------------------------------------------------ -->
+
+  <div class="question-wrapper">
+    <div>
       <div>
-        <img src="./assets/img/logo-large.png" alt="logo-large" />
-        <div class="drawer-button">
-          <input
-            type="checkbox"
-            name="drawer-checkbox"
-            id="drawer-checkbox"
-            class="drawer-checkbox"
-          />
-          <label for="drawer-checkbox">
-            <div></div>
-            <div></div>
-            <div></div>
-          </label>
-        </div>
+        <h4>Unita 1 > Romanticismo > caratteristiche fondamentali</h4>
+        <h6>Oct, 8, 2020</h6>
       </div>
-    </nav>
+      <div class="dropdown">
+        <button></button>
 
-    <!-- ------------------------------------------ input ------------------------------------------------ -->
-
-    <div class="input-group">
-      <input
-        type="text"
-        placeholder="name"
-        class="input-field"
-        name="name"
-        id="name"
-        required
-      />
-      <label for="name" class="input-label">Name</label>
-    </div>
-
-    <!-- ------------------------------------------ modal ------------------------------------------------ -->
-
-    <!-- Clicking on the a tag changes the url to [...]#modal-wrapper -->
-    <a href="#modal-wrapper" class="modal-open-btn">Open Demo Modal</a>
-    <div id="modal-wrapper" class="modal-wrapper">
-      <a href="#" class="modal-background"></a>
-      <div class="modal">
-        <h1>CSS Only Modal</h1>
-        <!--	to close the modal the url must be changed to [...]#	-->
-        <a href="#" class="modal-close-btn">&times;</a>
+        <!-- Options -->
+        <ul>
+          <li><span>Edit</span><i class="material-icons">create</i></li>
+          <li><span>Delete</span><i class="material-icons">delete</i></li>
+        </ul>
       </div>
     </div>
+    <p>
+      Sulla base di quanto studiato in classe, spiega il concetto di popolo in
+      ottica romantica, facendo un paragone tra il Romanticismo e le visioni
+      delle correnti fondamentale del Primo Ottocento.
+    </p>
+    <div>
+      <h5>
+        <span class="level difficult"></span>
+        <strong>Livello:</strong>
+        <span>Difficile</span>
+      </h5>
+      <h5><strong>Durata:</strong> 15min</h5>
+    </div>
+  </div>
 
-    <!-- ------------------------------------------ question-block ------------------------------------------------ -->
+  <!-- checkbox-group -->
+
+  <div class="checkbox-group">
+    <input type="checkbox" name="iti" id="iti" />
+    <label for="iti">
+      <i class="material-icons check">check</i>
+      <i class="material-icons add">add</i>
+      ITI
+    </label>
+  </div>
+
+  <!-- ------------------------------------------ container ------------------------------------------------ -->
+
+  <div class="container">
+
+    <select name="" id="" class="width-full">
+      <option value="">3</option>
+      <option value="">3</option>
+      <option value="">3</option>
+      <option value="">3</option>
+    </select>
 
     <div class="question-wrapper">
       <div>
@@ -79,9 +133,9 @@
         </div>
       </div>
       <p>
-        Sulla base di quanto studiato in classe, spiega il concetto di popolo in
-        ottica romantica, facendo un paragone tra il Romanticismo e le visioni
-        delle correnti fondamentale del Primo Ottocento.
+        Sulla base di quanto studiato in classe, spiega il concetto di popolo
+        in ottica romantica, facendo un paragone tra il Romanticismo e le
+        visioni delle correnti fondamentale del Primo Ottocento.
       </p>
       <div>
         <h5>
@@ -92,141 +146,93 @@
         <h5><strong>Durata:</strong> 15min</h5>
       </div>
     </div>
-
-    <!-- checkbox-group -->
-
-    <div class="checkbox-group">
-      <input type="checkbox" name="iti" id="iti" />
-      <label for="iti">
-        <i class="material-icons check">check</i>
-        <i class="material-icons add">add</i>
-        ITI
-      </label>
-    </div>
-
-    <!-- ------------------------------------------ container ------------------------------------------------ -->
-
-    <div class="container">
-      
-          <select name="" id="" class="width-full">
-            <option value="">3</option>
-            <option value="">3</option>
-            <option value="">3</option>
-            <option value="">3</option>
-          </select>
-
-      <div class="question-wrapper">
+    <div class="question-wrapper">
+      <div>
         <div>
-          <div>
-            <h4>Unita 1 > Romanticismo > caratteristiche fondamentali</h4>
-            <h6>Oct, 8, 2020</h6>
-          </div>
-          <div class="dropdown">
-            <button></button>
-
-            <!-- Options -->
-            <ul>
-              <li><span>Edit</span><i class="material-icons">create</i></li>
-              <li><span>Delete</span><i class="material-icons">delete</i></li>
-            </ul>
-          </div>
+          <h4>Unita 1 > Romanticismo > caratteristiche fondamentali</h4>
+          <h6>Oct, 8, 2020</h6>
         </div>
-        <p>
-          Sulla base di quanto studiato in classe, spiega il concetto di popolo
-          in ottica romantica, facendo un paragone tra il Romanticismo e le
-          visioni delle correnti fondamentale del Primo Ottocento.
-        </p>
-        <div>
-          <h5>
-            <span class="level difficult"></span>
-            <strong>Livello:</strong>
-            <span>Difficile</span>
-          </h5>
-          <h5><strong>Durata:</strong> 15min</h5>
+        <div class="dropdown">
+          <button></button>
+
+          <!-- Options -->
+          <ul>
+            <li><span>Edit</span><i class="material-icons">create</i></li>
+            <li><span>Delete</span><i class="material-icons">delete</i></li>
+          </ul>
         </div>
       </div>
-      <div class="question-wrapper">
-        <div>
-          <div>
-            <h4>Unita 1 > Romanticismo > caratteristiche fondamentali</h4>
-            <h6>Oct, 8, 2020</h6>
-          </div>
-          <div class="dropdown">
-            <button></button>
-
-            <!-- Options -->
-            <ul>
-              <li><span>Edit</span><i class="material-icons">create</i></li>
-              <li><span>Delete</span><i class="material-icons">delete</i></li>
-            </ul>
-          </div>
-        </div>
-        <p>
-          Sulla base di quanto studiato in classe, spiega il concetto di popolo
-          in ottica romantica, facendo un paragone tra il Romanticismo e le
-          visioni delle correnti fondamentale del Primo Ottocento.
-        </p>
-        <div>
-          <h5>
-            <span class="level medium"></span>
-            <strong>Livello:</strong>
-            <span>Difficile</span>
-          </h5>
-          <h5><strong>Durata:</strong> 15min</h5>
-        </div>
-      </div>
-      <div class="question-wrapper">
-        <div>
-          <div>
-            <h4>Unita 1 > Romanticismo > caratteristiche fondamentali</h4>
-            <h6>Oct, 8, 2020</h6>
-          </div>
-          <div class="dropdown">
-            <button></button>
-
-            <!-- Options -->
-            <ul>
-              <li><span>Edit</span><i class="material-icons">create</i></li>
-              <li><span>Delete</span><i class="material-icons">delete</i></li>
-            </ul>
-          </div>
-        </div>
-        <p>
-          Sulla base di quanto studiato in classe, spiega il concetto di popolo
-          in ottica romantica, facendo un paragone tra il Romanticismo e le
-          visioni delle correnti fondamentale del Primo Ottocento.
-        </p>
-        <div>
-          <h5>
-            <span class="level easy"></span>
-            <strong>Livello:</strong>
-            <span>Difficile</span>
-          </h5>
-          <h5><strong>Durata:</strong> 15min</h5>
-        </div>
+      <p>
+        Sulla base di quanto studiato in classe, spiega il concetto di popolo
+        in ottica romantica, facendo un paragone tra il Romanticismo e le
+        visioni delle correnti fondamentale del Primo Ottocento.
+      </p>
+      <div>
+        <h5>
+          <span class="level medium"></span>
+          <strong>Livello:</strong>
+          <span>Difficile</span>
+        </h5>
+        <h5><strong>Durata:</strong> 15min</h5>
       </div>
     </div>
+    <div class="question-wrapper">
+      <div>
+        <div>
+          <h4>Unita 1 > Romanticismo > caratteristiche fondamentali</h4>
+          <h6>Oct, 8, 2020</h6>
+        </div>
+        <div class="dropdown">
+          <button></button>
 
-    <!-- ------------------------------------------- drawer ------------------------------------------- -->
-
-    <div class="drawer-background"></div>
-    <div class="drawer">
-      <div class="drawer-links">
-        <a href="#" class="active">
-          <i class="material-icons">account_circle</i>
-          Mohamed Hussein
-        </a>
-        <a href="./classes.html">Anni e Settori</a>
-        <a href="./home-coordinatore.html">Domande</a>
-        <a href="./subjects.html">Materie</a>
-        <a href="./teachers.html">Docenti</a>
-        <a href="./generate.html">Genera Esame</a>
-
-        <a href="#" class="flex">
-          <button class="btn flex-1">Log out</button>
-        </a>
+          <!-- Options -->
+          <ul>
+            <li><span>Edit</span><i class="material-icons">create</i></li>
+            <li><span>Delete</span><i class="material-icons">delete</i></li>
+          </ul>
+        </div>
+      </div>
+      <p>
+        Sulla base di quanto studiato in classe, spiega il concetto di popolo
+        in ottica romantica, facendo un paragone tra il Romanticismo e le
+        visioni delle correnti fondamentale del Primo Ottocento.
+      </p>
+      <div>
+        <h5>
+          <span class="level easy"></span>
+          <strong>Livello:</strong>
+          <span>Difficile</span>
+        </h5>
+        <h5><strong>Durata:</strong> 15min</h5>
       </div>
     </div>
-  </body>
-  <script src="./js/drawer.js"></script>
+  </div>
+
+  <!-- ------------------------------------------- drawer ------------------------------------------- -->
+
+  <div class="drawer-background"></div>
+  <div class="drawer">
+    <div class="drawer-links">
+      <a href="#" class="active">
+        <i class="material-icons">account_circle</i>
+        Mohamed Hussein
+      </a>
+      <a href="./classes.html">Anni e Settori</a>
+      <a href="./home-coordinatore.html">Domande</a>
+      <a href="./subjects.html">Materie</a>
+      <a href="./teachers.html">Docenti</a>
+      <a href="./generate.html">Genera Esame</a>
+
+      <a href="#" class="flex">
+        <button class="btn flex-1">Log out</button>
+      </a>
+    </div>
+  </div>
+
+
+
+
+</body>
+<script src="./js/drawer.js"></script>
+
 </html>
