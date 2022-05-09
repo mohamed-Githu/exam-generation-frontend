@@ -4,6 +4,8 @@ const triggerAlert = (alertData) => {
   const { type, title , messages } = alertData;
 
   // type can be : info, danger, success, warning
+  // title --> string
+  // messages --> array
 
   const container = $(".container");
 
@@ -26,3 +28,5 @@ const triggerAlert = (alertData) => {
     $(this).parent().hide();
   });
 };
+
+// triggerAlert({ type: "success", title: "fasdf", messages: ["1", 2] });
