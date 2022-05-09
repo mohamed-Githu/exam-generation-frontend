@@ -65,15 +65,10 @@ a.link:hover {
 
 
 /* alert */
-/* .alert-container{
-  display: flex;
-  position: fixed;
 
-  justify-content: center;
-  z-index: 81;
-} */
 .alert {
   left: 50%;
+  top: 40px;
   position: fixed;
   transform: translateX(-50%);
   transition: all .3s ease-out;
@@ -82,26 +77,23 @@ a.link:hover {
   width: 50%;
   border-radius: 5px;
   z-index: 81;
-  transform: translate(-50%, -200%);
   transition: all 0.4 ease-in-out;
 }
 
 .alert-danger{
   background-color: var(--primary-color-dark);
 }
+
 .alert-success{
   background-color: var(--tertiary-color);
 }
+
 .alert-warning{
   background-color: var(--secondary-color);
 }
+
 .alert-info{
   background-color: var(--info-color);
-}
-
-.alert.show{
-  transform: translate(-50%, 0);
-
 }
 
 .alert li{
@@ -109,7 +101,8 @@ a.link:hover {
 }
 
 /* The close button */
-.closebtn {
+
+.alert-closebtn {
   margin-left: 15px;
   color: white;
   font-weight: bold;
