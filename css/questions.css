@@ -35,7 +35,7 @@
   margin: 0 4px;
 }
 
-.question-wrapper .level {
+.question-wrapper .level-color {
   display: block;
   width: 8px;
   height: 8px;
@@ -44,11 +44,15 @@
   background-color: var(--primary-color);
 }
 
-.question-wrapper .level.easy {
+.question-wrapper .level-color.difficile {
+  background-color: var(--primary-color);
+}
+
+.question-wrapper .level-color.facile {
   background-color: var(--tertiary-color);
 }
 
-.question-wrapper .level.medium {
+.question-wrapper .level-color.medio {
   background-color: var(--secondary-color);
 }
 

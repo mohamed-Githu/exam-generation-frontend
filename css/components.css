@@ -371,7 +371,21 @@ body::-webkit-scrollbar-thumb {
   resize: none;
   position: relative;
   background-color: var(--grey-color-transparent);
-  padding: 4px;
+  padding: 8px;
+  padding-right: 24px;
+}
+
+.input-group textarea ~ .material-icons {
+  color: var(--primary-color-dark);
+  cursor: pointer;
+  opacity: 0.7;
+  position: absolute;
+  right: 4px;
+  margin-top: 4px;
+}
+
+.input-group textarea ~ .material-icons:hover {
+  opacity: 1;
 }
 
 /* checkbox-group */
@@ -625,6 +639,10 @@ p {
 
 .container .question-wrapper {
   margin: 36px 0;
+}
+
+.question-text {
+  white-space: pre;
 }
 
 .buttons-wrapper {

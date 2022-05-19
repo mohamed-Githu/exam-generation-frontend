@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/basic.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/questions.css" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Generazione Esami | Nuova Domanda</title>
+  </head>
+  <body>
+    <!-- Nav-Bar - START -->
+    <nav>
+      <div>
+        <img src="../assets/img/logo-large.png" alt="logo-large" />
+        <div class="drawer-button">
+          <input
+            type="checkbox"
+            name="drawer-checkbox"
+            id="drawer-checkbox"
+            class="drawer-checkbox"
+          />
+          <label for="drawer-checkbox">
+            <div></div>
+            <div></div>
+            <div></div>
+          </label>
+        </div>
+      </div>
+    </nav>
+    <!-- Nav-Bar - END -->
+
+    <div class="container">
+      <div class="flex-center">
+        <select name="materia" id="materia" class="width-full">
+          <option value="" disabled selected hidden>Materia</option>
+          <option value="1">Italiano</option>
+          <option value="2">Storia</option>
+          <option value="3">Matematica</option>
+        </select>
+      </div>
+      <div class="m-vertical"></div>
+      <div class="divider"></div>
+      <div class="m-vertical"></div>
+      <div class="question-modal card">
+        <h1 class="text-center">Nuova Domanda</h1>
+        <form>
+          <div class="top">
+            <div class="left">
+              <select name="level" id="level">
+                <option value="" disabled selected hidden>Livello</option>
+                <option value="1">Facile</option>
+                <option value="2">Medio</option>
+                <option value="3">Difficile</option>
+              </select>
+              <div class="input-group">
+                <input
+                  placeholder="duration"
+                  type="number"
+                  class="input-field"
+                  name="duration"
+                  id="duration"
+                  min="1"
+                  step="1"
+                  required
+                />
+                <label for="duration" class="input-label">Durata (min)</label>
+              </div>
+              <div class="input-group">
+                <input
+                  placeholder="righe"
+                  type="number"
+                  class="input-field"
+                  name="righe"
+                  min="0"
+                  step="1"
+                  id="righe"
+                  required
+                />
+                <label for="righe" class="input-label">Righe</label>
+              </div>
+            </div>
+            <div class="right">
+              <select name="unit" id="unit">
+                <option value="" disabled selected hidden>Unità</option>
+                <option value="1">Unita 1</option>
+                <option value="2">Unita 2</option>
+                <option value="3">Unita 3</option>
+              </select>
+              <select name="argument" id="argument">
+                <option value="" disabled selected hidden>Argomento</option>
+                <option value="1">Romanticismo</option>
+                <option value="2">Secondo Ottocento</option>
+                <option value="3">Primo Novecento</option>
+              </select>
+              <select name="subargument" id="subargument">
+                <option value="" disabled selected hidden>
+                  Sotto argomento
+                </option>
+                <option value="1">Romanticismo</option>
+                <option value="2">Neoclassicismo</option>
+                <option value="3">Giovanni Verga</option>
+                <option value="4">caratteristiche fondamentali</option>
+                <option value="5">Decadentismo</option>
+              </select>
+              <input type="file" name="image" id="image" accept="image/*" />
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="input-group">
+            <textarea
+              placeholder="text"
+              type="text"
+              class="input-field"
+              name="text"
+              id="text"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <label for="text" class="input-label">Domanda</label>
+            <div class="material-icons functions-icon color-primary">iso</div>
+          </div>
+          <div class="m-vertical"></div>
+          <div class="justify-center">
+            <input type="submit" value="Aggiungi" class="btn" />
+          </div>
+        </form>
+      </div>
+      <div class="divider"></div>
+      <!-- preview -->
+      <div class="m-vertical"></div>
+      <h3 class="text-center">Preview</h3>
+      <div class="question-wrapper" id="questino-1">
+        <div>
+          <div>
+            <h4>
+              <a href="/questions/questino-1">
+                <span id="preview-unit">Unita 1</span> >
+                <span id="preview-argument">Romanticismo</span> >
+                <span id="preview-subargument">
+                  caratteristiche fondamentali
+                </span>
+              </a>
+            </h4>
+            <!-- <h6>Oct, 8, 2020</h6> -->
+          </div>
+        </div>
+        <p id="preview-text">
+          When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and
+          they are \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
+        </p>
+        <div>
+          <h5>
+            <span id="preview-level-color" class="level-color difficile"></span>
+            <strong>Livello:</strong>
+            <span id="preview-level">Difficile</span>
+          </h5>
+          <h5><strong>Righe:</strong> <span id="preview-righe">15</span></h5>
+          <h5>
+            <strong>Durata:</strong> <span id="preview-duration">15min</span>
+          </h5>
+        </div>
+      </div>
+      <!-- preview -->
+    </div>
+
+    <!-- drawer -->
+    <div class="drawer-background"></div>
+    <div class="drawer">
+      <div class="drawer-links">
+        <a href="#" class="active">
+          <i class="material-icons">account_circle</i>
+          Mohamed Hussein
+        </a>
+        <a href="./classes.html">Anni e Settori</a>
+        <a href="./home-coordinatore.html">Domande</a>
+        <a href="./subjects.html">Materie</a>
+        <a href="./teachers.html">Docenti</a>
+        <a href="./generate.html">Genera Esame</a>
+
+        <a href="#" class="flex">
+          <button class="btn flex-1">Log out</button>
+        </a>
+      </div>
+    </div>
+    <!-- drawer -->
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script>
+      const question = {
+        level: $("#level"),
+        duration: $("#duration"),
+        righe: $("#righe"),
+        unit: $("#unit"),
+        argument: $("#argument"),
+        subargument: $("#subargument"),
+        image: $("#image"),
+        text: $("#text"),
+      };
+
+      const preview = {
+        level: $("#preview-level"),
+        levelColor: $("#preview-level-color"),
+        duration: $("#preview-duration"),
+        righe: $("#preview-righe"),
+        unit: $("#preview-unit"),
+        argument: $("#preview-argument"),
+        subargument: $("#preview-subargument"),
+        image: $("#preview-image"),
+        text: $("#preview-text"),
+      };
+
+      question["text"].keyup(function () {
+        preview["text"].text($(this).val());
+        MathJax.typeset();
+      });
+
+      for (const prop in question) {
+        switch (prop) {
+          case "level":
+          case "unit":
+          case "argument":
+          case "subargument":
+            question[prop].change(function () {
+              const value = $(this)
+                .children(`option[value="${$(this).val()}"]`)
+                .text();
+              preview[prop].text(value);
+
+              prop === "level" &&
+                preview["levelColor"].prop(
+                  "class",
+                  "level-color " + value.toLocaleLowerCase()
+                );
+            });
+            break;
+          case "duration":
+          case "righe":
+            question[prop].change(function () {
+              preview[prop].text($(this).val());
+            });
+        }
+      }
+    </script>
+  </body>
+</html>
