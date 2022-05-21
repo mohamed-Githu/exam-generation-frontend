@@ -76,7 +76,7 @@ a.link:hover {
   padding: 20px;
   width: 50%;
   border-radius: 5px;
-  z-index: 81;
+  z-index: 100;
   transition: all 0.4 ease-in-out;
 }
 
