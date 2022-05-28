@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/basic.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/genera-esame.css" />
+    <link rel="stylesheet" href="../css/symbols.css" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Generazione Esami | Nuova Domanda</title>
+  </head>
+  <body>
+    <!-- Nav-Bar - START -->
+    <nav>
+      <div>
+        <img src="../assets/img/logo-large.png" alt="logo-large" />
+        <div class="drawer-button">
+          <input
+            type="checkbox"
+            name="drawer-checkbox"
+            id="drawer-checkbox"
+            class="drawer-checkbox"
+          />
+          <label for="drawer-checkbox">
+            <div></div>
+            <div></div>
+            <div></div>
+          </label>
+        </div>
+      </div>
+    </nav>
+    <!-- Nav-Bar - END -->
+
+    <div class="container">
+      <!-- viene mostrato solo per la segreteria/coordinatori -->
+      <div class="buttons-wrapper">
+        <a href="#symbol-modal">
+          <button class="btn btn-secondary">
+            <i class="material-icons">add</i>
+            Nuovo Simbolo
+          </button>
+        </a>
+        <a href="#category-modal">
+          <button class="btn btn-secondary">
+            <i class="material-icons">add</i>
+            Nuova Categoria
+          </button>
+        </a>
+      </div>
+      <!-- viene mostrato solo per la segreteria/coordinatori -->
+
+      <div class="divider m-vertical"></div>
+      <div class="dropdown-menu">
+        <h2 class="justify-between align-center toggle">
+          Non lo so 2 <i class="material-icons">keyboard_arrow_right</i>
+        </h2>
+        <div class="panel">
+          <div class="code-container">
+            <span class="code">a \over b</span>
+            <span class="compiled">\( a \over b \)</span>
+            <span class="copy"
+              ><i class="material-icons tiny">content_copy</i></span
+            >
+          </div>
+          <div class="code-container">
+            <span class="code">\pm</span>
+            <span class="compiled">\( \pm \)</span>
+            <span class="copy"
+              ><i class="material-icons tiny">content_copy</i></span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="dropdown-menu">
+        <h2 class="justify-between align-center toggle">
+          Non lo so 3 <i class="material-icons">keyboard_arrow_right</i>
+        </h2>
+        <div class="panel">
+          <div class="code-container">
+            <span class="code">a \over b</span>
+            <span class="compiled">\( a \over b \)</span>
+            <span class="copy"
+              ><i class="material-icons tiny">content_copy</i></span
+            >
+          </div>
+          <div class="code-container">
+            <span class="code">\pm</span>
+            <span class="compiled">\( \pm \)</span>
+            <span class="copy"
+              ><i class="material-icons tiny">content_copy</i></span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="dropdown-menu">
+        <h2 class="justify-between align-center toggle">
+          Non lo so <i class="material-icons">keyboard_arrow_right</i>
+        </h2>
+        <div class="panel">
+          <div class="code-container">
+            <span class="code">a \over b</span>
+            <span class="compiled">\( a \over b \)</span>
+            <span class="copy"
+              ><i class="material-icons tiny">content_copy</i></span
+            >
+          </div>
+          <div class="code-container">
+            <span class="code">\pm</span>
+            <span class="compiled">\( \pm \)</span>
+            <span class="copy"
+              ><i class="material-icons tiny">content_copy</i></span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="m-vertical"></div>
+    </div>
+
+    <!-- viene mostrato solo per la segreteria/coordinatori -->
+    <div id="symbol-modal" class="modal-wrapper">
+      <a href="#" class="modal-background"></a>
+      <div class="modal">
+        <h1>Nuovo Simbolo</h1>
+        <form id="symbol-form">
+          <div class="symbols-inputs input-wrapper flex-column align-baseline">
+            <select name="category" id="category">
+              <option disabled hidden selected value="">Categoria</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <div class="input-group">
+              <input
+                type="text"
+                placeholder="symbol"
+                class="input-field"
+                name="symbol"
+                id="symbol-input"
+                required
+              />
+              <label for="symbol" class="input-label">Simbolo</label>
+            </div>
+            <h3><strong>Preview: </strong> <span id="symbol-preview"></span></h3>
+          </div>
+          <div class="m-vertical"></div>
+          <input type="submit" value="Conferma" class="btn" />
+        </form>
+        <a href="#" class="modal-close-btn">&times;</a>
+      </div>
+    </div>
+    <div id="category-modal" class="modal-wrapper">
+      <a href="#" class="modal-background"></a>
+      <div class="modal">
+        <h1 class="text-center">Nuova Categoria di Simboli</h1>
+        <div class="m-vertical"></div>
+        <form id="symbol-category-form">
+          <div class="input-group">
+            <input
+              type="text"
+              placeholder="Titolo"
+              class="input-field"
+              name="Titolo"
+              id="Titolo"
+              required
+            />
+            <label for="Titolo" class="input-label">Titolo</label>
+          </div>
+          <div class="divider"></div>
+          <div class="justify-center">
+            <input type="submit" value="Conferma" class="btn" />
+          </div>
+        </form>
+        <a href="#" class="modal-close-btn">&times;</a>
+      </div>
+    </div>
+    <!-- viene mostrato solo per la segreteria/coordinatori -->
+
+    <!-- drawer -->
+    <div class="drawer-background"></div>
+    <div class="drawer">
+      <div class="drawer-links">
+        <a href="#" class="active">
+          <i class="material-icons">account_circle</i>
+          Mohamed Hussein
+        </a>
+        <a href="./classes.html">Anni e Settori</a>
+        <a href="./home-coordinatore.html">Domande</a>
+        <a href="./subjects.html">Materie</a>
+        <a href="./teachers.html">Docenti</a>
+        <a href="./generate.html">Genera Esame</a>
+
+        <a href="#" class="flex">
+          <button class="btn flex-1">Log out</button>
+        </a>
+      </div>
+    </div>
+    <!-- drawer -->
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="../js/slide-menu.js"></script>
+    <script src="../js/code-container.js"></script>
+    <script src="../js/symbols.js"></script>
+    <script src="../js/drawer.js"></script>
+  </body>
+</html>
