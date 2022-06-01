@@ -1,3 +1,30 @@
-.symbols-inputs > .input-group {
-  margin-bottom: 24px;
+.symbols-selector {
+  background-color: var(--grey-color-transparent);
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.symbols-start > *,
+.symbols-header > * ,
+.symbols-body > * {
+  border: 1px solid var(--grey-color-lighter);
+  margin: 2px;
+  border-radius: 4px;
+  padding: 2px;
+  background-color: var(--white-color);
+  transition: all 0.2s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.symbols-start > *:hover,
+.symbols-header > *:hover ,
+.symbols-body > *:hover {
+  background-color: var(--grey-color-transparent);
+}
+
+.symbols-start,
+.symbols-header,
+.symbols-body {
+  display: flex;
 }

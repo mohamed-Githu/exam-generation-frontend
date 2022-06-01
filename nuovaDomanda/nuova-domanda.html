@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/basic.css" />
     <link rel="stylesheet" href="../css/components.css" />
     <link rel="stylesheet" href="../css/questions.css" />
+    <link rel="stylesheet" href="../css/symbols.css" />
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -113,11 +114,38 @@
             </div>
           </div>
           <div class="divider"></div>
+          <div class="symbols-selector">
+            <div class="symbols-start">
+              <div data-value="\(    \)">Equazione</div>
+            </div>
+            <div class="divider"></div>
+            <div class="symbols-header">
+              <div>\( \pm \)</div>
+              <div>\( a \over b \)</div>
+              <div>\( \pm a \over b \)</div>
+            </div>
+            <div class="divider"></div>
+            <div class="symbols-body">
+              <div data-value="a \over b">\( a \over b \)</div>
+              <div data-value="\pm">\( \pm \)</div>
+              <div data-value="\pm a \over b">\( \pm a \over b \)</div>
+            </div>
+            <div class="symbols-body">
+              <div data-value="a \over b">\( a \over b \)</div>
+              <div data-value="\pm a \over b">\( \pm a \over b \)</div>
+              <div data-value="\pm">\( \pm \)</div>
+            </div>
+            <div class="symbols-body">
+              <div data-value="\pm">\( \pm \)</div>
+              <div data-value="a \over b">\( a \over b \)</div>
+              <div data-value="\pm a \over b">\( \pm a \over b \)</div>
+            </div>
+          </div>
           <div class="input-group">
             <textarea
               placeholder="text"
               type="text"
-              class="input-field"
+              class="input-field symbols-input"
               name="text"
               id="text"
               cols="30"
@@ -197,60 +225,114 @@
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
     ></script>
     <script>
-      const question = {
-        level: $("#level"),
-        duration: $("#duration"),
-        righe: $("#righe"),
-        unit: $("#unit"),
-        argument: $("#argument"),
-        subargument: $("#subargument"),
-        image: $("#image"),
-        text: $("#text"),
-      };
+      $(document).ready(function () {
+        // declaring the function that changes the position of the caret
+        const setCaretPosition = (elem, caretPos) => {
+          if (elem !== null) {
+            if (elem.createTextRange) {
+              const range = elem.createTextRange();
+              range.move("character", caretPos);
+              range.select();
+            } else {
+              if (elem.selectionStart) {
+                elem.focus();
+                elem.setSelectionRange(caretPos, caretPos);
+              } else elem.focus();
+            }
+          }
+        };
 
-      const preview = {
-        level: $("#preview-level"),
-        levelColor: $("#preview-level-color"),
-        duration: $("#preview-duration"),
-        righe: $("#preview-righe"),
-        unit: $("#preview-unit"),
-        argument: $("#preview-argument"),
-        subargument: $("#preview-subargument"),
-        image: $("#preview-image"),
-        text: $("#preview-text"),
-      };
+        // getting the elements of both the question inputs and the preview
+        const question = {
+          level: $("#level"),
+          duration: $("#duration"),
+          righe: $("#righe"),
+          unit: $("#unit"),
+          argument: $("#argument"),
+          subargument: $("#subargument"),
+          image: $("#image"),
+          text: $("#text"),
+        };
 
-      question["text"].keyup(function () {
-        preview["text"].text($(this).val());
-        MathJax.typeset();
-      });
+        const preview = {
+          level: $("#preview-level"),
+          levelColor: $("#preview-level-color"),
+          duration: $("#preview-duration"),
+          righe: $("#preview-righe"),
+          unit: $("#preview-unit"),
+          argument: $("#preview-argument"),
+          subargument: $("#preview-subargument"),
+          image: $("#preview-image"),
+          text: $("#preview-text"),
+        };
 
-      for (const prop in question) {
-        switch (prop) {
-          case "level":
-          case "unit":
-          case "argument":
-          case "subargument":
-            question[prop].change(function () {
-              const value = $(this)
-                .children(`option[value="${$(this).val()}"]`)
-                .text();
-              preview[prop].text(value);
-
-              prop === "level" &&
-                preview["levelColor"].prop(
-                  "class",
-                  "level-color " + value.toLocaleLowerCase()
-                );
-            });
-            break;
-          case "duration":
-          case "righe":
-            question[prop].change(function () {
-              preview[prop].text($(this).val());
-            });
+        // listening to the input change and reflecting it on the preview & tirggerin the mathJax
+        function handlePreviewText() {
+          preview["text"].text(question["text"].val());
+          MathJax.typeset();
         }
-      }
+
+        question["text"].on("keyup symbol-insert", handlePreviewText);
+
+        // listening to the change of inputs and revlecting the change on the preview
+        for (const prop in question) {
+          switch (prop) {
+            case "level":
+            case "unit":
+            case "argument":
+            case "subargument":
+              question[prop].change(function () {
+                const value = $(this)
+                  .children(`option[value="${$(this).val()}"]`)
+                  .text();
+                preview[prop].text(value);
+
+                prop === "level" &&
+                  preview["levelColor"].prop(
+                    "class",
+                    "level-color " + value.toLocaleLowerCase()
+                  );
+              });
+              break;
+            case "duration":
+            case "righe":
+              question[prop].change(function () {
+                preview[prop].text($(this).val());
+              });
+          }
+        }
+
+        /* catching the symbols-input and inserting the symbol in the textarea */
+        const symbolsInput = $(".symbols-input");
+        const inputJavaScript = document.querySelector(".symbols-input");
+
+        $(".symbols-body > *, .symbols-start > *").click(function () {
+          const symbol = $(this).attr("data-value");
+          const caretPositionStart = inputJavaScript.selectionStart;
+          const caretPositionEnd = inputJavaScript.selectionEnd;
+
+          // getting the input value and combining it with the symbol
+          const value = symbolsInput.val();
+          const part1 = value.slice(0, caretPositionStart);
+          const part2 = value.slice(caretPositionEnd);
+          const newValue = `${part1}${symbol}${part2}`;
+
+          // changing the input value and changing the caret position
+          const newCaretPos =
+            symbol === "\\(    \\)"
+              ? part1.length + 4
+              : part1.length + symbol.length;
+
+          symbolsInput.val(newValue);
+          setCaretPosition(
+            document.querySelector(".symbols-input"),
+            newCaretPos
+          );
+
+          // triggering the change in the preview.text
+          handlePreviewText();
+        });
+      });
     </script>
   </body>
 </html>
