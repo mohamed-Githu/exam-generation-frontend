@@ -120,22 +120,22 @@
             </div>
             <div class="divider"></div>
             <div class="symbols-header">
-              <div>\( \pm \)</div>
-              <div>\( a \over b \)</div>
-              <div>\( \pm a \over b \)</div>
+              <div class="active" id="symbols-header-1">\( \pm \)</div>
+              <div id="symbols-header-2">\( a \over b \)</div>
+              <div id="symbols-header-3">\( \pm a \over b \)</div>
             </div>
             <div class="divider"></div>
-            <div class="symbols-body">
+            <div class="symbols-body" id="symbols-body-1">
               <div data-value="a \over b">\( a \over b \)</div>
               <div data-value="\pm">\( \pm \)</div>
               <div data-value="\pm a \over b">\( \pm a \over b \)</div>
             </div>
-            <div class="symbols-body">
+            <div class="symbols-body hidden" id="symbols-body-2">
               <div data-value="a \over b">\( a \over b \)</div>
               <div data-value="\pm a \over b">\( \pm a \over b \)</div>
               <div data-value="\pm">\( \pm \)</div>
             </div>
-            <div class="symbols-body">
+            <div class="symbols-body hidden" id="symbols-body-3">
               <div data-value="\pm">\( \pm \)</div>
               <div data-value="a \over b">\( a \over b \)</div>
               <div data-value="\pm a \over b">\( \pm a \over b \)</div>
@@ -331,6 +331,26 @@
 
           // triggering the change in the preview.text
           handlePreviewText();
+        });
+
+        /* changing sections on click */
+
+        $(".symbols-header > *").click(function() {
+          const headerId = $(this).attr("id");
+          const headerIdNumber = headerId[headerId.length - 1];
+          $(".symbols-header > *").removeClass("active");
+          $(this).addClass("active");
+
+          $(".symbols-body").each(function() {
+            const bodyId = $(this).attr("id");
+            const bodyIdNumber = bodyId[bodyId.length - 1];
+
+            if (bodyIdNumber === headerIdNumber) {
+              $(this).removeClass("hidden");
+              return;
+            }
+            $(this).addClass("hidden");
+          });
         });
       });
     </script>

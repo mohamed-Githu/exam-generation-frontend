@@ -23,8 +23,16 @@
   background-color: var(--grey-color-transparent);
 }
 
+.symbols-header > *.active {
+  background-color: var(--grey-color-transparent);
+}
+
 .symbols-start,
 .symbols-header,
 .symbols-body {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
