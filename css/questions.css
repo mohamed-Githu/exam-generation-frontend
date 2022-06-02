@@ -19,6 +19,7 @@
 
 .question-wrapper p {
   margin: 14px 0;
+  white-space: pre;
 }
 
 .question-wrapper > div:last-child {
