@@ -96,8 +96,6 @@
         </div>
 
         <div class="divider bold"></div>
-
-        
       </div>
 
       <!-- Curriculum -->
@@ -121,21 +119,23 @@
           </h2>
           <div class="panel">
             <div class="grid-wrapper">
-              <div class="card">
+              <!-- metti l'ID dell'argomento -->
+              <!-- presta attenzione alle classi aggiunte (argomento-titolo <h3>, argomento-wrapper <div>, argomento-sottoargomenti <div>) -->
+              <div class="card argomento-wrapper" id="">
                 <div class="justify-between">
-                  <h3>Argomento 1</h3>
+                  <h3 class="argomento-titolo">Argomento 1</h3>
                   <div class="dropdown">
                     <button></button>
 
                     <!-- Options -->
                     <ul>
                       <li>
-                        <a href="#">
+                        <a href="#modifica-argomento">
                           Modifica<i class="material-icons">create</i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#rimvuovi-argomento">
                           Rimuovi<i class="material-icons">delete</i>
                         </a>
                       </li>
@@ -143,7 +143,7 @@
                   </div>
                 </div>
                 <div class="divider"></div>
-                <div class="flex-wrapper">
+                <div class="flex-wrapper argomento-sottoargomenti">
                   <div class="text-block dark">sotto argomento-1 ------</div>
                   <div class="text-block dark">sotto argomento-2 ------</div>
                   <div class="text-block dark">sotto argomento-3 ------</div>
@@ -184,7 +184,7 @@
 
               <!-- add-card - START -->
               <div class="buttons-wrapper">
-                <a href="#">
+                <a href="#argument-modal">
                   <button class="btn btn-secondary">
                     <i class="material-icons">add</i>Nuovo argomento
                   </button>
@@ -291,7 +291,7 @@
 
               <!-- add-card - START -->
               <div class="buttons-wrapper">
-                <a href="#">
+                <a href="#argument-modal">
                   <button class="btn btn-secondary">
                     <i class="material-icons">add</i>Nuovo argomento
                   </button>
@@ -460,7 +460,7 @@
 
               <!-- add-card - START -->
               <div class="buttons-wrapper">
-                <a href="#">
+                <a href="#argument-modal">
                   <button class="btn btn-secondary">
                     <i class="material-icons">add</i>Nuovo argomento
                   </button>
@@ -656,6 +656,79 @@
     </div>
     <!-- argument-modal - END -->
 
+    <!-- argument-modal - START -->
+    <div id="modifica-argomento" class="modal-wrapper">
+      <a href="#" class="modal-background"></a>
+      <div class="modal argument-modal">
+        <h1>Modifica Argomento</h1>
+        <form id="#modifica-argomento-form">
+          <input type="text" hidden name="argomento-id" value="prova-id" />
+          <div>
+            <h3 class="inline"><strong> Unità: </strong></h3>
+            <h4 class="inline">Unità 1</h4>
+            <div class="divider"></div>
+            <div class="input-group">
+              <input
+                placeholder="titolo"
+                type="text"
+                class="input-field"
+                name="titolo"
+                id="titolo"
+                required
+              />
+              <label for="titolo" class="input-label">Titolo</label>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div>
+            <h3 class="inline">Sotto-Argomenti:</h3>
+            <h4 class="inline blocks-count">0</h4>
+            <div class="m-vertical"></div>
+            <div class="blocks-form">
+              <textarea
+                type="text"
+                name="subarguments"
+                class="blocks-area"
+                hidden
+                required
+              ></textarea>
+              <div class="flex-wrapper"></div>
+              <div class="m-vertical"></div>
+              <div class="input-group">
+                <input
+                  placeholder="#"
+                  type="text"
+                  class="input-field block-input"
+                  id="subargument"
+                />
+                <label for="subargument" class="input-label"
+                  >Sotto-argomento</label
+                >
+              </div>
+            </div>
+          </div>
+          <input type="submit" value="Conferma" class="btn" />
+        </form>
+        <a href="#" class="modal-close-btn">&times;</a>
+      </div>
+    </div>
+    <!-- argument-modal - END -->
+
+    <!-- argument-modal - START -->
+    <div id="rimvuovi-argomento" class="modal-wrapper">
+      <a href="#" class="modal-background"></a>
+      <div class="modal argument-modal">
+        <h4>Sei sicuro di voler rimuovere questo argomento?</h4>
+        <div class="placeholder flex justify-center"></div>
+        <form id="rimvuovi-argomento-form">
+          <input type="text" hidden name="argomento-id" value="prova-id" />
+          <input type="submit" value="Conferma" class="btn" />
+        </form>
+        <a href="#" class="modal-close-btn">&times;</a>
+      </div>
+    </div>
+    <!-- argument-modal - END -->
+
     <!-- drawer - START -->
     <div class="drawer-background"></div>
     <div class="drawer">
@@ -672,5 +745,107 @@
     <script src="../js/slide-menu.js"></script>
     <script src="../js/blocks-form.js"></script>
     <script src="../js/tabs-nav.js"></script>
+
+    <script>
+      location.hash = "#";
+
+      $(document).ready(function () {
+        let sottoArgomentoDaModificare = "";
+        let titoloArgomentoDaModificare = "";
+
+        $("a[href='#modifica-argomento']").click(function (e) {
+          e.preventDefault();
+
+          const tempParent = $(this).parentsUntil(".argomento-wrapper");
+          const argomento = $(tempParent[tempParent.length - 1]).parent();
+          const modificaArgomentoModal = $("#modifica-argomento");
+
+          // modificaArgomentoModal
+          //   .children()
+          //   .find("input[name='argomento-id']")
+          //   .val();
+
+          /*
+            ancora da fare :
+
+            ricavare l'ID dell'argomento e assegnarlo a un input[name='argomento-id'] che e' invisibile all'utente
+
+            ricordamelo, Moussa (;
+          */
+
+          const argomentoTitolo = argomento
+            .children()
+            .find(".argomento-titolo")
+            .text();
+          const tempArgomentoSottoArgomenti = argomento
+            .children(".argomento-sottoargomenti")
+            .text()
+            .trim()
+            .split("\n");
+          const argomentoSottoArgomenti = tempArgomentoSottoArgomenti
+            .map((el) => el.trim())
+            .join("\n");
+
+          modificaArgomentoModal
+            .children()
+            .find("input[name='titolo']")
+            .val(argomentoTitolo);
+
+          modificaArgomentoModal
+            .children()
+            .find("textarea[name='subarguments']")
+            .val(argomentoSottoArgomenti);
+
+          sottoArgomentoDaModificare = argomentoSottoArgomenti;
+          titoloArgomentoDaModificare = argomentoTitolo;
+
+          handleBlocks(argomentoSottoArgomenti, "#modifica-argomento");
+
+          location.hash = "#modifica-argomento";
+        });
+
+        // quando un argomento viene modificato
+        $("#modifica-argomento-form").submit(function (e) {
+          e.preventDefault();
+        });
+
+        // quando un argomento viene rimosso
+        $("#rimvuovi-argomento-form").submit(function (e) {
+          e.preventDefault();
+        });
+
+        // per rimvuovere un argomento
+        $("a[href='#rimvuovi-argomento']").click(function (e) {
+          e.preventDefault();
+
+          const modal = $("#rimvuovi-argomento");
+
+          const tempParent = $(this).parentsUntil(".argomento-wrapper");
+          const argomento = $(tempParent[tempParent.length - 1])
+            .parent()
+            .html();
+
+          // modal.children().find("input[name='argomento-id']").val();
+
+          /*
+            ancora da fare :
+
+            ricavare l'ID dell'argomento e assegnarlo a un input[name='argomento-id'] che e' invisibile all'utente
+
+            ricordamelo, Moussa (;
+          */
+
+          const wrapper =
+            "<div class='card' style='max-width: 300px; margin-top: 28px; margin-bottom: 16px;'>" +
+            argomento +
+            "</div>";
+
+          modal.children().find(".placeholder").append(wrapper);
+          modal.children().find(".dropdown").remove();
+
+          location.hash = "#rimvuovi-argomento";
+        });
+      });
+    </script>
   </body>
 </html>

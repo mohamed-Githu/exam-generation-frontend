@@ -1,6 +1,7 @@
-const handleBlocks = (value) => {
-  const blocksContainer = $(".blocks-form .flex-wrapper");
-  const blocksCount = $(".blocks-count");
+const handleBlocks = (value, scope) => {
+  const parent = scope || location.hash;
+  const blocksContainer = $(parent + " .blocks-form .flex-wrapper");
+  const blocksCount = $(parent + " .blocks-count");
   blocksContainer.empty();
 
   if (!value.trim()) {
@@ -43,7 +44,7 @@ $(document).ready(function () {
     if (!$(this).val().trim()) return;
 
     const newBlock = $(this).val().trim();
-    const textarea = $(".blocks-area");
+    const textarea = $(this).parent().siblings(".blocks-area");
     const blocksValue = textarea.val();
 
     blocksValue
