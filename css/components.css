@@ -647,15 +647,25 @@ p {
 
 .buttons-wrapper {
   display: flex;
+  gap: 12px;
+}
+
+.unit-actions > i:not(:last-child) {
+  border-right: 1px solid var(--grey-color);
+  padding: 0 10px;
+}
+
+.unit-actions > i:last-child {
+  margin-left: 10px;
 }
 
 .buttons-wrapper a {
   flex: 1;
 }
-
+/* 
 .buttons-wrapper a:not(:last-child) {
   margin-right: 12px;
-}
+} */
 
 .filters-wrapper form {
   margin-top: 18px;

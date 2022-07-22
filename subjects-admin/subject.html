@@ -113,9 +113,14 @@
 
         <div class="divider"></div>
 
-        <div class="dropdown-menu">
+        <div class="dropdown-menu" id="id-unita-1">
           <h2 class="justify-between align-center toggle">
-            Unità 1 <i class="material-icons">keyboard_arrow_right</i>
+            <span class="unita-titolo">Unità 1</span>
+            <div class="flex unit-actions">
+              <i class="material-icons add">add</i>
+              <i class="material-icons delete">delete</i>
+              <i class="material-icons arrow">keyboard_arrow_right</i>
+            </div>
           </h2>
           <div class="panel">
             <div class="grid-wrapper">
@@ -181,22 +186,17 @@
                   <div class="text-block dark">sotto argomento-5 ------</div>
                 </div>
               </div>
-
-              <!-- add-card - START -->
-              <div class="buttons-wrapper">
-                <a href="#argument-modal">
-                  <button class="btn btn-secondary">
-                    <i class="material-icons">add</i>Nuovo argomento
-                  </button>
-                </a>
-              </div>
-              <!-- add-card - END -->
             </div>
           </div>
         </div>
-        <div class="dropdown-menu">
+        <div class="dropdown-menu" id="id-unita-2">
           <h2 class="justify-between align-center toggle">
-            Unità 2 <i class="material-icons">keyboard_arrow_right</i>
+            <span class="unita-titolo">Unità 2</span>
+            <div class="flex unit-actions">
+              <i class="material-icons add">add</i>
+              <i class="material-icons delete">delete</i>
+              <i class="material-icons arrow">keyboard_arrow_right</i>
+            </div>
           </h2>
           <div class="panel">
             <div class="grid-wrapper">
@@ -288,22 +288,17 @@
                   <div class="text-block dark">sotto argomento-5 ------</div>
                 </div>
               </div>
-
-              <!-- add-card - START -->
-              <div class="buttons-wrapper">
-                <a href="#argument-modal">
-                  <button class="btn btn-secondary">
-                    <i class="material-icons">add</i>Nuovo argomento
-                  </button>
-                </a>
-              </div>
-              <!-- add-card - END -->
             </div>
           </div>
         </div>
-        <div class="dropdown-menu">
+        <div class="dropdown-menu" id="id-unita-3">
           <h2 class="justify-between align-center toggle">
-            Unità 3 <i class="material-icons">keyboard_arrow_right</i>
+            <span class="unita-titolo">Unità 3</span>
+            <div class="flex unit-actions">
+              <i class="material-icons add">add</i>
+              <i class="material-icons delete">delete</i>
+              <i class="material-icons arrow">keyboard_arrow_right</i>
+            </div>
           </h2>
           <div class="panel">
             <div class="grid-wrapper">
@@ -457,16 +452,6 @@
                   <div class="text-block dark">sotto argomento-5 ------</div>
                 </div>
               </div>
-
-              <!-- add-card - START -->
-              <div class="buttons-wrapper">
-                <a href="#argument-modal">
-                  <button class="btn btn-secondary">
-                    <i class="material-icons">add</i>Nuovo argomento
-                  </button>
-                </a>
-              </div>
-              <!-- add-card - END -->
             </div>
           </div>
         </div>
@@ -605,9 +590,11 @@
       <div class="modal argument-modal">
         <h1>Nuovo Argomento</h1>
         <form>
+          <!-- un input nascosto che contiene l'id dell'unita -->
+          <input type="text" name="unita-id" hidden />
           <div>
             <h3 class="inline"><strong> Unità: </strong></h3>
-            <h4 class="inline">Unità 1</h4>
+            <h4 class="inline unita-titolo"></h4>
             <div class="divider"></div>
             <div class="input-group">
               <input
@@ -665,7 +652,7 @@
           <input type="text" hidden name="argomento-id" value="prova-id" />
           <div>
             <h3 class="inline"><strong> Unità: </strong></h3>
-            <h4 class="inline">Unità 1</h4>
+            <h4 class="inline unita-titolo"></h4>
             <div class="divider"></div>
             <div class="input-group">
               <input
@@ -729,6 +716,23 @@
     </div>
     <!-- argument-modal - END -->
 
+    <!-- remove-unit - START -->
+    <div id="rimvuovi-unita" class="modal-wrapper">
+      <a href="#" class="modal-background"></a>
+      <div class="modal argument-modal">
+        <h4>Sei sicuro di voler rimuovere</h4>
+        <div class="m-vertical"></div>
+        <h3 class="inline"><strong> Unità: </strong></h3>
+        <h4 class="inline unita-titolo"></h4>
+        <form id="rimvuovi-unita-form">
+          <input type="text" hidden name="unita-id" />
+          <input type="submit" value="Conferma" class="btn" />
+        </form>
+        <a href="#" class="modal-close-btn">&times;</a>
+      </div>
+    </div>
+    <!-- remove-unit - END -->
+
     <!-- drawer - START -->
     <div class="drawer-background"></div>
     <div class="drawer">
@@ -758,6 +762,11 @@
 
           const tempParent = $(this).parentsUntil(".argomento-wrapper");
           const argomento = $(tempParent[tempParent.length - 1]).parent();
+          const unitaTitolo = $(this)
+            .parents(".dropdown-menu")
+            .children()
+            .find(".unita-titolo")
+            .text();
           const modificaArgomentoModal = $("#modifica-argomento");
 
           // modificaArgomentoModal
@@ -795,6 +804,11 @@
             .children()
             .find("textarea[name='subarguments']")
             .val(argomentoSottoArgomenti);
+
+          modificaArgomentoModal
+            .children()
+            .find(".unita-titolo")
+            .text(unitaTitolo);
 
           sottoArgomentoDaModificare = argomentoSottoArgomenti;
           titoloArgomentoDaModificare = argomentoTitolo;
