@@ -1,126 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/basic.css" />
-    <link rel="stylesheet" href="../css/components.css" />
-    <link rel="stylesheet" href="../css/genera-esame.css" />
-    <link rel="stylesheet" href="../css/symbols.css" />
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <title>Generazione Esami | Nuova Domanda</title>
-  </head>
-  <body>
-    <!-- Nav-Bar - START -->
-    <nav>
-      <div>
-        <img src="../assets/img/logo-large.png" alt="logo-large" />
-        <div class="drawer-button">
-          <input
-            type="checkbox"
-            name="drawer-checkbox"
-            id="drawer-checkbox"
-            class="drawer-checkbox"
-          />
-          <label for="drawer-checkbox">
-            <div></div>
-            <div></div>
-            <div></div>
-          </label>
-        </div>
-      </div>
-    </nav>
-    <!-- Nav-Bar - END -->
 
-    <div class="container">
-      <!-- viene mostrato solo per la segreteria/coordinatori -->
-      <div class="buttons-wrapper">
-        <a href="#symbol-modal">
-          <button class="btn btn-secondary">
-            <i class="material-icons">add</i>
-            Nuovo Simbolo
-          </button>
-        </a>
-        <a href="#category-modal">
-          <button class="btn btn-secondary">
-            <i class="material-icons">add</i>
-            Nuova Categoria
-          </button>
-        </a>
-      </div>
-      <!-- viene mostrato solo per la segreteria/coordinatori -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/basic.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/genera-esame.css" />
+  <link rel="stylesheet" href="../css/symbols.css" />
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <title>Generazione Esami | Nuova Domanda</title>
+</head>
 
-      <div class="divider m-vertical"></div>
-      <div class="dropdown-menu">
-        <h2 class="justify-between align-center toggle">
-          Non lo so 2 <i class="material-icons">keyboard_arrow_right</i>
-        </h2>
-        <div class="panel">
-          <div class="code-container">
-            <span class="code">a \over b</span>
-            <span class="compiled">\( a \over b \)</span>
-            <span class="copy"
-              ><i class="material-icons tiny">content_copy</i></span
-            >
-          </div>
-          <div class="code-container">
-            <span class="code">\pm</span>
-            <span class="compiled">\( \pm \)</span>
-            <span class="copy"
-              ><i class="material-icons tiny">content_copy</i></span
-            >
-          </div>
-        </div>
+<body>
+  <!-- Nav-Bar - START -->
+  <nav>
+    <div>
+      <img src="../assets/img/logo-large.png" alt="logo-large" />
+      <div class="drawer-button">
+        <input type="checkbox" name="drawer-checkbox" id="drawer-checkbox" class="drawer-checkbox" />
+        <label for="drawer-checkbox">
+          <div></div>
+          <div></div>
+          <div></div>
+        </label>
       </div>
-      <div class="dropdown-menu">
-        <h2 class="justify-between align-center toggle">
-          Non lo so 3 <i class="material-icons">keyboard_arrow_right</i>
-        </h2>
-        <div class="panel">
-          <div class="code-container">
-            <span class="code">a \over b</span>
-            <span class="compiled">\( a \over b \)</span>
-            <span class="copy"
-              ><i class="material-icons tiny">content_copy</i></span
-            >
-          </div>
-          <div class="code-container">
-            <span class="code">\pm</span>
-            <span class="compiled">\( \pm \)</span>
-            <span class="copy"
-              ><i class="material-icons tiny">content_copy</i></span
-            >
-          </div>
-        </div>
-      </div>
-      <div class="dropdown-menu">
-        <h2 class="justify-between align-center toggle">
-          Non lo so <i class="material-icons">keyboard_arrow_right</i>
-        </h2>
-        <div class="panel">
-          <div class="code-container">
-            <span class="code">a \over b</span>
-            <span class="compiled">\( a \over b \)</span>
-            <span class="copy"
-              ><i class="material-icons tiny">content_copy</i></span
-            >
-          </div>
-          <div class="code-container">
-            <span class="code">\pm</span>
-            <span class="compiled">\( \pm \)</span>
-            <span class="copy"
-              ><i class="material-icons tiny">content_copy</i></span
-            >
-          </div>
-        </div>
-      </div>
-      <div class="m-vertical"></div>
     </div>
+  </nav>
+  <!-- Nav-Bar - END -->
+
+
+  <div class="container">
+
+    <div class="panel">
+      <div class="code-container">
+        <span class="code">a \over b</span>
+        <span class="compiled">\( a \over b \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+
+
+      <div class="code-container">
+        <span class="code">+</span>
+        <span class="compiled">\(+ \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">- </span>
+        <span class="compiled">\( - \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\pm </span>
+        <span class="compiled">\( \pm \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\times</span>
+        <span class="compiled">\( \times \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\cdot</span>
+        <span class="compiled">\( \cdot \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\div</span>
+        <span class="compiled">\( \div \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">/</span>
+        <span class="compiled">\( / \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">=</span>
+        <span class="compiled">\( = \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\ne </span>
+        <span class="compiled">\( \ne \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">< </span>
+        <span class="compiled">\( < \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">></span>
+        <span class="compiled">\( > \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\le </span>
+        <span class="compiled">\( \le \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\ge </span>
+        <span class="compiled">\( \ge \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\approx</span>
+        <span class="compiled">\( \approx \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+
+
+      <div class="code-container">
+        <span class="code">\infty</span>
+        <span class="compiled">\( \infty \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">1,2,3,\ldots</span>
+        <span class="compiled">\( 1,2,3,\ldots \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">1+2+3+\cdots</span>
+        <span class="compiled">\( 1+2+3+\cdots \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\frac{a}{b}</span>
+        <span class="compiled">\( \frac{a}{b} \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\sqrt{x}</span>
+        <span class="compiled">\( \sqrt{x} \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\sqrt[n]{x}</span>
+        <span class="compiled">\( \sqrt[n]{x} \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">a^b</span>
+        <span class="compiled">\( a^b \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">a_b</span>
+        <span class="compiled">\( a_b \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">|x|</span>
+        <span class="compiled">\( |x| \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\ln(x) </span>
+        <span class="compiled">\( \ln(x) \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\log_{a}b</span>
+        <span class="compiled">\( \log_{a}b \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">e^x=\exp(x) </span>
+        <span class="compiled">\( e^x=\exp(x) \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\deg(f) </span>
+        <span class="compiled">\( \deg(f) \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">|x |=\begin{cases}
+          x & x\ge 0\\ -x & x<0 \end{cases} </span>
+            <span class="compiled">\( |x |=\begin{cases}
+              x & x\ge 0\\ -x & x<0 \end{cases} \)</span>
+                <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\alpha</span>
+        <span class="compiled">\( \alpha \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\beta</span>
+        <span class="compiled">\( \beta \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\chi</span>
+        <span class="compiled">\( \chi \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\delta</span>
+        <span class="compiled">\( \delta \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\gamma</span>
+        <span class="compiled">\( \gamma \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\Delta</span>
+        <span class="compiled">\( \Delta \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\mu</span>
+        <span class="compiled">\( \mu \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\nu</span>
+        <span class="compiled">\( \nu \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\omega</span>
+        <span class="compiled">\( \omega \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\phi</span>
+        <span class="compiled">\( \phi \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\pi</span>
+        <span class="compiled">\( \pi \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\sigma</span>
+        <span class="compiled">\( \sigma \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\{1,2,3\} </span>
+        <span class="compiled">\( \{1,2,3\} \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\in </span>
+        <span class="compiled">\( \in \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\not\in </span>
+        <span class="compiled">\( \not\in \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\subset </span>
+        <span class="compiled">\( \subset \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\subseteq </span>
+        <span class="compiled">\( \subseteq \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\not\subset </span>
+        <span class="compiled">\( \not\subset \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\cup </span>
+        <span class="compiled">\( \cup \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\cap </span>
+        <span class="compiled">\( \cap \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\frac{df}{dx} </span>
+        <span class="compiled">\( \frac{df}{dx} \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">f' </span>
+        <span class="compiled">\( f' \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\int </span>
+        <span class="compiled">\( \int \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\lim_{x\to \infty} </span>
+        <span class="compiled">\( \lim_{x\to \infty} \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\sum_{n=1}^{\infty}a_n </span>
+        <span class="compiled">\( \sum_{n=1}^{\infty}a_n \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\land </span>
+        <span class="compiled">\( \land \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\lor </span>
+        <span class="compiled">\( \lor \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\to </span>
+        <span class="compiled">\( \to \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\equiv </span>
+        <span class="compiled">\( \equiv \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\therefore </span>
+        <span class="compiled">\( \therefore \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\exists </span>
+        <span class="compiled">\( \exists \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\forall </span>
+        <span class="compiled">\( \forall \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\vec{v} </span>
+        <span class="compiled">\( \vec{v} \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\||\vec{v}|| </span>
+        <span class="compiled">\( \||\vec{v}|| \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container" style="height: 80px;">
+        <span class="code" style="height: 80px;">\left[
+          \begin{array}{ccc}
+          1 & 2 & 3 \\ 4 & 5 & 6\\ 7 & 8 & 9 \end{array} \right] </span>
+        <span class="compiled" style="height: 80px;">\( \left[
+          \begin{array}{ccc}
+          1 & 2 & 3 \\ 4 & 5 & 6\\ 7 & 8 & 9 \end{array} \right] \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\angle ABC  </span>
+        <span class="compiled">\( \angle ABC  \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">90^{\circ}  </span>
+        <span class="compiled">\( 90^{\circ}  \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\triangle ABC </span>
+        <span class="compiled">\( \triangle ABC \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\overline{AB} </span>
+        <span class="compiled">\( \overline{AB} \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\triangle ABC </span>
+        <span class="compiled">\( \triangle ABC \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\sin </span>
+        <span class="compiled">\( \sin \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\cos </span>
+        <span class="compiled">\( \cos \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\tan </span>
+        <span class="compiled">\( \tan \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\sec </span>
+        <span class="compiled">\( \sec \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\cot </span>
+        <span class="compiled">\( \cot \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\arcsin </span>
+        <span class="compiled">\( \arcsin \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\arccos </span>
+        <span class="compiled">\( \arccos \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+      <div class="code-container">
+        <span class="code">\arctan </span>
+        <span class="compiled">\( \arctan \)</span>
+        <span class="copy"><i class="material-icons tiny">content_copy</i></span>
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
 
     <!-- viene mostrato solo per la segreteria/coordinatori -->
     <div id="symbol-modal" class="modal-wrapper">
@@ -136,14 +455,7 @@
               <option value="3">3</option>
             </select>
             <div class="input-group">
-              <input
-                type="text"
-                placeholder="symbol"
-                class="input-field"
-                name="symbol"
-                id="symbol-input"
-                required
-              />
+              <input type="text" placeholder="symbol" class="input-field" name="symbol" id="symbol-input" required />
               <label for="symbol" class="input-label">Simbolo</label>
             </div>
             <h3><strong>Preview: </strong> <span id="symbol-preview"></span></h3>
@@ -161,14 +473,7 @@
         <div class="m-vertical"></div>
         <form id="symbol-category-form">
           <div class="input-group">
-            <input
-              type="text"
-              placeholder="Titolo"
-              class="input-field"
-              name="Titolo"
-              id="Titolo"
-              required
-            />
+            <input type="text" placeholder="Titolo" class="input-field" name="Titolo" id="Titolo" required />
             <label for="Titolo" class="input-label">Titolo</label>
           </div>
           <div class="divider"></div>
@@ -203,14 +508,11 @@
     <!-- drawer -->
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script
-      id="MathJax-script"
-      async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-    ></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../js/slide-menu.js"></script>
     <script src="../js/code-container.js"></script>
     <script src="../js/symbols.js"></script>
     <script src="../js/drawer.js"></script>
-  </body>
+</body>
+
 </html>
