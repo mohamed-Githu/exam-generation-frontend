@@ -21,3 +21,7 @@
 .card.login form .btn {
   margin-top: 56px;
 }
+
+.registration-link{
+  color :var(--primary-color)
+}
